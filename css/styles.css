@@ -3748,6 +3748,2005 @@ p {
     color: rgba(248, 234, 219, 0.48);
 }
 /* ========================================
+   PORTFOLIO PAGE — HERO
+======================================== */
+
+.portfolio-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(6.5rem, 10vw, 9rem) 0;
+
+    background:
+        radial-gradient(
+            circle at 8% 18%,
+            rgba(232, 154, 170, 0.12),
+            transparent 28%
+        ),
+        var(--color-soft-cream);
+
+    color: var(--color-espresso);
+}
+
+
+/* Decorative Background Detail */
+
+.portfolio-hero::before {
+    content: "";
+
+    position: absolute;
+    left: -180px;
+    bottom: -220px;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(185, 79, 112, 0.08);
+    border-radius: 50%;
+
+    background: rgba(242, 197, 201, 0.12);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   PORTFOLIO HERO — GRID
+======================================== */
+
+.portfolio-hero-grid {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    align-items: center;
+
+    gap: clamp(3rem, 6vw, 6rem);
+}
+
+
+/* ========================================
+   PORTFOLIO HERO — CONTENT
+======================================== */
+
+.portfolio-hero-content {
+    max-width: 590px;
+}
+
+.portfolio-hero .section-eyebrow {
+    margin-bottom: 1.25rem;
+
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.portfolio-hero-title {
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(3.4rem, 5.5vw, 5.8rem);
+    font-weight: 500;
+    line-height: 0.95;
+
+    color: var(--color-espresso);
+}
+
+.portfolio-hero-title span {
+    display: block;
+
+    margin-top: 0.18em;
+
+    color: var(--color-deep-pink);
+    font-style: italic;
+}
+
+.portfolio-hero-text {
+    max-width: 540px;
+
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   PROJECT COUNT
+======================================== */
+
+.portfolio-hero-count {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+
+    width: fit-content;
+
+    margin-top: 2.25rem;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid rgba(107, 68, 56, 0.15);
+}
+
+.portfolio-count-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+
+    color: var(--color-deep-pink);
+}
+
+.portfolio-count-text {
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--font-code);
+    font-size: 0.64rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-cocoa);
+}
+
+.portfolio-count-text strong {
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   PORTFOLIO HERO — VISUAL
+======================================== */
+
+.portfolio-hero-visual {
+    position: relative;
+}
+
+.portfolio-hero-image-wrap {
+    position: relative;
+
+    padding: 0.75rem;
+
+    border: 1px solid rgba(107, 68, 56, 0.12);
+    border-radius: var(--radius-large);
+
+    background: rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 30px 65px rgba(59, 36, 31, 0.14),
+        0 8px 20px rgba(59, 36, 31, 0.06);
+}
+
+.portfolio-hero-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: calc(var(--radius-large) - 8px);
+}
+
+
+/* ========================================
+   HERO CODE LABELS
+======================================== */
+
+.portfolio-hero-code {
+    position: absolute;
+
+    padding: 0.5rem 0.75rem;
+
+    border: 1px solid rgba(232, 154, 170, 0.25);
+    border-radius: 999px;
+
+    background: var(--color-dark-chocolate);
+
+    box-shadow: 0 8px 22px rgba(59, 36, 31, 0.18);
+
+    font-family: var(--font-code);
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+
+    color: var(--color-gelato-pink);
+}
+
+.portfolio-code-top {
+    top: -18px;
+    right: 8%;
+}
+
+.portfolio-code-middle {
+    top: 48%;
+    left: -28px;
+
+    transform: translateY(-50%);
+}
+
+.portfolio-code-bottom {
+    right: 10%;
+    bottom: -18px;
+}
+
+
+/* Small Visual Accent */
+
+.portfolio-hero-visual::after {
+    content: "{ }";
+
+    position: absolute;
+    right: -22px;
+    bottom: 12%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    background: var(--color-deep-pink);
+
+    box-shadow: 0 12px 28px rgba(59, 36, 31, 0.2);
+
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    color: var(--color-white);
+}
+/* ========================================
+   PORTFOLIO — CASE STUDY BASE
+======================================== */
+
+.portfolio-case-study {
+    position: relative;
+    overflow: hidden;
+
+    padding: var(--section-padding) 0;
+}
+
+.hidden-leaf-case {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(185, 79, 112, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            var(--color-espresso),
+            var(--color-dark-chocolate)
+        );
+
+    color: var(--color-cream);
+}
+
+
+/* Decorative Background */
+
+.hidden-leaf-case::before {
+    content: "";
+
+    position: absolute;
+    left: -190px;
+    top: 28%;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(232, 154, 170, 0.08);
+    border-radius: 50%;
+
+    background: rgba(232, 154, 170, 0.025);
+
+    pointer-events: none;
+}
+
+.hidden-leaf-case .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ========================================
+   CASE STUDY — HEADER
+======================================== */
+
+.case-study-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    align-items: end;
+
+    gap: clamp(3rem, 7vw, 7rem);
+
+    margin-bottom: 4rem;
+}
+
+.case-study-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-gelato-pink);
+}
+
+.case-study-type {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.64rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(248, 234, 219, 0.48);
+}
+
+.case-study-title {
+    margin: 0;
+
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 500;
+    line-height: 0.9;
+
+    color: var(--color-cream);
+}
+
+.case-study-title span {
+    display: block;
+
+    margin-top: 0.12em;
+
+    color: var(--color-blush);
+    font-style: italic;
+}
+
+.case-study-summary {
+    padding-left: 2rem;
+
+    border-left: 1px solid rgba(248, 234, 219, 0.12);
+}
+
+.case-study-summary p {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.92rem;
+    line-height: 1.8;
+
+    color: rgba(248, 234, 219, 0.7);
+}
+
+.case-study-live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding-bottom: 0.4rem;
+
+    border-bottom: 1px solid rgba(232, 154, 170, 0.45);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    color: var(--color-gelato-pink);
+
+    transition:
+        gap var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+.case-study-live-link:hover {
+    gap: 0.8rem;
+
+    color: var(--color-cream);
+    border-color: var(--color-cream);
+}
+
+
+/* ========================================
+   CASE STUDY — PROJECT VISUAL
+======================================== */
+
+.case-study-visual {
+    position: relative;
+
+    max-width: 1080px;
+
+    margin: 0 auto 5rem;
+    padding: 1rem 5rem 3rem 0;
+}
+
+.case-desktop-frame {
+    overflow: hidden;
+
+    border: 1px solid rgba(248, 234, 219, 0.12);
+    border-radius: var(--radius-large);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    box-shadow: 0 28px 65px rgba(0, 0, 0, 0.25);
+}
+
+.case-desktop-frame img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.case-mobile-frame {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: clamp(150px, 19%, 210px);
+
+    overflow: hidden;
+
+    border: 5px solid var(--color-dark-chocolate);
+    border-radius: 24px;
+
+    background: var(--color-dark-chocolate);
+
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.35);
+}
+
+.case-mobile-frame img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 18px;
+}
+
+.case-responsive-label {
+    position: absolute;
+    left: 2rem;
+    bottom: 0.5rem;
+
+    padding: 0.5rem 0.75rem;
+
+    border: 1px solid rgba(232, 154, 170, 0.25);
+    border-radius: 999px;
+
+    background: var(--color-dark-chocolate);
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   CASE STUDY — DETAILS
+======================================== */
+
+.case-study-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.25rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.case-detail-block {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 1.25rem;
+
+    padding: 2rem;
+
+    border: 1px solid rgba(248, 234, 219, 0.1);
+    border-radius: var(--radius-medium);
+
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.case-detail-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid rgba(232, 154, 170, 0.28);
+    border-radius: 50%;
+
+    font-family: var(--font-code);
+    font-size: 0.64rem;
+    font-weight: 700;
+
+    color: var(--color-gelato-pink);
+}
+
+.case-detail-label {
+    margin-bottom: 0.55rem;
+
+    font-family: var(--font-code);
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-gelato-pink);
+}
+
+.case-detail-block h3 {
+    margin-bottom: 0.85rem;
+
+    font-size: 1.55rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    color: var(--color-cream);
+}
+
+.case-detail-block p:last-child {
+    margin-bottom: 0;
+
+    font-size: 0.84rem;
+    line-height: 1.75;
+
+    color: rgba(248, 234, 219, 0.62);
+}
+
+
+/* ========================================
+   CASE STUDY — BUILD HIGHLIGHTS
+======================================== */
+
+.case-study-highlights {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+    gap: 3rem;
+
+    padding: 2.5rem;
+
+    border: 1px solid rgba(232, 154, 170, 0.14);
+    border-radius: var(--radius-medium);
+
+    background: rgba(232, 154, 170, 0.055);
+}
+
+.case-highlights-heading h3 {
+    margin: 0;
+
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    color: var(--color-cream);
+}
+
+.case-highlight-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem 1.5rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.case-highlight-list li {
+    position: relative;
+
+    padding-left: 1.25rem;
+
+    font-size: 0.8rem;
+    line-height: 1.55;
+
+    color: rgba(248, 234, 219, 0.7);
+}
+
+.case-highlight-list li::before {
+    content: "→";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   CASE STUDY — TECHNOLOGY
+======================================== */
+
+.case-study-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+
+    margin-top: 2rem;
+}
+
+.case-study-tech span {
+    padding: 0.5rem 0.8rem;
+
+    border: 1px solid rgba(248, 234, 219, 0.13);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    color: rgba(248, 234, 219, 0.72);
+}
+
+
+/* ========================================
+   CASE STUDY — DISCLAIMER
+======================================== */
+
+.case-study-disclaimer {
+    max-width: 760px;
+
+    margin: 2rem 0 0;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid rgba(248, 234, 219, 0.08);
+
+    font-size: 0.65rem;
+    line-height: 1.7;
+
+    color: rgba(248, 234, 219, 0.38);
+}
+/* ========================================
+   PORTFOLIO — MAISON ROSE CASE STUDY
+======================================== */
+
+.maison-rose-case {
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(185, 79, 112, 0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            var(--color-soft-cream),
+            #f6dfe1
+        );
+
+    color: var(--color-espresso);
+}
+
+
+/* Decorative Background Detail */
+
+.maison-rose-case::before {
+    content: "";
+
+    position: absolute;
+    right: -180px;
+    top: 24%;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(107, 68, 56, 0.07);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    pointer-events: none;
+}
+
+.maison-rose-case .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ========================================
+   MAISON ROSE — HEADER
+======================================== */
+
+.maison-rose-case .case-study-heading .section-eyebrow {
+    color: var(--color-deep-pink);
+}
+
+.maison-rose-case .case-study-type {
+    color: rgba(107, 68, 56, 0.65);
+}
+
+.maison-rose-case .case-study-title {
+    color: var(--color-espresso);
+}
+
+.maison-rose-case .case-study-title span {
+    color: var(--color-deep-pink);
+}
+
+.maison-rose-case .case-study-summary {
+    border-left-color: rgba(107, 68, 56, 0.15);
+}
+
+.maison-rose-case .case-study-summary p {
+    color: var(--color-cocoa);
+}
+
+.maison-rose-case .case-study-live-link {
+    border-color: rgba(185, 79, 112, 0.35);
+
+    color: var(--color-deep-pink);
+}
+
+.maison-rose-case .case-study-live-link:hover {
+    border-color: var(--color-espresso);
+
+    color: var(--color-espresso);
+}
+
+
+/* ========================================
+   MAISON ROSE — PROJECT VISUAL
+======================================== */
+
+.maison-case-visual {
+    padding: 1rem 0 3rem 5rem;
+}
+
+.maison-case-visual .case-desktop-frame {
+    border: 1px solid rgba(107, 68, 56, 0.12);
+
+    background: rgba(255, 255, 255, 0.65);
+
+    box-shadow: 0 28px 65px rgba(59, 36, 31, 0.13);
+}
+
+
+/* Flip Mobile Preview to Left */
+
+.maison-case-visual .case-mobile-frame {
+    right: auto;
+    left: 0;
+
+    border-color: var(--color-cream);
+
+    background: var(--color-cream);
+
+    box-shadow: 0 22px 45px rgba(59, 36, 31, 0.2);
+}
+
+
+/* Responsive Label */
+
+.maison-case-visual .case-responsive-label {
+    left: auto;
+    right: 2rem;
+
+    border-color: rgba(185, 79, 112, 0.22);
+
+    background: var(--color-cream);
+
+    color: var(--color-deep-pink);
+
+    box-shadow: 0 8px 22px rgba(59, 36, 31, 0.08);
+}
+
+
+/* ========================================
+   MAISON ROSE — DETAIL CARDS
+======================================== */
+
+.maison-rose-case .case-detail-block {
+    border-color: rgba(107, 68, 56, 0.12);
+
+    background: rgba(255, 255, 255, 0.46);
+
+    box-shadow: 0 12px 30px rgba(59, 36, 31, 0.045);
+}
+
+.maison-rose-case .case-detail-number {
+    border-color: rgba(185, 79, 112, 0.25);
+
+    background: rgba(185, 79, 112, 0.06);
+
+    color: var(--color-deep-pink);
+}
+
+.maison-rose-case .case-detail-label {
+    color: var(--color-deep-pink);
+}
+
+.maison-rose-case .case-detail-block h3 {
+    color: var(--color-espresso);
+}
+
+.maison-rose-case .case-detail-block p:last-child {
+    color: rgba(107, 68, 56, 0.82);
+}
+
+
+/* ========================================
+   MAISON ROSE — BUILD HIGHLIGHTS
+======================================== */
+
+.maison-rose-case .case-study-highlights {
+    border-color: rgba(185, 79, 112, 0.16);
+
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.maison-rose-case .case-highlights-heading h3 {
+    color: var(--color-espresso);
+}
+
+.maison-rose-case .case-highlight-list li {
+    color: rgba(107, 68, 56, 0.82);
+}
+
+.maison-rose-case .case-highlight-list li::before {
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   MAISON ROSE — TECHNOLOGY
+======================================== */
+
+.maison-rose-case .case-study-tech span {
+    border-color: rgba(107, 68, 56, 0.14);
+
+    background: rgba(255, 255, 255, 0.5);
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   MAISON ROSE — PROJECT NOTE
+======================================== */
+
+.maison-rose-case .case-study-disclaimer {
+    border-top-color: rgba(107, 68, 56, 0.12);
+
+    color: rgba(107, 68, 56, 0.58);
+}
+/* ========================================
+   PORTFOLIO — THE BARKERY HOUSE
+======================================== */
+
+.barkery-house-case {
+    background:
+        radial-gradient(
+            circle at 88% 12%,
+            rgba(232, 154, 170, 0.11),
+            transparent 28%
+        ),
+        var(--color-cream);
+
+    color: var(--color-espresso);
+}
+
+.barkery-house-case::before {
+    content: "";
+
+    position: absolute;
+    left: -170px;
+    top: 18%;
+
+    width: 380px;
+    height: 380px;
+
+    border: 1px solid rgba(185, 79, 112, 0.08);
+    border-radius: 50%;
+
+    background: rgba(232, 154, 170, 0.08);
+
+    pointer-events: none;
+}
+
+.barkery-house-case .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ========================================
+   BARKERY — HEADER
+======================================== */
+
+.barkery-house-case .case-study-heading .section-eyebrow,
+.barkery-house-case .case-detail-label {
+    color: var(--color-deep-pink);
+}
+
+.barkery-house-case .case-study-type {
+    color: rgba(107, 68, 56, 0.62);
+}
+
+.barkery-house-case .case-study-title {
+    color: var(--color-espresso);
+}
+
+.barkery-house-case .case-study-title span {
+    color: var(--color-deep-pink);
+}
+
+.barkery-house-case .case-study-summary {
+    border-left-color: rgba(107, 68, 56, 0.14);
+}
+
+.barkery-house-case .case-study-summary p {
+    color: var(--color-cocoa);
+}
+
+.barkery-house-case .case-study-live-link {
+    border-color: rgba(185, 79, 112, 0.35);
+
+    color: var(--color-deep-pink);
+}
+
+.barkery-house-case .case-study-live-link:hover {
+    color: var(--color-espresso);
+    border-color: var(--color-espresso);
+}
+
+
+/* ========================================
+   BARKERY — PROJECT VISUAL
+======================================== */
+
+.barkery-case-visual {
+    padding: 1rem 5rem 3rem 0;
+}
+
+.barkery-case-visual .case-desktop-frame {
+    border-color: rgba(107, 68, 56, 0.12);
+
+    background: #fff;
+
+    box-shadow: 0 28px 65px rgba(59, 36, 31, 0.14);
+}
+
+.barkery-case-visual .case-mobile-frame {
+    border-color: var(--color-dark-chocolate);
+
+    background: var(--color-dark-chocolate);
+}
+
+.barkery-case-visual .case-responsive-label {
+    border-color: rgba(185, 79, 112, 0.22);
+
+    background: var(--color-dark-chocolate);
+
+    color: var(--color-gelato-pink);
+
+    box-shadow: 0 8px 22px rgba(59, 36, 31, 0.12);
+}
+
+
+/* ========================================
+   BARKERY — DETAIL CARDS
+======================================== */
+
+.barkery-house-case .case-detail-block {
+    border-color: rgba(107, 68, 56, 0.12);
+
+    background: rgba(255, 255, 255, 0.62);
+
+    box-shadow: 0 12px 30px rgba(59, 36, 31, 0.045);
+}
+
+.barkery-house-case .case-detail-number {
+    border-color: rgba(185, 79, 112, 0.25);
+
+    background: rgba(185, 79, 112, 0.06);
+
+    color: var(--color-deep-pink);
+}
+
+.barkery-house-case .case-detail-block h3 {
+    color: var(--color-espresso);
+}
+
+.barkery-house-case .case-detail-block p:last-child {
+    color: rgba(107, 68, 56, 0.82);
+}
+
+
+/* ========================================
+   BARKERY — BEHIND THE BUILD
+======================================== */
+
+.barkery-system {
+    position: relative;
+    overflow: hidden;
+
+    margin: 1.25rem 0;
+    padding: clamp(2.5rem, 5vw, 4rem);
+
+    border-radius: var(--radius-large);
+
+    background:
+        radial-gradient(
+            circle at 90% 0%,
+            rgba(185, 79, 112, 0.18),
+            transparent 30%
+        ),
+        var(--color-dark-chocolate);
+
+    box-shadow: 0 24px 55px rgba(59, 36, 31, 0.16);
+}
+
+.barkery-system::before {
+    content: "</>";
+
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+
+    font-family: var(--font-code);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+
+    color: rgba(248, 234, 219, 0.035);
+
+    pointer-events: none;
+}
+
+
+/* System Heading */
+
+.barkery-system-heading {
+    position: relative;
+    z-index: 1;
+
+    max-width: 700px;
+
+    margin-bottom: 3rem;
+}
+
+.barkery-system-heading h3 {
+    max-width: 620px;
+
+    margin-bottom: 1rem;
+
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: var(--color-cream);
+}
+
+.barkery-system-heading h3 span {
+    color: var(--color-gelato-pink);
+    font-style: italic;
+}
+
+.barkery-system-heading > p:last-child {
+    max-width: 610px;
+
+    margin: 0;
+
+    font-size: 0.86rem;
+    line-height: 1.75;
+
+    color: rgba(248, 234, 219, 0.62);
+}
+
+
+/* ========================================
+   BARKERY — SYSTEM FLOW
+======================================== */
+
+.barkery-flow {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) auto
+        minmax(0, 1fr) auto
+        minmax(0, 1fr) auto
+        minmax(0, 1fr) auto
+        minmax(0, 1fr);
+
+    align-items: stretch;
+
+    gap: 0.65rem;
+}
+
+.barkery-flow-step {
+    min-width: 0;
+
+    padding: 1.25rem;
+
+    border: 1px solid rgba(248, 234, 219, 0.09);
+    border-radius: var(--radius-medium);
+
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.barkery-flow-step > span {
+    display: block;
+
+    margin-bottom: 1.4rem;
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    color: var(--color-gelato-pink);
+}
+
+.barkery-flow-step strong {
+    display: block;
+
+    margin-bottom: 0.65rem;
+
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    color: var(--color-cream);
+}
+
+.barkery-flow-step p {
+    margin: 0;
+
+    font-size: 0.68rem;
+    line-height: 1.6;
+
+    color: rgba(248, 234, 219, 0.5);
+}
+
+.barkery-flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   BARKERY — BUILD HIGHLIGHTS
+======================================== */
+
+.barkery-house-case .case-study-highlights {
+    border-color: rgba(185, 79, 112, 0.15);
+
+    background: rgba(232, 154, 170, 0.08);
+}
+
+.barkery-house-case .case-highlights-heading h3 {
+    color: var(--color-espresso);
+}
+
+.barkery-house-case .case-highlight-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.barkery-house-case .case-highlight-list li {
+    color: rgba(107, 68, 56, 0.82);
+}
+
+.barkery-house-case .case-highlight-list li::before {
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   BARKERY — TECHNOLOGY
+======================================== */
+
+.barkery-house-case .case-study-tech span {
+    border-color: rgba(107, 68, 56, 0.14);
+
+    background: rgba(255, 255, 255, 0.6);
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   BARKERY — PROJECT NOTE
+======================================== */
+
+.barkery-house-case .case-study-disclaimer {
+    border-top-color: rgba(107, 68, 56, 0.12);
+
+    color: rgba(107, 68, 56, 0.58);
+}
+/* ========================================
+   PORTFOLIO — SKILLS DEMONSTRATED
+======================================== */
+
+.portfolio-skills {
+    position: relative;
+    overflow: hidden;
+
+    padding: var(--section-padding) 0;
+
+    background:
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(255, 255, 255, 0.38),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #f3d6d9,
+            var(--color-blush)
+        );
+
+    color: var(--color-espresso);
+}
+
+
+/* Decorative Background */
+
+.portfolio-skills::before {
+    content: "{ }";
+
+    position: absolute;
+    right: 5%;
+    top: 5%;
+
+    font-family: var(--font-code);
+    font-size: clamp(5rem, 11vw, 10rem);
+    font-weight: 700;
+
+    color: rgba(107, 68, 56, 0.035);
+
+    pointer-events: none;
+}
+
+.portfolio-skills .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ========================================
+   SKILLS — HEADER
+======================================== */
+
+.portfolio-skills-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+    align-items: end;
+
+    gap: clamp(3rem, 7vw, 7rem);
+
+    margin-bottom: 4rem;
+}
+
+.portfolio-skills .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.portfolio-skills-title {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+    font-weight: 500;
+    line-height: 0.94;
+
+    color: var(--color-espresso);
+}
+
+.portfolio-skills-title span {
+    display: block;
+
+    margin-top: 0.12em;
+
+    color: var(--color-deep-pink);
+    font-style: italic;
+}
+
+.portfolio-skills-intro {
+    margin: 0;
+    padding-left: 2rem;
+
+    border-left: 1px solid rgba(107, 68, 56, 0.16);
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+
+    color: rgba(107, 68, 56, 0.82);
+}
+
+
+/* ========================================
+   CAPABILITY GRID
+======================================== */
+
+.portfolio-capability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1rem;
+}
+
+
+/* ========================================
+   CAPABILITY CARD
+======================================== */
+
+.portfolio-capability-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 390px;
+
+    padding: 2.25rem;
+
+    border: 1px solid rgba(248, 234, 219, 0.08);
+    border-radius: var(--radius-medium);
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(185, 79, 112, 0.14),
+            transparent 32%
+        ),
+        var(--color-dark-chocolate);
+
+    box-shadow: 0 18px 40px rgba(59, 36, 31, 0.1);
+}
+
+.portfolio-capability-card::after {
+    content: "";
+
+    position: absolute;
+    right: -55px;
+    bottom: -55px;
+
+    width: 145px;
+    height: 145px;
+
+    border: 1px solid rgba(232, 154, 170, 0.09);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.capability-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 2.2rem;
+
+    border: 1px solid rgba(232, 154, 170, 0.25);
+    border-radius: 50%;
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    color: var(--color-gelato-pink);
+}
+
+.capability-label {
+    margin-bottom: 0.65rem;
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: var(--color-gelato-pink);
+}
+
+.portfolio-capability-card h3 {
+    max-width: 420px;
+
+    margin-bottom: 1rem;
+
+    font-size: clamp(1.9rem, 3vw, 2.65rem);
+    font-weight: 500;
+    line-height: 1.05;
+
+    color: var(--color-cream);
+}
+
+.portfolio-capability-card h3 span {
+    color: var(--color-blush);
+    font-style: italic;
+}
+
+.portfolio-capability-card > p:not(.capability-label) {
+    max-width: 500px;
+
+    margin-bottom: 1.5rem;
+
+    font-size: 0.8rem;
+    line-height: 1.7;
+
+    color: rgba(248, 234, 219, 0.58);
+}
+
+
+/* Capability Lists */
+
+.portfolio-capability-card ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0.65rem 1rem;
+
+    margin: 0;
+    padding: 1.25rem 0 0;
+
+    border-top: 1px solid rgba(248, 234, 219, 0.08);
+
+    list-style: none;
+}
+
+.portfolio-capability-card li {
+    position: relative;
+
+    padding-left: 1rem;
+
+    font-size: 0.7rem;
+    line-height: 1.5;
+
+    color: rgba(248, 234, 219, 0.72);
+}
+
+.portfolio-capability-card li::before {
+    content: "+";
+
+    position: absolute;
+    left: 0;
+
+    font-family: var(--font-code);
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   TOOLKIT
+======================================== */
+
+.portfolio-toolkit {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1.45fr);
+    align-items: center;
+
+    gap: 3rem;
+
+    margin-top: 1rem;
+    padding: 2rem;
+
+    border: 1px solid rgba(107, 68, 56, 0.12);
+    border-radius: var(--radius-medium);
+
+    background: rgba(255, 255, 255, 0.42);
+}
+
+.portfolio-toolkit-heading {
+    padding-right: 2rem;
+
+    border-right: 1px solid rgba(107, 68, 56, 0.13);
+}
+
+.toolkit-code {
+    display: block;
+
+    margin-bottom: 0.65rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    color: var(--color-deep-pink);
+}
+
+.portfolio-toolkit-heading p {
+    margin: 0;
+
+    font-size: 0.75rem;
+    line-height: 1.65;
+
+    color: rgba(107, 68, 56, 0.72);
+}
+
+.portfolio-toolkit-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.55rem;
+}
+
+.portfolio-toolkit-list span {
+    padding: 0.5rem 0.75rem;
+
+    border: 1px solid rgba(107, 68, 56, 0.13);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    font-family: var(--font-code);
+    font-size: 0.56rem;
+    font-weight: 700;
+
+    color: var(--color-cocoa);
+}
+/* ========================================
+   PORTFOLIO — WHAT'S NEXT
+======================================== */
+
+.portfolio-next {
+    position: relative;
+    overflow: hidden;
+
+    padding: var(--section-padding) 0;
+
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(185, 79, 112, 0.14),
+            transparent 30%
+        ),
+        var(--color-dark-chocolate);
+
+    color: var(--color-cream);
+}
+
+
+/* Decorative Code Detail */
+
+.portfolio-next::before {
+    content: "</>";
+
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+
+    font-family: var(--font-code);
+    font-size: clamp(6rem, 13vw, 12rem);
+    font-weight: 700;
+
+    color: rgba(248, 234, 219, 0.025);
+
+    pointer-events: none;
+}
+
+.portfolio-next .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ========================================
+   WHAT'S NEXT — GRID
+======================================== */
+
+.portfolio-next-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+
+    gap: clamp(4rem, 8vw, 8rem);
+}
+
+
+/* ========================================
+   WHAT'S NEXT — HEADING
+======================================== */
+
+.portfolio-next-heading {
+    position: sticky;
+    top: 8rem;
+}
+
+.portfolio-next .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-gelato-pink);
+}
+
+.portfolio-next-title {
+    max-width: 540px;
+
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+    font-weight: 500;
+    line-height: 0.94;
+
+    color: var(--color-cream);
+}
+
+.portfolio-next-title span {
+    display: block;
+
+    margin-top: 0.12em;
+
+    color: var(--color-blush);
+    font-style: italic;
+}
+
+.portfolio-next-text {
+    max-width: 500px;
+
+    margin: 0;
+
+    font-size: 0.88rem;
+    line-height: 1.8;
+
+    color: rgba(248, 234, 219, 0.62);
+}
+
+
+/* ========================================
+   WHAT'S NEXT — PATH
+======================================== */
+
+.portfolio-next-path {
+    position: relative;
+
+    display: grid;
+    gap: 0;
+}
+
+
+/* Vertical Roadmap Line */
+
+.portfolio-next-path::before {
+    content: "";
+
+    position: absolute;
+    left: 23px;
+    top: 25px;
+    bottom: 25px;
+
+    width: 1px;
+
+    background: linear-gradient(
+        to bottom,
+        var(--color-deep-pink),
+        rgba(232, 154, 170, 0.12)
+    );
+}
+
+
+/* ========================================
+   PATH ITEM
+======================================== */
+
+.next-path-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1.5rem;
+
+    padding: 0 0 3.5rem;
+}
+
+.next-path-item:last-child {
+    padding-bottom: 0;
+}
+
+.next-path-number {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(232, 154, 170, 0.3);
+    border-radius: 50%;
+
+    background: var(--color-dark-chocolate);
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    color: var(--color-gelato-pink);
+}
+
+.next-path-item > div {
+    padding: 0.15rem 0 0;
+}
+
+.next-path-label {
+    margin-bottom: 0.55rem;
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-gelato-pink);
+}
+
+.next-path-item h3 {
+    max-width: 520px;
+
+    margin-bottom: 0.75rem;
+
+    font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+
+    color: var(--color-cream);
+}
+
+.next-path-item p:last-child {
+    max-width: 540px;
+
+    margin: 0;
+
+    font-size: 0.8rem;
+    line-height: 1.75;
+
+    color: rgba(248, 234, 219, 0.56);
+}
+
+
+/* ========================================
+   GROWING PORTFOLIO NOTE
+======================================== */
+
+.portfolio-next-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    margin-top: 4.5rem;
+    padding-top: 1.5rem;
+
+    border-top: 1px solid rgba(248, 234, 219, 0.09);
+}
+
+.next-note-code {
+    font-family: var(--font-code);
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    color: var(--color-gelato-pink);
+}
+
+.portfolio-next-note p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-style: italic;
+
+    color: rgba(248, 234, 219, 0.65);
+}
+/* ========================================
+   PORTFOLIO — FINAL CTA
+======================================== */
+
+.portfolio-final-cta {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(6rem, 10vw, 9rem) 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(232, 154, 170, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(185, 79, 112, 0.08),
+            transparent 26%
+        ),
+        var(--color-soft-cream);
+
+    color: var(--color-espresso);
+}
+
+
+/* Decorative Background Details */
+
+.portfolio-final-cta::before {
+    content: "< />";
+    position: absolute;
+
+    right: 5%;
+    top: 8%;
+
+    font-family: var(--font-code);
+    font-size: clamp(5rem, 11vw, 10rem);
+    font-weight: 700;
+
+    color: rgba(107, 68, 56, 0.035);
+
+    pointer-events: none;
+}
+
+.portfolio-final-cta::after {
+    content: "";
+
+    position: absolute;
+    left: -140px;
+    bottom: -190px;
+
+    width: 360px;
+    height: 360px;
+
+    border: 1px solid rgba(185, 79, 112, 0.08);
+    border-radius: 50%;
+
+    background: rgba(232, 154, 170, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   FINAL CTA — CONTENT
+======================================== */
+
+.portfolio-final-cta-inner {
+    position: relative;
+    z-index: 1;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.portfolio-final-cta .section-eyebrow {
+    margin-bottom: 1.25rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.portfolio-final-cta-title {
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(3.8rem, 7vw, 7rem);
+    font-weight: 500;
+    line-height: 0.92;
+
+    color: var(--color-espresso);
+}
+
+.portfolio-final-cta-title span {
+    display: block;
+
+    margin-top: 0.12em;
+
+    color: var(--color-deep-pink);
+    font-style: italic;
+}
+
+.portfolio-final-cta-text {
+    max-width: 620px;
+
+    margin: 0 auto 2.25rem;
+
+    font-size: 0.92rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   FINAL CTA — ACTIONS
+======================================== */
+
+.portfolio-final-cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+.portfolio-secondary-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.45rem;
+
+    padding-bottom: 0.35rem;
+
+    border-bottom: 1px solid rgba(107, 68, 56, 0.3);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    color: var(--color-espresso);
+
+    transition:
+        gap var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+.portfolio-secondary-link:hover {
+    gap: 0.75rem;
+
+    color: var(--color-deep-pink);
+    border-color: var(--color-deep-pink);
+}
+/* ========================================
    SITE FOOTER
 ======================================== */
 
@@ -4990,6 +6989,789 @@ p {
 
     font-size: 0.62rem;
     line-height: 1.65;
+}
+/* ========================================
+   PORTFOLIO PAGE — HERO — MOBILE
+======================================== */
+
+.portfolio-hero {
+    padding: 5rem 0 5.5rem;
+}
+
+
+/* Hero Grid */
+
+.portfolio-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+}
+
+
+/* Hero Content */
+
+.portfolio-hero-content {
+    max-width: none;
+}
+
+.portfolio-hero .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-size: 0.68rem;
+}
+
+.portfolio-hero-title {
+    margin-bottom: 1.25rem;
+
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    line-height: 0.98;
+}
+
+.portfolio-hero-text {
+    margin-bottom: 1.75rem;
+
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+
+/* Project Count */
+
+.portfolio-hero-count {
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.portfolio-count-number {
+    font-size: 2.2rem;
+}
+
+.portfolio-count-text {
+    font-size: 0.6rem;
+}
+
+
+/* Hero Visual */
+
+.portfolio-hero-visual {
+    width: 100%;
+}
+
+.portfolio-hero-image-wrap {
+    padding: 0.45rem;
+
+    border-radius: var(--radius-medium);
+}
+
+.portfolio-hero-image {
+    border-radius: calc(var(--radius-medium) - 5px);
+}
+
+
+/* Code Labels */
+
+.portfolio-hero-code {
+    padding: 0.4rem 0.6rem;
+
+    font-size: 0.52rem;
+}
+
+.portfolio-code-top {
+    top: -14px;
+    right: 6%;
+}
+
+.portfolio-code-middle {
+    top: 48%;
+    left: -8px;
+}
+
+.portfolio-code-bottom {
+    right: 8%;
+    bottom: -14px;
+}
+
+
+/* Pink Code Accent */
+
+.portfolio-hero-visual::after {
+    right: 10px;
+    bottom: 10%;
+
+    width: 52px;
+    height: 52px;
+
+    font-size: 0.72rem;
+}
+/* ========================================
+   PORTFOLIO — CASE STUDY — MOBILE
+======================================== */
+
+.portfolio-case-study {
+    padding: 4.5rem 0;
+}
+
+
+/* ========================================
+   CASE STUDY HEADER
+======================================== */
+
+.case-study-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    margin-bottom: 3rem;
+}
+
+.case-study-heading .section-eyebrow {
+    margin-bottom: 0.85rem;
+
+    font-size: 0.66rem;
+}
+
+.case-study-type {
+    margin-bottom: 0.85rem;
+
+    font-size: 0.58rem;
+    line-height: 1.6;
+}
+
+.case-study-title {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+    line-height: 0.92;
+}
+
+.case-study-summary {
+    padding-left: 0;
+    padding-top: 1.5rem;
+
+    border-left: 0;
+    border-top: 1px solid rgba(248, 234, 219, 0.12);
+}
+
+.case-study-summary p {
+    margin-bottom: 1.25rem;
+
+    font-size: 0.86rem;
+    line-height: 1.75;
+}
+
+.case-study-live-link {
+    font-size: 0.78rem;
+}
+
+
+/* ========================================
+   PROJECT VISUAL
+======================================== */
+
+.case-study-visual {
+    margin-bottom: 4rem;
+    padding: 0 0 4rem;
+}
+
+.case-desktop-frame {
+    border-radius: var(--radius-medium);
+}
+
+.case-mobile-frame {
+    right: 1rem;
+    bottom: 0;
+
+    width: 28%;
+    min-width: 92px;
+
+    border-width: 3px;
+    border-radius: 16px;
+}
+
+.case-mobile-frame img {
+    border-radius: 12px;
+}
+
+.case-responsive-label {
+    left: 0;
+    bottom: 1rem;
+
+    padding: 0.4rem 0.6rem;
+
+    font-size: 0.5rem;
+}
+
+
+/* ========================================
+   PROJECT DETAILS
+======================================== */
+
+.case-study-details {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.case-detail-block {
+    grid-template-columns: 42px 1fr;
+    gap: 1rem;
+
+    padding: 1.5rem;
+}
+
+.case-detail-number {
+    width: 38px;
+    height: 38px;
+
+    font-size: 0.58rem;
+}
+
+.case-detail-label {
+    font-size: 0.56rem;
+}
+
+.case-detail-block h3 {
+    margin-bottom: 0.75rem;
+
+    font-size: 1.35rem;
+}
+
+.case-detail-block p:last-child {
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BUILD HIGHLIGHTS
+======================================== */
+
+.case-study-highlights {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+
+    padding: 1.5rem;
+}
+
+.case-highlights-heading h3 {
+    font-size: 1.5rem;
+}
+
+.case-highlight-list {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+.case-highlight-list li {
+    font-size: 0.78rem;
+}
+
+
+/* ========================================
+   TECHNOLOGY
+======================================== */
+
+.case-study-tech {
+    gap: 0.5rem;
+
+    margin-top: 1.5rem;
+}
+
+.case-study-tech span {
+    padding: 0.45rem 0.65rem;
+
+    font-size: 0.54rem;
+}
+
+
+/* ========================================
+   DISCLAIMER
+======================================== */
+
+.case-study-disclaimer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+
+    font-size: 0.6rem;
+    line-height: 1.65;
+}
+/* ========================================
+   PORTFOLIO — MAISON ROSE — MOBILE
+======================================== */
+
+/* Header Divider */
+
+.maison-rose-case .case-study-summary {
+    border-top-color: rgba(107, 68, 56, 0.15);
+}
+
+
+/* ========================================
+   MAISON ROSE — PROJECT VISUAL — MOBILE
+======================================== */
+
+.maison-case-visual {
+    padding: 0 0 4rem;
+}
+
+
+/* Keep Phone Preview on Left */
+
+.maison-case-visual .case-mobile-frame {
+    right: auto;
+    left: 1rem;
+
+    width: 28%;
+    min-width: 92px;
+}
+
+
+/* Move Responsive Label Opposite the Phone */
+
+.maison-case-visual .case-responsive-label {
+    left: auto;
+    right: 0;
+    bottom: 1rem;
+}
+
+
+/* ========================================
+   MAISON ROSE — DETAIL CARDS — MOBILE
+======================================== */
+
+.maison-rose-case .case-detail-block {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ========================================
+   MAISON ROSE — BUILD HIGHLIGHTS — MOBILE
+======================================== */
+
+.maison-rose-case .case-study-highlights {
+    background: rgba(255, 255, 255, 0.44);
+}
+/* ========================================
+   PORTFOLIO — THE BARKERY HOUSE — MOBILE
+======================================== */
+
+/* Header Divider */
+
+.barkery-house-case .case-study-summary {
+    border-top-color: rgba(107, 68, 56, 0.14);
+}
+
+
+/* ========================================
+   BARKERY — PROJECT VISUAL — MOBILE
+======================================== */
+
+.barkery-case-visual {
+    padding: 0 0 4rem;
+}
+
+.barkery-case-visual .case-mobile-frame {
+    right: 1rem;
+    left: auto;
+
+    width: 28%;
+    min-width: 92px;
+}
+
+.barkery-case-visual .case-responsive-label {
+    left: 0;
+    right: auto;
+    bottom: 1rem;
+}
+
+
+/* ========================================
+   BARKERY — DETAIL CARDS — MOBILE
+======================================== */
+
+.barkery-house-case .case-detail-block {
+    background: rgba(255, 255, 255, 0.64);
+}
+
+
+/* ========================================
+   BARKERY — BEHIND THE BUILD — MOBILE
+======================================== */
+
+.barkery-system {
+    margin: 1rem 0;
+    padding: 2rem 1.25rem;
+
+    border-radius: var(--radius-medium);
+}
+
+.barkery-system::before {
+    right: 1rem;
+    top: 1rem;
+
+    font-size: 3.5rem;
+}
+
+
+/* System Heading */
+
+.barkery-system-heading {
+    margin-bottom: 2rem;
+}
+
+.barkery-system-heading h3 {
+    margin-bottom: 0.9rem;
+
+    font-size: clamp(2.2rem, 11vw, 3.25rem);
+    line-height: 0.98;
+}
+
+.barkery-system-heading > p:last-child {
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BARKERY — SYSTEM FLOW — MOBILE
+======================================== */
+
+.barkery-flow {
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.barkery-flow-step {
+    padding: 1.25rem;
+}
+
+.barkery-flow-step > span {
+    margin-bottom: 0.75rem;
+}
+
+.barkery-flow-step strong {
+    margin-bottom: 0.5rem;
+
+    font-size: 1.3rem;
+}
+
+.barkery-flow-step p {
+    font-size: 0.72rem;
+    line-height: 1.6;
+}
+
+
+/* Turn Horizontal Arrows Downward */
+
+.barkery-flow-arrow {
+    height: 2rem;
+
+    font-size: 0;
+}
+
+.barkery-flow-arrow::after {
+    content: "↓";
+
+    font-size: 0.9rem;
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   BARKERY — BUILD HIGHLIGHTS — MOBILE
+======================================== */
+
+.barkery-house-case .case-study-highlights {
+    background: rgba(232, 154, 170, 0.08);
+}
+
+.barkery-house-case .case-highlight-list {
+    grid-template-columns: 1fr;
+}
+/* ========================================
+   PORTFOLIO — SKILLS DEMONSTRATED — MOBILE
+======================================== */
+
+.portfolio-skills {
+    padding: 4.5rem 0;
+}
+
+
+/* ========================================
+   SKILLS — HEADER — MOBILE
+======================================== */
+
+.portfolio-skills-header {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+
+    margin-bottom: 3rem;
+}
+
+.portfolio-skills .section-eyebrow {
+    margin-bottom: 0.85rem;
+
+    font-size: 0.66rem;
+}
+
+.portfolio-skills-title {
+    font-size: clamp(2.9rem, 13vw, 4.25rem);
+    line-height: 0.95;
+}
+
+.portfolio-skills-intro {
+    padding-left: 0;
+    padding-top: 1.25rem;
+
+    border-left: 0;
+    border-top: 1px solid rgba(107, 68, 56, 0.16);
+
+    font-size: 0.84rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   CAPABILITY GRID — MOBILE
+======================================== */
+
+.portfolio-capability-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+}
+
+.portfolio-capability-card {
+    min-height: 0;
+
+    padding: 1.5rem;
+}
+
+.capability-number {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 1.6rem;
+
+    font-size: 0.54rem;
+}
+
+.capability-label {
+    font-size: 0.54rem;
+}
+
+.portfolio-capability-card h3 {
+    margin-bottom: 0.85rem;
+
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+}
+
+.portfolio-capability-card > p:not(.capability-label) {
+    margin-bottom: 1.25rem;
+
+    font-size: 0.78rem;
+}
+
+.portfolio-capability-card ul {
+    grid-template-columns: 1fr;
+
+    gap: 0.6rem;
+
+    padding-top: 1rem;
+}
+
+.portfolio-capability-card li {
+    font-size: 0.7rem;
+}
+
+
+/* ========================================
+   TOOLKIT — MOBILE
+======================================== */
+
+.portfolio-toolkit {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    margin-top: 0.85rem;
+    padding: 1.5rem;
+}
+
+.portfolio-toolkit-heading {
+    padding-right: 0;
+    padding-bottom: 1.25rem;
+
+    border-right: 0;
+    border-bottom: 1px solid rgba(107, 68, 56, 0.13);
+}
+
+.toolkit-code {
+    font-size: 0.66rem;
+}
+
+.portfolio-toolkit-heading p {
+    font-size: 0.72rem;
+}
+
+.portfolio-toolkit-list {
+    gap: 0.45rem;
+}
+
+.portfolio-toolkit-list span {
+    padding: 0.45rem 0.65rem;
+
+    font-size: 0.52rem;
+}
+/* ========================================
+   PORTFOLIO — WHAT'S NEXT — MOBILE
+======================================== */
+
+.portfolio-next {
+    padding: 4.5rem 0;
+}
+
+
+/* ========================================
+   WHAT'S NEXT — GRID — MOBILE
+======================================== */
+
+.portfolio-next-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+
+/* Remove Desktop Sticky Behavior */
+
+.portfolio-next-heading {
+    position: static;
+}
+
+.portfolio-next .section-eyebrow {
+    margin-bottom: 0.85rem;
+
+    font-size: 0.66rem;
+}
+
+.portfolio-next-title {
+    margin-bottom: 1.25rem;
+
+    font-size: clamp(2.9rem, 13vw, 4.25rem);
+    line-height: 0.95;
+}
+
+.portfolio-next-text {
+    font-size: 0.82rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   WHAT'S NEXT — ROADMAP — MOBILE
+======================================== */
+
+.portfolio-next-path::before {
+    left: 19px;
+    top: 20px;
+    bottom: 20px;
+}
+
+.next-path-item {
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+
+    padding-bottom: 2.75rem;
+}
+
+.next-path-number {
+    width: 40px;
+    height: 40px;
+
+    font-size: 0.54rem;
+}
+
+.next-path-label {
+    font-size: 0.54rem;
+}
+
+.next-path-item h3 {
+    margin-bottom: 0.65rem;
+
+    font-size: clamp(1.55rem, 7vw, 2rem);
+}
+
+.next-path-item p:last-child {
+    font-size: 0.76rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   GROWING PORTFOLIO NOTE — MOBILE
+======================================== */
+
+.portfolio-next-note {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0.65rem;
+
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+}
+
+.next-note-code {
+    font-size: 0.58rem;
+}
+
+.portfolio-next-note p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+/* ========================================
+   PORTFOLIO — FINAL CTA — MOBILE
+======================================== */
+
+.portfolio-final-cta {
+    padding: 5rem 0;
+}
+
+.portfolio-final-cta::before {
+    right: -1rem;
+    top: 5%;
+
+    font-size: 5rem;
+}
+
+.portfolio-final-cta-inner {
+    max-width: none;
+}
+
+.portfolio-final-cta .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-size: 0.64rem;
+}
+
+.portfolio-final-cta-title {
+    margin-bottom: 1.25rem;
+
+    font-size: clamp(3rem, 14vw, 4.5rem);
+    line-height: 0.94;
+}
+
+.portfolio-final-cta-text {
+    margin-bottom: 2rem;
+
+    font-size: 0.84rem;
+    line-height: 1.75;
+}
+
+.portfolio-final-cta-actions {
+    flex-direction: column;
+
+    gap: 1.25rem;
+}
+
+.portfolio-secondary-link {
+    font-size: 0.76rem;
 }
 /* ========================================
    SITE FOOTER — MOBILE
