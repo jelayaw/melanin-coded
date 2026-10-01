@@ -7784,6 +7784,4420 @@ p {
     color: rgba(107, 68, 56, 0.52);
 }
 /* ========================================
+   PROCESS — HERO
+======================================== */
+
+.process-hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: calc(100vh - 80px);
+
+    padding: clamp(7rem, 10vw, 10rem) 0 4rem;
+
+    background:
+        linear-gradient(
+            rgba(185, 79, 112, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(185, 79, 112, 0.035) 1px,
+            transparent 1px
+        ),
+        var(--color-soft-cream);
+
+    background-size: 48px 48px;
+
+    color: var(--color-espresso);
+}
+
+.process-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    left: -260px;
+    bottom: -280px;
+
+    border: 1px dashed rgba(185, 79, 112, 0.16);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.process-hero-container {
+    position: relative;
+
+    min-height: 680px;
+}
+
+
+/* ========================================
+   PROCESS HERO — MARKER
+======================================== */
+
+.process-hero-marker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.process-hero-marker .section-eyebrow {
+    margin: 0;
+
+    font-family: var(--font-code);
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.process-hero-marker > span {
+    font-family: var(--font-code);
+    font-size: 0.56rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.48);
+}
+
+
+/* ========================================
+   PROCESS HERO — MAIN HEADING
+======================================== */
+
+.process-hero-heading {
+    position: relative;
+    z-index: 3;
+
+    width: min(1000px, 92%);
+
+    margin-top: 5rem;
+}
+
+.process-hero-script {
+    position: absolute;
+
+    left: 3%;
+    top: -1.6rem;
+
+    font-family: var(--font-script);
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    line-height: 1;
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-4deg);
+}
+
+.process-hero-heading h1 {
+    margin: 0;
+
+    font-size: clamp(5.5rem, 10vw, 10rem);
+    font-weight: 500;
+    line-height: 0.76;
+
+    letter-spacing: -0.055em;
+
+    color: var(--color-espresso);
+}
+
+.process-hero-heading h1 span {
+    display: block;
+
+    margin-left: 18%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   PROCESS HERO — TRANSFORMATION
+======================================== */
+
+.process-transformation {
+    position: relative;
+    z-index: 3;
+
+    display: grid;
+    grid-template-columns:
+        auto minmax(70px, 1fr)
+        auto minmax(70px, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    width: min(720px, 65%);
+
+    margin: 4.5rem 0 0 12%;
+}
+
+.process-transform-word,
+.process-transform-code {
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.process-transform-word {
+    color: var(--color-cocoa);
+}
+
+.process-transform-code {
+    color: var(--color-deep-pink);
+}
+
+.process-transform-line {
+    position: relative;
+
+    height: 1px;
+
+    background: rgba(107, 68, 56, 0.22);
+}
+
+.process-transform-line::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--color-deep-pink);
+
+    transform: translateY(-50%);
+}
+
+
+/* ========================================
+   PROCESS HERO — SUPPORTING COPY
+======================================== */
+
+.process-hero-copy {
+    position: absolute;
+
+    right: 3%;
+    bottom: 6rem;
+
+    width: min(350px, 30%);
+}
+
+.process-hero-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(185, 79, 112, 0.28);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   PROCESS HERO — COUNTER
+======================================== */
+
+.process-hero-counter {
+    position: absolute;
+
+    left: 0;
+    bottom: 5.5rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.process-hero-counter > span {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    line-height: 0.8;
+
+    color: rgba(185, 79, 112, 0.18);
+}
+
+.process-hero-counter div {
+    padding-left: 1rem;
+
+    border-left:
+        1px solid rgba(107, 68, 56, 0.18);
+}
+
+.process-hero-counter p {
+    margin: 0;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-cocoa);
+}
+
+.process-hero-counter p:last-child {
+    margin-top: 0.25rem;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   PROCESS HERO — SCROLL CUE
+======================================== */
+
+.process-hero-scroll {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.65rem;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.48);
+}
+
+.process-hero-scroll span:last-child {
+    color: var(--color-deep-pink);
+}
+/* ========================================
+   PROCESS — START WITH THE IDEA
+======================================== */
+
+.process-idea {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-blush);
+
+    color: var(--color-espresso);
+}
+
+.process-idea::before {
+    content: "?";
+
+    position: absolute;
+
+    right: -0.05em;
+    top: -0.18em;
+
+    font-family: var(--font-display);
+    font-size: clamp(20rem, 42vw, 42rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(248, 234, 219, 0.09);
+
+    pointer-events: none;
+}
+
+.process-idea-container {
+    position: relative;
+
+    min-height: 1180px;
+}
+
+
+/* ========================================
+   IDEA — STAGE MARKER
+======================================== */
+
+.process-stage-marker {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.process-stage-marker > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid rgba(107, 68, 56, 0.22);
+    border-radius: 50%;
+
+    font-family: var(--font-code);
+    font-size: 0.56rem;
+    font-weight: 700;
+
+    color: var(--color-deep-pink);
+}
+
+.process-stage-marker div {
+    padding-left: 1rem;
+
+    border-left:
+        1px solid rgba(107, 68, 56, 0.18);
+}
+
+.process-stage-marker p {
+    margin: 0;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.58);
+}
+
+.process-stage-marker p:last-child {
+    margin-top: 0.25rem;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   IDEA — HEADING
+======================================== */
+
+.process-idea-heading {
+    position: relative;
+    z-index: 4;
+
+    max-width: 850px;
+
+    margin-top: 5rem;
+}
+
+.process-idea-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.process-idea-heading h2 {
+    margin: 0;
+
+    font-size: clamp(4.8rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-espresso);
+}
+
+.process-idea-heading h2 span {
+    display: block;
+
+    margin-left: 13%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   IDEA — INTRO COPY
+======================================== */
+
+.process-idea-copy {
+    position: relative;
+    z-index: 5;
+
+    width: min(390px, 34%);
+
+    margin: 2.75rem 8% 0 auto;
+}
+
+.process-idea-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(107, 68, 56, 0.2);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   IDEA — SCATTERED NOTES
+======================================== */
+
+.idea-thoughts {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 500px;
+
+    min-height: 470px;
+
+    z-index: 3;
+}
+
+.idea-note {
+    position: absolute;
+
+    width: min(270px, 24%);
+
+    padding: 1.6rem 1.5rem;
+
+    background: var(--color-soft-cream);
+
+    box-shadow:
+        0 16px 40px rgba(74, 44, 34, 0.08);
+}
+
+.idea-note::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: -8px;
+
+    width: 54px;
+    height: 16px;
+
+    background: rgba(248, 234, 219, 0.55);
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+}
+
+.idea-note > span {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+
+    color: var(--color-deep-pink);
+}
+
+.idea-note p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.12;
+
+    color: var(--color-espresso);
+}
+
+
+/* ========================================
+   INDIVIDUAL NOTE POSITIONS
+======================================== */
+
+.idea-note-one {
+    left: 3%;
+    top: 70px;
+
+    transform: rotate(-4deg);
+}
+
+.idea-note-two {
+    left: 31%;
+    top: 210px;
+
+    transform: rotate(2.5deg);
+}
+
+.idea-note-three {
+    right: 17%;
+    top: 35px;
+
+    transform: rotate(-1.5deg);
+}
+
+.idea-note-four {
+    right: 0;
+    top: 260px;
+
+    transform: rotate(4deg);
+}
+
+
+/* ========================================
+   IDEA — FLOATING QUESTIONS
+======================================== */
+
+.idea-questions {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.idea-question {
+    position: absolute;
+
+    font-family: var(--font-script);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1;
+
+    color: rgba(107, 68, 56, 0.14);
+
+    white-space: nowrap;
+}
+
+.idea-question-one {
+    left: 4%;
+    top: 40%;
+
+    transform: rotate(-8deg);
+}
+
+.idea-question-two {
+    right: 4%;
+    top: 46%;
+
+    transform: rotate(6deg);
+}
+
+.idea-question-three {
+    left: 38%;
+    top: 69%;
+
+    transform: rotate(-4deg);
+}
+
+
+/* ========================================
+   IDEA — WHAT HAPPENS HERE
+======================================== */
+
+.process-idea-outcome {
+    position: absolute;
+    z-index: 5;
+
+    left: 6%;
+    bottom: 5rem;
+
+    width: min(390px, 35%);
+}
+
+.idea-outcome-label {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    font-family: var(--font-code);
+    font-size: 0.54rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.process-idea-outcome p {
+    margin: 0;
+
+    padding-top: 1rem;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.2);
+
+    font-size: 0.76rem;
+    line-height: 1.75;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   IDEA — STAGE RESULT
+======================================== */
+
+.process-stage-result {
+    position: absolute;
+    z-index: 5;
+
+    right: 5%;
+    bottom: 4.5rem;
+
+    width: min(470px, 42%);
+}
+
+.process-stage-result > span:first-child {
+    display: block;
+
+    margin-bottom: 0.75rem;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.55);
+}
+
+.process-stage-result p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.05;
+
+    color: var(--color-espresso);
+}
+
+.process-stage-result em {
+    display: block;
+
+    font-weight: 500;
+
+    color: var(--color-deep-pink);
+}
+
+.process-stage-result > span:last-child {
+    position: absolute;
+
+    right: 0;
+    bottom: -2.5rem;
+
+    font-family: var(--font-code);
+    font-size: 1.3rem;
+
+    color: var(--color-deep-pink);
+}
+/* ========================================
+   PROCESS — MAKE IT OFFICIAL
+======================================== */
+
+.process-official {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-soft-cream);
+
+    color: var(--color-espresso);
+}
+
+.process-official::before {
+    content: "02";
+
+    position: absolute;
+
+    right: -0.04em;
+    top: -0.18em;
+
+    font-family: var(--font-display);
+    font-size: clamp(18rem, 38vw, 38rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(185, 79, 112, 0.035);
+
+    pointer-events: none;
+}
+
+.process-official-container {
+    position: relative;
+
+    min-height: 1280px;
+}
+
+
+/* ========================================
+   OFFICIAL — STAGE MARKER
+======================================== */
+
+.process-official-marker {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ========================================
+   OFFICIAL — HEADING
+======================================== */
+
+.process-official-heading {
+    position: relative;
+    z-index: 5;
+
+    max-width: 900px;
+
+    margin-top: 5rem;
+}
+
+.process-official-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.process-official-heading h2 {
+    margin: 0;
+
+    font-size: clamp(4.8rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-espresso);
+}
+
+.process-official-heading h2 span {
+    display: block;
+
+    margin-left: 16%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   OFFICIAL — INTRO COPY
+======================================== */
+
+.process-official-copy {
+    position: relative;
+    z-index: 5;
+
+    width: min(380px, 32%);
+
+    margin: 2.5rem 5% 0 auto;
+}
+
+.process-official-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(185, 79, 112, 0.25);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   OFFICIAL — PROJECT BRIEF
+======================================== */
+
+.official-brief {
+    position: absolute;
+    z-index: 4;
+
+    left: 3%;
+    top: 470px;
+
+    width: min(680px, 60%);
+
+    padding: 2.25rem 2.5rem 2rem;
+
+    background: var(--color-cream);
+
+    border:
+        1px solid rgba(107, 68, 56, 0.12);
+
+    box-shadow:
+        0 24px 60px rgba(74, 44, 34, 0.07);
+}
+
+
+/* ========================================
+   PROJECT BRIEF — TOP
+======================================== */
+
+.official-brief-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-bottom: 1rem;
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.15);
+}
+
+.official-brief-top span {
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.55);
+}
+
+.official-brief-top span:last-child {
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   PROJECT BRIEF — TITLE
+======================================== */
+
+.official-brief-title {
+    padding: 2rem 0 2.4rem;
+}
+
+.official-brief-title > p {
+    margin: 0 0 0.4rem;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.official-brief-title h3 {
+    max-width: 470px;
+
+    margin: 0;
+
+    font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+    font-weight: 500;
+    line-height: 0.9;
+
+    color: var(--color-espresso);
+}
+
+.official-brief-title h3 em {
+    display: block;
+
+    margin-left: 10%;
+
+    font-weight: 500;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   PROJECT BRIEF — ROWS
+======================================== */
+
+.official-brief-row {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+
+    gap: 1.2rem;
+
+    padding: 1.3rem 0;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.12);
+}
+
+.official-brief-number {
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    color: rgba(185, 79, 112, 0.55);
+}
+
+.official-brief-label {
+    margin: 0 0 0.35rem;
+
+    font-family: var(--font-code);
+    font-size: 0.54rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.official-brief-text {
+    max-width: 470px;
+
+    margin: 0;
+
+    font-size: 0.7rem;
+    line-height: 1.65;
+
+    color: rgba(107, 68, 56, 0.7);
+}
+
+
+/* ========================================
+   PROJECT BRIEF — FOOTER
+======================================== */
+
+.official-brief-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-top: 1rem;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.15);
+}
+
+.official-brief-footer span {
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.45);
+}
+
+
+/* ========================================
+   OFFICIAL — DEPOSIT
+======================================== */
+
+.official-deposit {
+    position: absolute;
+    z-index: 5;
+
+    right: 2%;
+    top: 570px;
+
+    width: min(330px, 29%);
+}
+
+.official-deposit-label {
+    display: block;
+
+    margin-bottom: 0.75rem;
+
+    font-family: var(--font-code);
+    font-size: 0.54rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.official-deposit-number {
+    display: flex;
+    align-items: flex-start;
+
+    line-height: 0.72;
+}
+
+.official-deposit-number span:first-child {
+    font-family: var(--font-display);
+    font-size: clamp(8rem, 14vw, 14rem);
+    font-weight: 500;
+
+    letter-spacing: -0.07em;
+
+    color: var(--color-espresso);
+}
+
+.official-deposit-number span:last-child {
+    margin: 0.5rem 0 0 0.3rem;
+
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    color: var(--color-deep-pink);
+}
+
+.official-deposit > p {
+    margin: 0.7rem 0 0;
+
+    font-family: var(--font-script);
+    font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+    line-height: 1;
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-4deg);
+}
+
+.official-deposit-note {
+    display: block;
+
+    margin-top: 1.25rem;
+    padding-top: 0.8rem;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.18);
+
+    font-size: 0.68rem;
+    line-height: 1.6;
+
+    color: rgba(107, 68, 56, 0.65);
+}
+
+
+/* ========================================
+   OFFICIAL — AGREEMENT
+======================================== */
+
+.official-agreement {
+    position: absolute;
+    z-index: 5;
+
+    right: 5%;
+    top: 910px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.9rem;
+}
+
+.official-agreement > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid rgba(185, 79, 112, 0.35);
+    border-radius: 50%;
+
+    font-family: var(--font-code);
+    font-size: 0.65rem;
+
+    color: var(--color-deep-pink);
+}
+
+.official-agreement p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    line-height: 1.1;
+
+    color: var(--color-espresso);
+}
+
+.official-agreement em {
+    display: block;
+
+    font-weight: 500;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   OFFICIAL — STAGE RESULT
+======================================== */
+
+.official-stage-result {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: min(520px, 45%);
+}
+/* ========================================
+   PROCESS — GATHER THE PIECES
+======================================== */
+
+.process-gather {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-dark-chocolate);
+
+    color: var(--color-cream);
+}
+
+.process-gather::before {
+    content: "03";
+
+    position: absolute;
+
+    left: -0.08em;
+    top: -0.2em;
+
+    font-family: var(--font-display);
+    font-size: clamp(20rem, 40vw, 40rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(248, 234, 219, 0.025);
+
+    pointer-events: none;
+}
+
+.process-gather-container {
+    position: relative;
+
+    min-height: 1420px;
+}
+
+
+/* ========================================
+   GATHER — STAGE MARKER
+======================================== */
+
+.process-gather-marker {
+    position: relative;
+    z-index: 5;
+}
+
+.process-gather-marker > span {
+    border-color: rgba(248, 234, 219, 0.18);
+
+    color: var(--color-gelato-pink);
+}
+
+.process-gather-marker div {
+    border-color: rgba(248, 234, 219, 0.14);
+}
+
+.process-gather-marker p {
+    color: rgba(248, 234, 219, 0.45);
+}
+
+.process-gather-marker p:last-child {
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   GATHER — HEADING
+======================================== */
+
+.process-gather-heading {
+    position: relative;
+    z-index: 5;
+
+    max-width: 940px;
+
+    margin-top: 5rem;
+}
+
+.process-gather-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-gelato-pink);
+}
+
+.process-gather-heading h2 {
+    margin: 0;
+
+    font-size: clamp(4.8rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-cream);
+}
+
+.process-gather-heading h2 span {
+    display: block;
+
+    margin-left: 12%;
+
+    font-style: italic;
+
+    color: var(--color-blush);
+}
+
+
+/* ========================================
+   GATHER — INTRO COPY
+======================================== */
+
+.process-gather-copy {
+    position: relative;
+    z-index: 5;
+
+    width: min(390px, 33%);
+
+    margin: 2.5rem 4% 0 auto;
+}
+
+.process-gather-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(232, 154, 170, 0.28);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: rgba(248, 234, 219, 0.6);
+}
+
+
+/* ========================================
+   GATHER — WORKSPACE
+======================================== */
+
+.gather-workspace {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 500px;
+
+    min-height: 590px;
+
+    z-index: 3;
+}
+
+.gather-asset {
+    position: absolute;
+
+    padding: 1.5rem;
+
+    border:
+        1px solid rgba(248, 234, 219, 0.11);
+}
+
+.gather-asset-number {
+    display: block;
+
+    margin-bottom: 1.5rem;
+
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    color: var(--color-gelato-pink);
+}
+
+.gather-asset-type {
+    margin: 0 0 0.35rem;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(248, 234, 219, 0.45);
+}
+
+.gather-asset h3 {
+    margin: 0 0 0.9rem;
+
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: var(--color-cream);
+}
+
+.gather-asset > p:last-of-type {
+    margin: 0;
+
+    font-size: 0.68rem;
+    line-height: 1.65;
+
+    color: rgba(248, 234, 219, 0.55);
+}
+
+
+/* ========================================
+   COPY — TYPESET SHEET
+======================================== */
+
+.gather-copy-asset {
+    left: 2%;
+    top: 30px;
+
+    width: 28%;
+    min-height: 330px;
+
+    background: var(--color-cream);
+
+    border-color: transparent;
+
+    transform: rotate(-3deg);
+}
+
+.gather-copy-asset .gather-asset-type {
+    color: rgba(107, 68, 56, 0.55);
+}
+
+.gather-copy-asset h3 {
+    color: var(--color-espresso);
+}
+
+.gather-copy-asset > p:last-of-type {
+    max-width: 80%;
+
+    color: var(--color-cocoa);
+}
+
+.gather-asset-mark {
+    position: absolute;
+
+    right: 1rem;
+    bottom: 0.4rem;
+
+    font-family: var(--font-display);
+    font-size: 7rem;
+    line-height: 1;
+
+    color: rgba(185, 79, 112, 0.1);
+}
+
+
+/* ========================================
+   VISUALS — PHOTO FRAME
+======================================== */
+
+.gather-image-asset {
+    left: 34%;
+    top: 165px;
+
+    width: 25%;
+    min-height: 330px;
+
+    background: rgba(248, 234, 219, 0.035);
+
+    transform: rotate(2deg);
+}
+
+.gather-image-placeholder {
+    position: absolute;
+
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+
+    height: 82px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(232, 154, 170, 0.25);
+}
+
+.gather-image-placeholder::before {
+    content: "";
+
+    position: absolute;
+
+    left: -5%;
+    bottom: -35%;
+
+    width: 70%;
+    height: 100%;
+
+    border-radius: 50% 50% 0 0;
+
+    background: rgba(232, 154, 170, 0.12);
+
+    transform: rotate(18deg);
+}
+
+.gather-image-placeholder span:first-child {
+    position: absolute;
+
+    right: 16px;
+    top: 14px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: rgba(232, 154, 170, 0.3);
+}
+
+.gather-image-placeholder span:last-child {
+    position: absolute;
+
+    left: 42%;
+    bottom: -28px;
+
+    width: 100px;
+    height: 80px;
+
+    border:
+        1px solid rgba(248, 234, 219, 0.15);
+
+    transform: rotate(45deg);
+}
+
+
+/* ========================================
+   BRAND — SWATCH BOARD
+======================================== */
+
+.gather-brand-asset {
+    right: 3%;
+    top: 10px;
+
+    width: 31%;
+    min-height: 300px;
+
+    border:
+        1px dashed rgba(232, 154, 170, 0.25);
+
+    transform: rotate(-1deg);
+}
+
+.gather-swatches {
+    display: flex;
+
+    gap: 0.7rem;
+
+    margin-top: 1.5rem;
+}
+
+.gather-swatches span {
+    display: block;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+}
+
+.gather-swatches span:nth-child(1) {
+    background: var(--color-blush);
+}
+
+.gather-swatches span:nth-child(2) {
+    background: var(--color-deep-pink);
+}
+
+.gather-swatches span:nth-child(3) {
+    background: var(--color-cocoa);
+
+    border:
+        1px solid rgba(248, 234, 219, 0.15);
+}
+
+
+/* ========================================
+   DETAILS — TECHNICAL FRAGMENT
+======================================== */
+
+.gather-details-asset {
+    right: 8%;
+    top: 365px;
+
+    width: 30%;
+    min-height: 245px;
+
+    background: var(--color-espresso);
+
+    border-color:
+        rgba(232, 154, 170, 0.14);
+
+    transform: rotate(2.5deg);
+}
+
+.gather-detail-code {
+    position: absolute;
+
+    right: 1.2rem;
+    bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   CLIENT RESPONSIBILITY NOTE
+======================================== */
+
+.gather-client-note {
+    position: absolute;
+    z-index: 5;
+
+    left: 3%;
+    bottom: 13rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 1.2rem;
+
+    width: min(470px, 42%);
+}
+
+.gather-client-symbol {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    line-height: 0.8;
+
+    color: var(--color-gelato-pink);
+}
+
+.gather-client-note div > span {
+    display: block;
+
+    margin-bottom: 0.65rem;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-gelato-pink);
+}
+
+.gather-client-note p {
+    margin: 0;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+
+    color: rgba(248, 234, 219, 0.6);
+}
+
+
+/* ========================================
+   FLEXIBLE NOTE
+======================================== */
+
+.gather-flexible {
+    position: absolute;
+    z-index: 5;
+
+    right: 4%;
+    bottom: 13rem;
+
+    width: min(340px, 30%);
+}
+
+.gather-flexible > span {
+    display: block;
+
+    margin-bottom: 0.6rem;
+
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-style: italic;
+
+    color: var(--color-blush);
+}
+
+.gather-flexible p {
+    margin: 0;
+
+    padding-top: 0.75rem;
+
+    border-top:
+        1px solid rgba(248, 234, 219, 0.12);
+
+    font-size: 0.68rem;
+    line-height: 1.65;
+
+    color: rgba(248, 234, 219, 0.5);
+}
+
+
+/* ========================================
+   GATHER — STAGE RESULT
+======================================== */
+
+.gather-stage-result {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: min(530px, 46%);
+}
+
+.gather-stage-result > span:first-child {
+    color: rgba(248, 234, 219, 0.4);
+}
+
+.gather-stage-result p {
+    color: var(--color-cream);
+}
+
+.gather-stage-result em {
+    color: var(--color-blush);
+}
+
+.gather-stage-result > span:last-child {
+    color: var(--color-gelato-pink);
+}
+/* ========================================
+   PROCESS — SHAPE THE DIRECTION
+======================================== */
+
+.process-direction {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-cream);
+
+    color: var(--color-espresso);
+}
+
+.process-direction::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(107, 68, 56, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(107, 68, 56, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 32px 32px;
+
+    pointer-events: none;
+}
+
+.process-direction-container {
+    position: relative;
+
+    min-height: 1430px;
+}
+
+
+/* ========================================
+   DIRECTION — STAGE MARKER
+======================================== */
+
+.process-direction-marker {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ========================================
+   DIRECTION — HEADING
+======================================== */
+
+.process-direction-heading {
+    position: relative;
+    z-index: 5;
+
+    max-width: 950px;
+
+    margin-top: 5rem;
+}
+
+.process-direction-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.process-direction-heading h2 {
+    margin: 0;
+
+    font-size: clamp(4.8rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-espresso);
+}
+
+.process-direction-heading h2 span {
+    display: block;
+
+    margin-left: 12%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   DIRECTION — INTRO COPY
+======================================== */
+
+.process-direction-copy {
+    position: relative;
+    z-index: 5;
+
+    width: min(390px, 33%);
+
+    margin: 2.5rem 5% 0 auto;
+}
+
+.process-direction-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(185, 79, 112, 0.25);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   DIRECTION — WORKSPACE
+======================================== */
+
+.direction-workspace {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    right: 0;
+    top: 500px;
+
+    min-height: 570px;
+}
+
+
+/* ========================================
+   DIRECTION — BROWSER
+======================================== */
+
+.direction-browser {
+    position: absolute;
+
+    left: 8%;
+    top: 40px;
+
+    width: min(760px, 68%);
+
+    background: var(--color-soft-cream);
+
+    border:
+        1px solid rgba(107, 68, 56, 0.18);
+
+    box-shadow:
+        18px 20px 0 rgba(185, 79, 112, 0.07);
+}
+
+.direction-browser-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 0.85rem 1rem;
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.14);
+}
+
+.direction-browser-bar > div {
+    display: flex;
+
+    gap: 0.35rem;
+}
+
+.direction-browser-bar > div span {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: rgba(185, 79, 112, 0.35);
+}
+
+.direction-browser-bar > span {
+    font-family: var(--font-code);
+    font-size: 0.46rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.45);
+}
+
+
+/* ========================================
+   WIREFRAME
+======================================== */
+
+.direction-wireframe {
+    padding: 1.7rem;
+}
+
+.wire-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 1.2rem;
+
+    border-bottom:
+        1px dashed rgba(107, 68, 56, 0.14);
+}
+
+.wire-logo {
+    display: block;
+
+    width: 72px;
+    height: 12px;
+
+    background: rgba(185, 79, 112, 0.22);
+}
+
+.wire-nav > div {
+    display: flex;
+
+    gap: 0.65rem;
+}
+
+.wire-nav > div span {
+    display: block;
+
+    width: 34px;
+    height: 5px;
+
+    background: rgba(107, 68, 56, 0.14);
+}
+
+
+/* ========================================
+   WIREFRAME — HERO
+======================================== */
+
+.wire-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 2rem;
+
+    min-height: 245px;
+
+    padding: 2rem 0;
+}
+
+.wire-hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 0.75rem;
+}
+
+.wire-hero-copy span {
+    display: block;
+
+    height: 13px;
+
+    background: rgba(107, 68, 56, 0.12);
+}
+
+.wire-hero-copy span:first-child {
+    width: 82%;
+    height: 27px;
+
+    background: rgba(185, 79, 112, 0.18);
+}
+
+.wire-hero-copy span:nth-child(2) {
+    width: 68%;
+}
+
+.wire-hero-copy span:nth-child(3) {
+    width: 48%;
+}
+
+.wire-hero-image {
+    position: relative;
+
+    min-height: 200px;
+
+    border:
+        1px solid rgba(107, 68, 56, 0.16);
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49.5%,
+            rgba(107, 68, 56, 0.1) 50%,
+            transparent 50.5%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 49.5%,
+            rgba(107, 68, 56, 0.1) 50%,
+            transparent 50.5%
+        );
+}
+
+.wire-hero-image span {
+    position: absolute;
+
+    right: 12%;
+    top: 12%;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: rgba(185, 79, 112, 0.18);
+}
+
+
+/* ========================================
+   WIREFRAME — CONTENT
+======================================== */
+
+.wire-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1rem;
+
+    padding-top: 1.4rem;
+
+    border-top:
+        1px dashed rgba(107, 68, 56, 0.14);
+}
+
+.wire-content div {
+    height: 92px;
+
+    border:
+        1px solid rgba(107, 68, 56, 0.13);
+}
+
+.wire-content div:nth-child(2) {
+    background: rgba(185, 79, 112, 0.045);
+}
+
+
+/* ========================================
+   DESIGN ANNOTATIONS
+======================================== */
+
+.direction-note {
+    position: absolute;
+    z-index: 5;
+
+    width: 190px;
+
+    padding-top: 0.7rem;
+
+    border-top:
+        1px solid rgba(185, 79, 112, 0.4);
+}
+
+.direction-note span {
+    display: block;
+
+    margin-bottom: 0.35rem;
+
+    font-family: var(--font-code);
+    font-size: 0.46rem;
+    font-weight: 700;
+
+    color: var(--color-deep-pink);
+}
+
+.direction-note p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.15;
+
+    color: var(--color-cocoa);
+}
+
+.direction-note-one {
+    right: 1%;
+    top: 55px;
+}
+
+.direction-note-two {
+    right: 3%;
+    top: 245px;
+}
+
+.direction-note-three {
+    right: 8%;
+    top: 440px;
+}
+
+
+/* ========================================
+   MEASUREMENTS + SCRIBBLE
+======================================== */
+
+.direction-measure {
+    position: absolute;
+
+    font-family: var(--font-code);
+    font-size: 0.46rem;
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.4);
+}
+
+.direction-measure-one {
+    left: 10%;
+    top: 5px;
+}
+
+.direction-measure-two {
+    left: 32%;
+    bottom: -1.8rem;
+}
+
+.direction-scribble {
+    position: absolute;
+
+    left: 1%;
+    top: 390px;
+
+    font-family: var(--font-script);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    line-height: 1;
+
+    color: rgba(185, 79, 112, 0.55);
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   DIRECTION — PRINCIPLES
+======================================== */
+
+.direction-principles {
+    position: absolute;
+    z-index: 5;
+
+    left: 0;
+    right: 0;
+    bottom: 14rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.direction-principles > div {
+    min-height: 135px;
+
+    padding: 1.4rem 2rem 0;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.18);
+}
+
+.direction-principles > div + div {
+    border-left:
+        1px solid rgba(107, 68, 56, 0.13);
+}
+
+.direction-principles span {
+    display: block;
+
+    margin-bottom: 0.75rem;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.direction-principles p {
+    max-width: 280px;
+
+    margin: 0;
+
+    font-size: 0.68rem;
+    line-height: 1.65;
+
+    color: rgba(107, 68, 56, 0.67);
+}
+
+
+/* ========================================
+   DIRECTION — APPROVAL
+======================================== */
+
+.direction-approval {
+    position: absolute;
+    z-index: 6;
+
+    left: 2%;
+    bottom: 3rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 0.9rem;
+
+    width: min(330px, 29%);
+}
+
+.direction-approval > span {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid rgba(185, 79, 112, 0.35);
+    border-radius: 50%;
+
+    font-family: var(--font-code);
+    font-size: 0.6rem;
+
+    color: var(--color-deep-pink);
+}
+
+.direction-approval div > span {
+    display: block;
+
+    margin-bottom: 0.45rem;
+
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.direction-approval p {
+    margin: 0;
+
+    font-size: 0.66rem;
+    line-height: 1.6;
+
+    color: rgba(107, 68, 56, 0.65);
+}
+
+
+/* ========================================
+   DIRECTION — STAGE RESULT
+======================================== */
+
+.direction-stage-result {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: min(550px, 48%);
+}
+/* ========================================
+   PROCESS — BUILD IT
+======================================== */
+
+.process-build {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-dark-chocolate);
+
+    color: var(--color-cream);
+}
+
+.process-build::before {
+    content: "05";
+
+    position: absolute;
+
+    right: -0.06em;
+    top: -0.18em;
+
+    font-family: var(--font-display);
+    font-size: clamp(20rem, 40vw, 40rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(248, 234, 219, 0.025);
+
+    pointer-events: none;
+}
+
+.process-build-container {
+    position: relative;
+
+    min-height: 1440px;
+}
+
+
+/* ========================================
+   BUILD — STAGE MARKER
+======================================== */
+
+.process-build-marker {
+    position: relative;
+    z-index: 5;
+}
+
+.process-build-marker > span {
+    border-color: rgba(248, 234, 219, 0.18);
+
+    color: var(--color-gelato-pink);
+}
+
+.process-build-marker div {
+    border-color: rgba(248, 234, 219, 0.14);
+}
+
+.process-build-marker p {
+    color: rgba(248, 234, 219, 0.45);
+}
+
+.process-build-marker p:last-child {
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   BUILD — HEADING
+======================================== */
+
+.process-build-heading {
+    position: relative;
+    z-index: 5;
+
+    max-width: 950px;
+
+    margin-top: 5rem;
+}
+
+.process-build-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-gelato-pink);
+}
+
+.process-build-heading h2 {
+    margin: 0;
+
+    font-size: clamp(4.8rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-cream);
+}
+
+.process-build-heading h2 span {
+    display: block;
+
+    margin-left: 12%;
+
+    font-style: italic;
+
+    color: var(--color-blush);
+}
+
+
+/* ========================================
+   BUILD — INTRO COPY
+======================================== */
+
+.process-build-copy {
+    position: relative;
+    z-index: 5;
+
+    width: min(400px, 34%);
+
+    margin: 2.5rem 4% 0 auto;
+}
+
+.process-build-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(232, 154, 170, 0.28);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: rgba(248, 234, 219, 0.6);
+}
+
+
+/* ========================================
+   BUILD — DEVELOPMENT WORKSPACE
+======================================== */
+
+.build-workspace {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    right: 0;
+    top: 500px;
+
+    min-height: 560px;
+}
+
+
+/* ========================================
+   BUILD — CODE EDITOR
+======================================== */
+
+.build-editor {
+    position: absolute;
+
+    left: 2%;
+    top: 25px;
+
+    width: min(650px, 58%);
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(248, 234, 219, 0.12);
+
+    background: var(--color-espresso);
+
+    box-shadow:
+        18px 20px 0 rgba(232, 154, 170, 0.045);
+}
+
+.build-editor-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 0.85rem 1rem;
+
+    border-bottom:
+        1px solid rgba(248, 234, 219, 0.1);
+}
+
+.build-editor-top > div {
+    display: flex;
+
+    gap: 0.35rem;
+}
+
+.build-editor-top > div span {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: rgba(232, 154, 170, 0.42);
+}
+
+.build-editor-top > span {
+    font-family: var(--font-code);
+    font-size: 0.46rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(248, 234, 219, 0.35);
+}
+
+
+/* ========================================
+   BUILD — EDITOR TABS
+======================================== */
+
+.build-editor-tabs {
+    display: flex;
+    align-items: center;
+
+    border-bottom:
+        1px solid rgba(248, 234, 219, 0.08);
+}
+
+.build-editor-tabs span {
+    padding: 0.7rem 1rem;
+
+    border-right:
+        1px solid rgba(248, 234, 219, 0.07);
+
+    font-family: var(--font-code);
+    font-size: 0.45rem;
+
+    color: rgba(248, 234, 219, 0.32);
+}
+
+.build-editor-tabs span.active {
+    border-top:
+        1px solid var(--color-gelato-pink);
+
+    background: rgba(248, 234, 219, 0.025);
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   BUILD — CODE
+======================================== */
+
+.build-code {
+    min-height: 390px;
+
+    padding: 1.8rem 1.3rem 2rem;
+
+    font-family: var(--font-code);
+    font-size: 0.67rem;
+    line-height: 2;
+
+    color: rgba(248, 234, 219, 0.7);
+}
+
+.build-code > div {
+    display: flex;
+    align-items: baseline;
+
+    min-height: 1.4rem;
+
+    white-space: nowrap;
+}
+
+.build-line-number {
+    flex: 0 0 35px;
+
+    margin-right: 1rem;
+
+    color: rgba(248, 234, 219, 0.18);
+}
+
+.build-code-indent {
+    display: inline-block;
+
+    width: 1.5rem;
+}
+
+.build-code-gap {
+    height: 1rem;
+}
+
+.build-code-pink {
+    color: var(--color-gelato-pink);
+}
+
+.build-code-light {
+    color: rgba(248, 234, 219, 0.72);
+}
+
+.build-code-gold {
+    color: var(--color-caramel);
+}
+
+.build-code-selector {
+    color: var(--color-blush);
+}
+
+.build-code-property {
+    color: rgba(232, 154, 170, 0.82);
+}
+
+
+/* ========================================
+   BUILD — LIVE PREVIEW
+======================================== */
+
+.build-preview {
+    position: absolute;
+
+    right: 1%;
+    top: 170px;
+
+    width: min(480px, 42%);
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(248, 234, 219, 0.18);
+
+    background: var(--color-soft-cream);
+
+    box-shadow:
+        -18px 18px 0 rgba(232, 154, 170, 0.07);
+
+    transform: rotate(1.5deg);
+}
+
+.build-preview-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: 0.7rem 0.85rem;
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.12);
+}
+
+.build-preview-top > div {
+    display: flex;
+
+    gap: 0.3rem;
+}
+
+.build-preview-top > div span {
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(185, 79, 112, 0.38);
+}
+
+.build-preview-top > span {
+    font-family: var(--font-code);
+    font-size: 0.42rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.45);
+}
+
+.build-preview-screen {
+    position: relative;
+
+    min-height: 340px;
+
+    padding: 3rem 2.5rem;
+
+    color: var(--color-espresso);
+}
+
+.build-preview-label {
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.build-preview-screen h3 {
+    max-width: 320px;
+
+    margin: 2rem 0 1.2rem;
+
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 0.82;
+
+    color: var(--color-espresso);
+}
+
+.build-preview-screen h3 em {
+    display: block;
+
+    margin-left: 16%;
+
+    font-weight: 500;
+
+    color: var(--color-deep-pink);
+}
+
+.build-preview-line {
+    width: 48px;
+    height: 1px;
+
+    margin-bottom: 1.2rem;
+
+    background: var(--color-deep-pink);
+}
+
+.build-preview-screen p {
+    max-width: 260px;
+
+    margin: 0;
+
+    font-size: 0.67rem;
+    line-height: 1.65;
+
+    color: var(--color-cocoa);
+}
+
+.build-preview-button {
+    display: inline-block;
+
+    margin-top: 1.7rem;
+    padding-bottom: 0.25rem;
+
+    border-bottom:
+        1px solid rgba(185, 79, 112, 0.4);
+
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   CODE → EXPERIENCE CONNECTION
+======================================== */
+
+.build-connection {
+    position: absolute;
+
+    left: 48%;
+    top: 90px;
+
+    z-index: 6;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.65rem;
+
+    transform: rotate(-5deg);
+}
+
+.build-connection span {
+    display: block;
+
+    width: 38px;
+    height: 1px;
+
+    background: rgba(232, 154, 170, 0.4);
+}
+
+.build-connection p {
+    margin: 0;
+
+    font-family: var(--font-script);
+    font-size: 1.6rem;
+
+    color: var(--color-gelato-pink);
+}
+
+
+/* ========================================
+   BUILD — DETAILS
+======================================== */
+
+.build-details {
+    position: absolute;
+    z-index: 5;
+
+    left: 0;
+    right: 0;
+    bottom: 15rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top:
+        1px solid rgba(248, 234, 219, 0.12);
+}
+
+.build-detail {
+    padding: 1.4rem 2rem 0;
+}
+
+.build-detail + .build-detail {
+    border-left:
+        1px solid rgba(248, 234, 219, 0.1);
+}
+
+.build-detail span {
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-gelato-pink);
+}
+
+.build-detail p {
+    max-width: 290px;
+
+    margin: 0;
+
+    font-size: 0.68rem;
+    line-height: 1.65;
+
+    color: rgba(248, 234, 219, 0.55);
+}
+
+
+/* ========================================
+   BUILD — SCOPE NOTE
+======================================== */
+
+.build-scope-note {
+    position: absolute;
+    z-index: 5;
+
+    left: 2%;
+    bottom: 2.5rem;
+
+    width: min(390px, 34%);
+}
+
+.build-scope-note > span {
+    display: block;
+
+    margin-bottom: 0.65rem;
+
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-style: italic;
+
+    color: var(--color-blush);
+}
+
+.build-scope-note p {
+    margin: 0;
+
+    padding-top: 0.8rem;
+
+    border-top:
+        1px solid rgba(248, 234, 219, 0.12);
+
+    font-size: 0.65rem;
+    line-height: 1.65;
+
+    color: rgba(248, 234, 219, 0.48);
+}
+
+
+/* ========================================
+   BUILD — STAGE RESULT
+======================================== */
+
+.build-stage-result {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: min(540px, 47%);
+}
+
+.build-stage-result > span:first-child {
+    color: rgba(248, 234, 219, 0.4);
+}
+
+.build-stage-result p {
+    color: var(--color-cream);
+}
+
+.build-stage-result em {
+    color: var(--color-blush);
+}
+
+.build-stage-result > span:last-child {
+    color: var(--color-gelato-pink);
+}
+/* ========================================
+   PROCESS — REVIEW & REFINE
+======================================== */
+
+.process-review {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-soft-cream);
+
+    color: var(--color-espresso);
+}
+
+.process-review::before {
+    content: "06";
+
+    position: absolute;
+
+    left: -0.08em;
+    top: -0.2em;
+
+    font-family: var(--font-display);
+    font-size: clamp(20rem, 40vw, 40rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(185, 79, 112, 0.03);
+
+    pointer-events: none;
+}
+
+.process-review-container {
+    position: relative;
+
+    min-height: 1510px;
+}
+
+
+/* ========================================
+   REVIEW — STAGE MARKER
+======================================== */
+
+.process-review-marker {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ========================================
+   REVIEW — HEADING
+======================================== */
+
+.process-review-heading {
+    position: relative;
+    z-index: 5;
+
+    max-width: 950px;
+
+    margin-top: 5rem;
+}
+
+.process-review-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.process-review-heading h2 {
+    margin: 0;
+
+    font-size: clamp(4.8rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-espresso);
+}
+
+.process-review-heading h2 span {
+    display: block;
+
+    margin-left: 20%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   REVIEW — INTRO COPY
+======================================== */
+
+.process-review-copy {
+    position: relative;
+    z-index: 5;
+
+    width: min(400px, 34%);
+
+    margin: 2.5rem 4% 0 auto;
+}
+
+.process-review-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(185, 79, 112, 0.25);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   REVIEW — INSPECTION WORKSPACE
+======================================== */
+
+.review-workspace {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    right: 0;
+    top: 500px;
+
+    min-height: 540px;
+}
+
+
+/* ========================================
+   REVIEW — DESKTOP FRAME
+======================================== */
+
+.review-desktop {
+    position: absolute;
+
+    left: 5%;
+    top: 40px;
+
+    width: min(700px, 62%);
+
+    background: var(--color-cream);
+
+    border:
+        1px solid rgba(107, 68, 56, 0.16);
+
+    box-shadow:
+        18px 18px 0 rgba(185, 79, 112, 0.055);
+}
+
+.review-browser-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 0.8rem 1rem;
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.12);
+}
+
+.review-browser-bar > div {
+    display: flex;
+
+    gap: 0.35rem;
+}
+
+.review-browser-bar > div span {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: rgba(185, 79, 112, 0.38);
+}
+
+.review-browser-bar > span {
+    font-family: var(--font-code);
+    font-size: 0.45rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.42);
+}
+
+
+/* ========================================
+   DESKTOP — MINI SITE
+======================================== */
+
+.review-desktop-screen {
+    position: relative;
+
+    min-height: 350px;
+
+    padding: 1.5rem;
+}
+
+.review-mini-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 1rem;
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.09);
+}
+
+.review-mini-nav > span {
+    display: block;
+
+    width: 70px;
+    height: 10px;
+
+    background: rgba(185, 79, 112, 0.22);
+}
+
+.review-mini-nav > div {
+    display: flex;
+
+    gap: 0.6rem;
+}
+
+.review-mini-nav > div span {
+    display: block;
+
+    width: 30px;
+    height: 4px;
+
+    background: rgba(107, 68, 56, 0.13);
+}
+
+.review-mini-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 2rem;
+
+    padding-top: 2rem;
+}
+
+.review-mini-hero > div:first-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.65rem;
+
+    padding-top: 1rem;
+}
+
+.review-mini-label {
+    display: block;
+
+    width: 60px;
+    height: 5px;
+
+    margin-bottom: 0.3rem;
+
+    background: rgba(185, 79, 112, 0.3);
+}
+
+.review-mini-title {
+    display: block;
+
+    width: 88%;
+    height: 22px;
+
+    background: rgba(107, 68, 56, 0.14);
+}
+
+.review-mini-title.short {
+    width: 64%;
+}
+
+.review-mini-copy {
+    display: block;
+
+    width: 72%;
+    height: 8px;
+
+    margin-top: 0.4rem;
+
+    background: rgba(107, 68, 56, 0.09);
+}
+
+.review-mini-button {
+    display: block;
+
+    width: 74px;
+    height: 24px;
+
+    margin-top: 0.5rem;
+
+    border: 1px solid rgba(185, 79, 112, 0.3);
+}
+
+.review-mini-visual {
+    position: relative;
+
+    min-height: 225px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(185, 79, 112, 0.08),
+            rgba(232, 154, 170, 0.18)
+        );
+}
+
+.review-mini-visual span {
+    position: absolute;
+
+    right: 16%;
+    top: 15%;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: rgba(185, 79, 112, 0.25);
+}
+
+
+/* ========================================
+   INSPECTION CIRCLE
+======================================== */
+
+.review-circle {
+    position: absolute;
+
+    right: -30px;
+    top: 110px;
+
+    width: 180px;
+    height: 125px;
+
+    border: 2px solid rgba(185, 79, 112, 0.48);
+    border-radius: 50%;
+
+    transform: rotate(-12deg);
+
+    pointer-events: none;
+}
+
+.review-circle::after {
+    content: "";
+
+    position: absolute;
+
+    right: -55px;
+    bottom: -25px;
+
+    width: 80px;
+    height: 1px;
+
+    background: rgba(185, 79, 112, 0.45);
+
+    transform: rotate(25deg);
+}
+
+
+/* ========================================
+   REVIEW — PHONE
+======================================== */
+
+.review-phone {
+    position: absolute;
+
+    right: 4%;
+    top: 115px;
+
+    width: 185px;
+    height: 365px;
+
+    padding: 10px;
+
+    border: 1px solid rgba(107, 68, 56, 0.28);
+    border-radius: 25px;
+
+    background: var(--color-espresso);
+
+    box-shadow:
+        -12px 14px 0 rgba(185, 79, 112, 0.07);
+
+    transform: rotate(3deg);
+}
+
+.review-phone-speaker {
+    width: 42px;
+    height: 3px;
+
+    margin: 2px auto 9px;
+
+    border-radius: 999px;
+
+    background: rgba(248, 234, 219, 0.25);
+}
+
+.review-phone-screen {
+    height: calc(100% - 16px);
+
+    padding: 1.1rem 0.85rem;
+
+    border-radius: 17px;
+
+    background: var(--color-cream);
+}
+
+.review-phone-logo,
+.review-phone-heading,
+.review-phone-copy,
+.review-phone-button {
+    display: block;
+}
+
+.review-phone-logo {
+    width: 38px;
+    height: 6px;
+
+    margin-bottom: 1.4rem;
+
+    background: rgba(185, 79, 112, 0.3);
+}
+
+.review-phone-heading {
+    width: 90%;
+    height: 13px;
+
+    margin-bottom: 0.4rem;
+
+    background: rgba(107, 68, 56, 0.15);
+}
+
+.review-phone-heading.short {
+    width: 62%;
+}
+
+.review-phone-image {
+    height: 125px;
+
+    margin: 1.1rem 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(185, 79, 112, 0.08),
+            rgba(232, 154, 170, 0.2)
+        );
+}
+
+.review-phone-copy {
+    width: 76%;
+    height: 6px;
+
+    background: rgba(107, 68, 56, 0.1);
+}
+
+.review-phone-button {
+    width: 58px;
+    height: 20px;
+
+    margin-top: 1rem;
+
+    border: 1px solid rgba(185, 79, 112, 0.3);
+}
+
+
+/* ========================================
+   REVIEW — QA MARKS
+======================================== */
+
+.review-mark {
+    position: absolute;
+    z-index: 6;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+.review-mark > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid rgba(185, 79, 112, 0.38);
+    border-radius: 50%;
+
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+
+    color: var(--color-deep-pink);
+}
+
+.review-mark p {
+    margin: 0;
+
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.review-mark-one {
+    left: 1%;
+    top: 0;
+}
+
+.review-mark-two {
+    left: 2%;
+    top: 455px;
+}
+
+.review-mark-three {
+    right: 1%;
+    top: 35px;
+}
+
+
+/* ========================================
+   REVIEW — ANNOTATION
+======================================== */
+
+.review-annotation {
+    position: absolute;
+    z-index: 6;
+
+    right: 21%;
+    top: 485px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    transform: rotate(-4deg);
+}
+
+.review-annotation > span {
+    font-family: var(--font-script);
+    font-size: 2rem;
+
+    color: var(--color-deep-pink);
+}
+
+.review-annotation p {
+    margin: 0;
+
+    font-family: var(--font-script);
+    font-size: 1.8rem;
+
+    color: rgba(185, 79, 112, 0.75);
+}
+
+
+/* ========================================
+   REVIEW FLOW
+======================================== */
+
+.review-flow {
+    position: absolute;
+    z-index: 5;
+
+    left: 0;
+    right: 0;
+    bottom: 19rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.16);
+}
+
+.review-flow-step {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+
+    gap: 0.8rem;
+
+    padding: 1.5rem 1.7rem 0;
+}
+
+.review-flow-step + .review-flow-step {
+    border-left:
+        1px solid rgba(107, 68, 56, 0.11);
+}
+
+.review-flow-step > span {
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    color: rgba(185, 79, 112, 0.55);
+}
+
+.review-flow-step div > p {
+    margin: 0 0 0.5rem;
+
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    line-height: 1;
+
+    color: var(--color-espresso);
+}
+
+.review-flow-step div > span {
+    display: block;
+
+    font-size: 0.65rem;
+    line-height: 1.6;
+
+    color: rgba(107, 68, 56, 0.65);
+}
+
+
+/* ========================================
+   REVISION NOTE
+======================================== */
+
+.review-revision-note {
+    position: absolute;
+    z-index: 5;
+
+    left: 2%;
+    bottom: 6rem;
+
+    width: min(350px, 31%);
+}
+
+.review-revision-note > span {
+    display: block;
+
+    margin-bottom: 0.6rem;
+
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+.review-revision-note p {
+    margin: 0;
+
+    padding-top: 0.75rem;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.14);
+
+    font-size: 0.64rem;
+    line-height: 1.65;
+
+    color: rgba(107, 68, 56, 0.62);
+}
+
+
+/* ========================================
+   FINAL CHECK
+======================================== */
+
+.review-final-check {
+    position: absolute;
+    z-index: 5;
+
+    left: 38%;
+    bottom: 5.8rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 0.8rem;
+
+    width: min(300px, 27%);
+}
+
+.review-final-check > span {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(185, 79, 112, 0.35);
+    border-radius: 50%;
+
+    font-family: var(--font-code);
+    font-size: 0.55rem;
+
+    color: var(--color-deep-pink);
+}
+
+.review-final-check div > span {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.review-final-check p {
+    margin: 0;
+
+    font-size: 0.63rem;
+    line-height: 1.6;
+
+    color: rgba(107, 68, 56, 0.62);
+}
+
+
+/* ========================================
+   REVIEW — STAGE RESULT
+======================================== */
+
+.review-stage-result {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: min(500px, 43%);
+}
+/* ========================================
+   PROCESS — LAUNCH & HANDOFF
+======================================== */
+
+.process-launch {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-blush);
+
+    color: var(--color-espresso);
+}
+
+.process-launch::before {
+    content: "07";
+
+    position: absolute;
+
+    right: -0.06em;
+    top: -0.2em;
+
+    font-family: var(--font-display);
+    font-size: clamp(20rem, 40vw, 40rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(248, 234, 219, 0.07);
+
+    pointer-events: none;
+}
+
+.process-launch-container {
+    position: relative;
+
+    min-height: 1570px;
+}
+
+
+/* ========================================
+   LAUNCH — STAGE MARKER
+======================================== */
+
+.process-launch-marker {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ========================================
+   LAUNCH — HEADING
+======================================== */
+
+.process-launch-heading {
+    position: relative;
+    z-index: 5;
+
+    max-width: 900px;
+
+    margin-top: 5rem;
+}
+
+.process-launch-heading .section-eyebrow {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.process-launch-heading h2 {
+    margin: 0;
+
+    font-size: clamp(5rem, 9vw, 9rem);
+    font-weight: 500;
+    line-height: 0.82;
+
+    letter-spacing: -0.05em;
+
+    color: var(--color-espresso);
+}
+
+.process-launch-heading h2 span {
+    display: block;
+
+    margin-left: 20%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   LAUNCH — INTRO COPY
+======================================== */
+
+.process-launch-copy {
+    position: relative;
+    z-index: 5;
+
+    width: min(400px, 34%);
+
+    margin: 2.5rem 4% 0 auto;
+}
+
+.process-launch-copy p {
+    margin: 0;
+
+    padding-left: 1.4rem;
+
+    border-left:
+        1px solid rgba(107, 68, 56, 0.2);
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   LAUNCH MOMENT
+======================================== */
+
+.launch-moment {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    right: 0;
+    top: 500px;
+
+    min-height: 450px;
+}
+
+
+/* ========================================
+   LAUNCH — STATE LABELS
+======================================== */
+
+.launch-state-label {
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.5);
+}
+
+
+/* ========================================
+   BEFORE — FINAL BUILD
+======================================== */
+
+.launch-local {
+    position: absolute;
+
+    left: 2%;
+    top: 90px;
+
+    width: 31%;
+
+    transform: rotate(-2deg);
+}
+
+.launch-local-window {
+    overflow: hidden;
+
+    border:
+        1px solid rgba(107, 68, 56, 0.17);
+
+    background: rgba(248, 234, 219, 0.55);
+
+    box-shadow:
+        12px 14px 0 rgba(107, 68, 56, 0.04);
+}
+
+.launch-window-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: 0.7rem 0.85rem;
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.12);
+}
+
+.launch-window-top > div {
+    display: flex;
+
+    gap: 0.3rem;
+}
+
+.launch-window-top > div span {
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(185, 79, 112, 0.35);
+}
+
+.launch-window-top > span {
+    font-family: var(--font-code);
+    font-size: 0.42rem;
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.42);
+}
+
+.launch-local-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 220px;
+
+    padding: 2rem;
+}
+
+.launch-local-screen > span {
+    font-family: var(--font-code);
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-local-screen p {
+    margin: 0.6rem 0 0;
+
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-style: italic;
+
+    color: var(--color-espresso);
+}
+
+
+/* ========================================
+   PUBLISH PATH
+======================================== */
+
+.launch-path {
+    position: absolute;
+
+    left: 34%;
+    top: 190px;
+
+    z-index: 6;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.7rem;
+
+    width: 21%;
+}
+
+.launch-path > span {
+    font-family: var(--font-code);
+    font-size: 1.1rem;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-path p {
+    margin: 0;
+
+    font-family: var(--font-script);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-5deg);
+}
+
+
+/* ========================================
+   AFTER — LIVE WEBSITE
+======================================== */
+
+.launch-live {
+    position: absolute;
+
+    right: 1%;
+    top: 10px;
+
+    width: 45%;
+
+    z-index: 5;
+
+    transform: rotate(1deg);
+}
+
+.launch-live .launch-state-label {
+    color: var(--color-deep-pink);
+}
+
+.launch-live-window {
+    overflow: hidden;
+
+    border:
+        1px solid rgba(107, 68, 56, 0.14);
+
+    background: var(--color-cream);
+
+    box-shadow:
+        -20px 22px 0 rgba(185, 79, 112, 0.09);
+}
+
+.launch-live-url {
+    text-transform: lowercase !important;
+
+    color: var(--color-deep-pink) !important;
+}
+
+.launch-live-screen {
+    position: relative;
+
+    min-height: 345px;
+
+    padding: 3rem;
+}
+
+.launch-live-screen::before {
+    content: "";
+
+    position: absolute;
+
+    right: -50px;
+    top: -40px;
+
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    background: rgba(232, 154, 170, 0.12);
+}
+
+.launch-live-status {
+    position: relative;
+    z-index: 2;
+
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-live-screen > p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 380px;
+
+    margin: 2.2rem 0 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+    font-weight: 500;
+    line-height: 0.88;
+
+    color: var(--color-espresso);
+}
+
+.launch-live-screen > p em {
+    display: block;
+
+    margin-left: 8%;
+
+    font-weight: 500;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-live-link {
+    position: relative;
+    z-index: 2;
+
+    display: inline-block;
+
+    margin-top: 2rem;
+    padding-bottom: 0.25rem;
+
+    border-bottom:
+        1px solid rgba(185, 79, 112, 0.4);
+
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   WE MADE IT
+======================================== */
+
+.launch-scribble {
+    position: absolute;
+
+    left: 37%;
+    top: 340px;
+
+    z-index: 7;
+
+    font-family: var(--font-script);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   LAUNCH — HANDOFF
+======================================== */
+
+.launch-handoff {
+    position: absolute;
+    z-index: 5;
+
+    left: 0;
+    right: 0;
+    bottom: 25rem;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.7fr;
+
+    gap: 4rem;
+
+    padding-top: 2rem;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.17);
+}
+
+.launch-handoff-heading > span {
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--font-code);
+    font-size: 0.52rem;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-handoff-heading h3 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 0.9;
+
+    color: var(--color-espresso);
+}
+
+.launch-handoff-heading h3 em {
+    display: block;
+
+    margin-left: 10%;
+
+    font-weight: 500;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   HANDOFF DETAILS
+======================================== */
+
+.launch-handoff-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.launch-handoff-details > div {
+    padding: 0 1.4rem;
+}
+
+.launch-handoff-details > div + div {
+    border-left:
+        1px solid rgba(107, 68, 56, 0.14);
+}
+
+.launch-handoff-details span {
+    display: block;
+
+    margin-bottom: 0.65rem;
+
+    font-family: var(--font-code);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-handoff-details p {
+    margin: 0;
+
+    font-size: 0.64rem;
+    line-height: 1.65;
+
+    color: rgba(107, 68, 56, 0.65);
+}
+
+
+/* ========================================
+   AFTERCARE
+======================================== */
+
+.launch-aftercare {
+    position: absolute;
+    z-index: 5;
+
+    left: 2%;
+    bottom: 7rem;
+
+    width: min(390px, 34%);
+}
+
+.launch-aftercare-label {
+    display: block;
+
+    margin-bottom: 0.6rem;
+
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-aftercare p {
+    margin: 0;
+
+    padding-top: 0.8rem;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.16);
+
+    font-size: 0.66rem;
+    line-height: 1.65;
+
+    color: rgba(107, 68, 56, 0.66);
+}
+
+.launch-aftercare-note {
+    display: block;
+
+    margin-top: 0.75rem;
+
+    font-family: var(--font-code);
+    font-size: 0.46rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   COMPLETION STAMP
+======================================== */
+
+.launch-complete {
+    position: absolute;
+    z-index: 5;
+
+    left: 39%;
+    bottom: 6.5rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+
+    padding: 0.75rem 1rem;
+
+    border:
+        1px solid rgba(185, 79, 112, 0.38);
+
+    transform: rotate(-4deg);
+}
+
+.launch-complete > span {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+.launch-complete > div {
+    padding-left: 0.8rem;
+
+    border-left:
+        1px solid rgba(185, 79, 112, 0.3);
+}
+
+.launch-complete p {
+    margin: 0;
+
+    font-family: var(--font-code);
+    font-size: 0.4rem;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.5);
+}
+
+.launch-complete strong {
+    display: block;
+
+    margin-top: 0.15rem;
+
+    font-family: var(--font-code);
+    font-size: 0.6rem;
+
+    letter-spacing: 0.1em;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   LAUNCH — STAGE RESULT
+======================================== */
+
+.launch-stage-result {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: min(520px, 45%);
+}
+/* ========================================
    SITE FOOTER
 ======================================== */
 
@@ -10949,6 +15363,2344 @@ p {
 
 .about-final-signature p {
     font-size: 0.46rem;
+}
+/* ========================================
+   PROCESS — HERO — MOBILE
+======================================== */
+
+.process-hero {
+    min-height: 820px;
+
+    padding: 5rem 0 2.5rem;
+
+    background-size: 36px 36px;
+}
+
+.process-hero::before {
+    width: 340px;
+    height: 340px;
+
+    left: -190px;
+    bottom: -170px;
+}
+
+.process-hero-container {
+    min-height: 700px;
+}
+
+
+/* ========================================
+   PROCESS HERO MARKER — MOBILE
+======================================== */
+
+.process-hero-marker {
+    align-items: flex-start;
+
+    gap: 1rem;
+}
+
+.process-hero-marker .section-eyebrow {
+    font-size: 0.6rem;
+}
+
+.process-hero-marker > span {
+    max-width: 105px;
+
+    text-align: right;
+
+    font-size: 0.48rem;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   PROCESS HERO HEADING — MOBILE
+======================================== */
+
+.process-hero-heading {
+    width: 100%;
+
+    margin-top: 5rem;
+}
+
+.process-hero-script {
+    left: 1%;
+    top: -1.3rem;
+
+    font-size: clamp(2rem, 10vw, 2.8rem);
+}
+
+.process-hero-heading h1 {
+    font-size: clamp(4rem, 18vw, 5.6rem);
+    line-height: 0.78;
+}
+
+.process-hero-heading h1 span {
+    margin-left: 9%;
+}
+
+
+/* ========================================
+   PROCESS TRANSFORMATION — MOBILE
+======================================== */
+
+.process-transformation {
+    grid-template-columns:
+        auto minmax(25px, 1fr)
+        auto minmax(25px, 1fr)
+        auto;
+
+    gap: 0.45rem;
+
+    width: 94%;
+
+    margin: 3.5rem auto 0;
+}
+
+.process-transform-word,
+.process-transform-code {
+    font-size: 0.45rem;
+
+    letter-spacing: 0.06em;
+}
+
+.process-transform-line::after {
+    width: 4px;
+    height: 4px;
+}
+
+
+/* ========================================
+   PROCESS HERO COPY — MOBILE
+======================================== */
+
+.process-hero-copy {
+    right: 0;
+    bottom: 7rem;
+
+    width: 62%;
+}
+
+.process-hero-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.7rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PROCESS HERO COUNTER — MOBILE
+======================================== */
+
+.process-hero-counter {
+    left: 0;
+    bottom: 7rem;
+
+    align-items: flex-start;
+
+    gap: 0.6rem;
+}
+
+.process-hero-counter > span {
+    font-size: 3.3rem;
+}
+
+.process-hero-counter div {
+    padding-left: 0.6rem;
+}
+
+.process-hero-counter p {
+    font-size: 0.44rem;
+}
+
+
+/* ========================================
+   PROCESS HERO SCROLL — MOBILE
+======================================== */
+
+.process-hero-scroll {
+    right: 0;
+    bottom: 0;
+
+    font-size: 0.46rem;
+}
+/* ========================================
+   PROCESS — START WITH THE IDEA — MOBILE
+======================================== */
+
+.process-idea {
+    padding: 5rem 0;
+}
+
+.process-idea::before {
+    right: -0.18em;
+    top: 0.02em;
+
+    font-size: 22rem;
+}
+
+.process-idea-container {
+    min-height: 1420px;
+}
+
+
+/* ========================================
+   IDEA STAGE MARKER — MOBILE
+======================================== */
+
+.process-stage-marker {
+    gap: 0.75rem;
+}
+
+.process-stage-marker > span {
+    width: 38px;
+    height: 38px;
+
+    font-size: 0.5rem;
+}
+
+.process-stage-marker div {
+    padding-left: 0.75rem;
+}
+
+.process-stage-marker p {
+    font-size: 0.46rem;
+}
+
+
+/* ========================================
+   IDEA HEADING — MOBILE
+======================================== */
+
+.process-idea-heading {
+    max-width: none;
+
+    margin-top: 3.75rem;
+}
+
+.process-idea-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.6rem;
+}
+
+.process-idea-heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.86;
+}
+
+.process-idea-heading h2 span {
+    margin-left: 7%;
+}
+
+
+/* ========================================
+   IDEA INTRO COPY — MOBILE
+======================================== */
+
+.process-idea-copy {
+    width: 78%;
+
+    margin: 2rem 0 0 auto;
+}
+
+.process-idea-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   IDEA SCATTERED NOTES — MOBILE
+======================================== */
+
+.idea-thoughts {
+    top: 410px;
+
+    min-height: 650px;
+}
+
+.idea-note {
+    width: 67%;
+
+    padding: 1.35rem 1.2rem;
+}
+
+.idea-note::before {
+    width: 44px;
+    height: 13px;
+
+    top: -6px;
+}
+
+.idea-note > span {
+    margin-bottom: 0.65rem;
+
+    font-size: 0.46rem;
+}
+
+.idea-note p {
+    font-size: 1.2rem;
+    line-height: 1.12;
+}
+
+
+/* ========================================
+   INDIVIDUAL NOTE POSITIONS — MOBILE
+======================================== */
+
+.idea-note-one {
+    left: 0;
+    top: 45px;
+
+    transform: rotate(-3deg);
+}
+
+.idea-note-two {
+    left: auto;
+    right: 0;
+    top: 205px;
+
+    transform: rotate(2deg);
+}
+
+.idea-note-three {
+    left: 3%;
+    right: auto;
+    top: 370px;
+
+    transform: rotate(-2deg);
+}
+
+.idea-note-four {
+    left: auto;
+    right: -1%;
+    top: 535px;
+
+    transform: rotate(3deg);
+}
+
+
+/* ========================================
+   FLOATING QUESTIONS — MOBILE
+======================================== */
+
+.idea-question {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+}
+
+.idea-question-one {
+    left: 3%;
+    top: 28%;
+}
+
+.idea-question-two {
+    right: -3%;
+    top: 49%;
+}
+
+.idea-question-three {
+    left: 7%;
+    top: 70%;
+}
+
+
+/* ========================================
+   WHAT HAPPENS HERE — MOBILE
+======================================== */
+
+.process-idea-outcome {
+    left: 0;
+    bottom: 11rem;
+
+    width: 72%;
+}
+
+.idea-outcome-label {
+    margin-bottom: 0.65rem;
+
+    font-size: 0.5rem;
+}
+
+.process-idea-outcome p {
+    padding-top: 0.8rem;
+
+    font-size: 0.7rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   STAGE RESULT — MOBILE
+======================================== */
+
+.process-stage-result {
+    right: 0;
+    bottom: 0;
+
+    width: 84%;
+}
+
+.process-stage-result > span:first-child {
+    margin-bottom: 0.6rem;
+
+    font-size: 0.48rem;
+}
+
+.process-stage-result p {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+}
+
+.process-stage-result > span:last-child {
+    right: 0;
+    bottom: -2rem;
+
+    font-size: 1rem;
+}
+/* ========================================
+   PROCESS — MAKE IT OFFICIAL — MOBILE
+======================================== */
+
+.process-official {
+    padding: 5rem 0;
+}
+
+.process-official::before {
+    right: -0.16em;
+    top: 0.03em;
+
+    font-size: 21rem;
+}
+
+.process-official-container {
+    min-height: 1510px;
+}
+
+
+/* ========================================
+   OFFICIAL HEADING — MOBILE
+======================================== */
+
+.process-official-heading {
+    max-width: none;
+
+    margin-top: 3.75rem;
+}
+
+.process-official-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.6rem;
+}
+
+.process-official-heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.86;
+}
+
+.process-official-heading h2 span {
+    margin-left: 7%;
+}
+
+
+/* ========================================
+   OFFICIAL INTRO COPY — MOBILE
+======================================== */
+
+.process-official-copy {
+    width: 76%;
+
+    margin: 2rem 0 0 auto;
+}
+
+.process-official-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PROJECT BRIEF — MOBILE
+======================================== */
+
+.official-brief {
+    left: 0;
+    top: 405px;
+
+    width: 100%;
+
+    padding: 1.5rem 1.25rem 1.4rem;
+}
+
+.official-brief-top {
+    gap: 1rem;
+
+    padding-bottom: 0.8rem;
+}
+
+.official-brief-top span {
+    font-size: 0.43rem;
+}
+
+.official-brief-title {
+    padding: 1.6rem 0 1.8rem;
+}
+
+.official-brief-title > p {
+    font-size: 0.47rem;
+}
+
+.official-brief-title h3 {
+    max-width: 90%;
+
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+}
+
+.official-brief-title h3 em {
+    margin-left: 6%;
+}
+
+
+/* ========================================
+   PROJECT BRIEF ROWS — MOBILE
+======================================== */
+
+.official-brief-row {
+    grid-template-columns: 34px 1fr;
+
+    gap: 0.8rem;
+
+    padding: 1rem 0;
+}
+
+.official-brief-number {
+    font-size: 0.46rem;
+}
+
+.official-brief-label {
+    margin-bottom: 0.3rem;
+
+    font-size: 0.48rem;
+}
+
+.official-brief-text {
+    font-size: 0.66rem;
+    line-height: 1.6;
+}
+
+.official-brief-footer {
+    gap: 1rem;
+
+    padding-top: 0.8rem;
+}
+
+.official-brief-footer span {
+    font-size: 0.42rem;
+}
+
+
+/* ========================================
+   DEPOSIT — MOBILE
+======================================== */
+
+.official-deposit {
+    right: auto;
+    left: 0;
+    top: 1000px;
+
+    width: 56%;
+}
+
+.official-deposit-label {
+    margin-bottom: 0.6rem;
+
+    font-size: 0.48rem;
+}
+
+.official-deposit-number span:first-child {
+    font-size: clamp(7rem, 34vw, 9rem);
+}
+
+.official-deposit-number span:last-child {
+    margin: 0.25rem 0 0 0.2rem;
+
+    font-size: 2.5rem;
+}
+
+.official-deposit > p {
+    margin-top: 0.45rem;
+
+    font-size: 2.5rem;
+}
+
+.official-deposit-note {
+    margin-top: 0.9rem;
+    padding-top: 0.65rem;
+
+    font-size: 0.62rem;
+}
+
+
+/* ========================================
+   AGREEMENT — MOBILE
+======================================== */
+
+.official-agreement {
+    right: 0;
+    top: 1080px;
+
+    width: 38%;
+
+    align-items: flex-start;
+
+    gap: 0.55rem;
+}
+
+.official-agreement > span {
+    flex: 0 0 auto;
+
+    width: 28px;
+    height: 28px;
+
+    font-size: 0.55rem;
+}
+
+.official-agreement p {
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+
+/* ========================================
+   OFFICIAL STAGE RESULT — MOBILE
+======================================== */
+
+.official-stage-result {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: 88%;
+}
+/* ========================================
+   PROCESS — GATHER THE PIECES — MOBILE
+======================================== */
+
+.process-gather {
+    padding: 5rem 0;
+}
+
+.process-gather::before {
+    left: -0.2em;
+    top: 0.02em;
+
+    font-size: 22rem;
+}
+
+.process-gather-container {
+    min-height: 1690px;
+}
+
+
+/* ========================================
+   GATHER HEADING — MOBILE
+======================================== */
+
+.process-gather-heading {
+    max-width: none;
+
+    margin-top: 3.75rem;
+}
+
+.process-gather-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.6rem;
+}
+
+.process-gather-heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.86;
+}
+
+.process-gather-heading h2 span {
+    margin-left: 6%;
+}
+
+
+/* ========================================
+   GATHER INTRO COPY — MOBILE
+======================================== */
+
+.process-gather-copy {
+    width: 78%;
+
+    margin: 2rem 0 0 auto;
+}
+
+.process-gather-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   GATHER WORKSPACE — MOBILE
+======================================== */
+
+.gather-workspace {
+    top: 420px;
+
+    min-height: 900px;
+}
+
+.gather-asset {
+    padding: 1.25rem;
+}
+
+.gather-asset-number {
+    margin-bottom: 1rem;
+
+    font-size: 0.44rem;
+}
+
+.gather-asset-type {
+    font-size: 0.47rem;
+}
+
+.gather-asset h3 {
+    margin-bottom: 0.7rem;
+
+    font-size: 2rem;
+}
+
+.gather-asset > p:last-of-type {
+    font-size: 0.64rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   COPY ASSET — MOBILE
+======================================== */
+
+.gather-copy-asset {
+    left: 0;
+    top: 25px;
+
+    width: 76%;
+    min-height: 250px;
+
+    transform: rotate(-2.5deg);
+}
+
+.gather-copy-asset > p:last-of-type {
+    max-width: 82%;
+}
+
+.gather-asset-mark {
+    right: 0.6rem;
+    bottom: 0.2rem;
+
+    font-size: 5.5rem;
+}
+
+
+/* ========================================
+   VISUAL ASSET — MOBILE
+======================================== */
+
+.gather-image-asset {
+    left: auto;
+    right: 0;
+    top: 245px;
+
+    width: 70%;
+    min-height: 260px;
+
+    transform: rotate(2deg);
+}
+
+.gather-image-placeholder {
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+
+    height: 60px;
+}
+
+
+/* ========================================
+   BRAND ASSET — MOBILE
+======================================== */
+
+.gather-brand-asset {
+    left: 2%;
+    right: auto;
+    top: 485px;
+
+    width: 76%;
+    min-height: 245px;
+
+    transform: rotate(-1.5deg);
+}
+
+.gather-swatches {
+    gap: 0.55rem;
+
+    margin-top: 1.1rem;
+}
+
+.gather-swatches span {
+    width: 42px;
+    height: 42px;
+}
+
+
+/* ========================================
+   DETAILS ASSET — MOBILE
+======================================== */
+
+.gather-details-asset {
+    left: auto;
+    right: 0;
+    top: 700px;
+
+    width: 72%;
+    min-height: 215px;
+
+    transform: rotate(2deg);
+}
+
+.gather-detail-code {
+    right: 1rem;
+    bottom: 0.8rem;
+
+    font-size: 0.5rem;
+}
+
+
+/* ========================================
+   CLIENT NOTE — MOBILE
+======================================== */
+
+.gather-client-note {
+    left: 0;
+    bottom: 14rem;
+
+    width: 68%;
+
+    gap: 0.8rem;
+}
+
+.gather-client-symbol {
+    font-size: 3rem;
+}
+
+.gather-client-note div > span {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.46rem;
+    line-height: 1.5;
+}
+
+.gather-client-note p {
+    font-size: 0.66rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   FLEXIBLE NOTE — MOBILE
+======================================== */
+
+.gather-flexible {
+    right: 0;
+    bottom: 7rem;
+
+    width: 66%;
+}
+
+.gather-flexible > span {
+    font-size: 1.25rem;
+}
+
+.gather-flexible p {
+    padding-top: 0.6rem;
+
+    font-size: 0.64rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   GATHER STAGE RESULT — MOBILE
+======================================== */
+
+.gather-stage-result {
+    left: 0;
+    right: auto;
+    bottom: -4rem;
+
+    width: 90%;
+}
+/* ========================================
+   PROCESS — SHAPE THE DIRECTION — MOBILE
+======================================== */
+
+.process-direction {
+    padding: 5rem 0;
+}
+
+.process-direction::before {
+    background-size: 24px 24px;
+}
+
+.process-direction-container {
+    min-height: 1530px;
+}
+
+
+/* ========================================
+   DIRECTION HEADING — MOBILE
+======================================== */
+
+.process-direction-heading {
+    max-width: none;
+
+    margin-top: 3.75rem;
+}
+
+.process-direction-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.6rem;
+}
+
+.process-direction-heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.86;
+}
+
+.process-direction-heading h2 span {
+    margin-left: 6%;
+}
+
+
+/* ========================================
+   DIRECTION INTRO COPY — MOBILE
+======================================== */
+
+.process-direction-copy {
+    width: 78%;
+
+    margin: 2rem 0 0 auto;
+}
+
+.process-direction-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   DIRECTION WORKSPACE — MOBILE
+======================================== */
+
+.direction-workspace {
+    top: 415px;
+
+    min-height: 670px;
+}
+
+
+/* ========================================
+   BROWSER — MOBILE
+======================================== */
+
+.direction-browser {
+    left: 0;
+    top: 60px;
+
+    width: 88%;
+
+    box-shadow:
+        10px 12px 0 rgba(185, 79, 112, 0.07);
+}
+
+.direction-browser-bar {
+    gap: 1rem;
+
+    padding: 0.65rem 0.7rem;
+}
+
+.direction-browser-bar > div {
+    gap: 0.25rem;
+}
+
+.direction-browser-bar > div span {
+    width: 5px;
+    height: 5px;
+}
+
+.direction-browser-bar > span {
+    font-size: 0.38rem;
+}
+
+
+/* ========================================
+   WIREFRAME — MOBILE
+======================================== */
+
+.direction-wireframe {
+    padding: 1rem;
+}
+
+.wire-nav {
+    padding-bottom: 0.8rem;
+}
+
+.wire-logo {
+    width: 48px;
+    height: 8px;
+}
+
+.wire-nav > div {
+    gap: 0.35rem;
+}
+
+.wire-nav > div span {
+    width: 20px;
+    height: 4px;
+}
+
+.wire-hero {
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 0.8rem;
+
+    min-height: 165px;
+
+    padding: 1.2rem 0;
+}
+
+.wire-hero-copy {
+    gap: 0.5rem;
+}
+
+.wire-hero-copy span {
+    height: 8px;
+}
+
+.wire-hero-copy span:first-child {
+    height: 18px;
+}
+
+.wire-hero-image {
+    min-height: 135px;
+}
+
+.wire-hero-image span {
+    width: 17px;
+    height: 17px;
+}
+
+.wire-content {
+    gap: 0.5rem;
+
+    padding-top: 0.9rem;
+}
+
+.wire-content div {
+    height: 58px;
+}
+
+
+/* ========================================
+   DESIGN ANNOTATIONS — MOBILE
+======================================== */
+
+.direction-note {
+    width: 42%;
+
+    padding-top: 0.5rem;
+}
+
+.direction-note span {
+    font-size: 0.4rem;
+}
+
+.direction-note p {
+    font-size: 0.9rem;
+}
+
+.direction-note-one {
+    left: auto;
+    right: 0;
+    top: 5px;
+}
+
+.direction-note-two {
+    left: auto;
+    right: 0;
+    top: 405px;
+}
+
+.direction-note-three {
+    left: 3%;
+    right: auto;
+    top: 505px;
+}
+
+
+/* ========================================
+   MEASUREMENTS + SCRIBBLE — MOBILE
+======================================== */
+
+.direction-measure {
+    font-size: 0.38rem;
+}
+
+.direction-measure-one {
+    left: 2%;
+    top: 30px;
+}
+
+.direction-measure-two {
+    left: 36%;
+    bottom: 15px;
+}
+
+.direction-scribble {
+    left: 2%;
+    top: 375px;
+
+    font-size: 2rem;
+}
+
+
+/* ========================================
+   DIRECTION PRINCIPLES — MOBILE
+======================================== */
+
+.direction-principles {
+    left: 0;
+    right: 0;
+    bottom: 18rem;
+
+    grid-template-columns: 1fr;
+}
+
+.direction-principles > div {
+    min-height: auto;
+
+    padding: 1rem 0;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.18);
+}
+
+.direction-principles > div + div {
+    border-left: 0;
+}
+
+.direction-principles span {
+    margin-bottom: 0.45rem;
+
+    font-size: 0.47rem;
+}
+
+.direction-principles p {
+    max-width: 82%;
+
+    font-size: 0.64rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   DIRECTION APPROVAL — MOBILE
+======================================== */
+
+.direction-approval {
+    left: 0;
+    bottom: 8rem;
+
+    width: 62%;
+
+    gap: 0.65rem;
+}
+
+.direction-approval > span {
+    width: 28px;
+    height: 28px;
+
+    font-size: 0.52rem;
+}
+
+.direction-approval div > span {
+    font-size: 0.45rem;
+}
+
+.direction-approval p {
+    font-size: 0.62rem;
+}
+
+
+/* ========================================
+   DIRECTION STAGE RESULT — MOBILE
+======================================== */
+
+.direction-stage-result {
+    left: auto;
+    right: 0;
+    bottom: -4rem;
+
+    width: 90%;
+}
+/* ========================================
+   PROCESS — BUILD IT — MOBILE
+======================================== */
+
+.process-build {
+    padding: 5rem 0;
+}
+
+.process-build::before {
+    right: -0.18em;
+    top: 0.02em;
+
+    font-size: 22rem;
+}
+
+.process-build-container {
+    min-height: 1630px;
+}
+
+
+/* ========================================
+   BUILD HEADING — MOBILE
+======================================== */
+
+.process-build-heading {
+    max-width: none;
+
+    margin-top: 3.75rem;
+}
+
+.process-build-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.6rem;
+}
+
+.process-build-heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.86;
+}
+
+.process-build-heading h2 span {
+    margin-left: 6%;
+}
+
+
+/* ========================================
+   BUILD INTRO COPY — MOBILE
+======================================== */
+
+.process-build-copy {
+    width: 78%;
+
+    margin: 2rem 0 0 auto;
+}
+
+.process-build-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BUILD WORKSPACE — MOBILE
+======================================== */
+
+.build-workspace {
+    top: 415px;
+
+    min-height: 750px;
+}
+
+
+/* ========================================
+   CODE EDITOR — MOBILE
+======================================== */
+
+.build-editor {
+    left: 0;
+    top: 25px;
+
+    width: 92%;
+
+    box-shadow:
+        10px 12px 0 rgba(232, 154, 170, 0.045);
+}
+
+.build-editor-top {
+    gap: 1rem;
+
+    padding: 0.65rem 0.7rem;
+}
+
+.build-editor-top > div {
+    gap: 0.25rem;
+}
+
+.build-editor-top > div span {
+    width: 5px;
+    height: 5px;
+}
+
+.build-editor-top > span {
+    font-size: 0.38rem;
+}
+
+
+/* ========================================
+   EDITOR TABS — MOBILE
+======================================== */
+
+.build-editor-tabs span {
+    padding: 0.55rem 0.6rem;
+
+    font-size: 0.38rem;
+}
+
+
+/* ========================================
+   CODE — MOBILE
+======================================== */
+
+.build-code {
+    min-height: 300px;
+
+    padding: 1.2rem 0.7rem 1.4rem;
+
+    font-size: 0.48rem;
+    line-height: 1.9;
+}
+
+.build-code > div {
+    min-height: 1.1rem;
+}
+
+.build-line-number {
+    flex: 0 0 23px;
+
+    margin-right: 0.45rem;
+}
+
+.build-code-indent {
+    width: 0.8rem;
+}
+
+.build-code-gap {
+    height: 0.6rem;
+}
+
+
+/* ========================================
+   CODE → EXPERIENCE — MOBILE
+======================================== */
+
+.build-connection {
+    left: 7%;
+    top: 385px;
+
+    gap: 0.45rem;
+
+    transform: rotate(-4deg);
+}
+
+.build-connection span {
+    width: 24px;
+}
+
+.build-connection p {
+    font-size: 1.3rem;
+}
+
+
+/* ========================================
+   LIVE PREVIEW — MOBILE
+======================================== */
+
+.build-preview {
+    right: 0;
+    top: 440px;
+
+    width: 82%;
+
+    box-shadow:
+        -10px 10px 0 rgba(232, 154, 170, 0.07);
+
+    transform: rotate(1.5deg);
+}
+
+.build-preview-top {
+    padding: 0.55rem 0.65rem;
+}
+
+.build-preview-top > div span {
+    width: 5px;
+    height: 5px;
+}
+
+.build-preview-top > span {
+    font-size: 0.38rem;
+}
+
+.build-preview-screen {
+    min-height: 270px;
+
+    padding: 2rem 1.5rem;
+}
+
+.build-preview-label {
+    font-size: 0.42rem;
+}
+
+.build-preview-screen h3 {
+    max-width: 190px;
+
+    margin: 1.2rem 0 0.9rem;
+
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    line-height: 0.9;
+}
+
+.build-preview-screen h3 em {
+    margin-left: 6%;
+}
+
+.build-preview-line {
+    width: 38px;
+
+    margin-bottom: 0.9rem;
+}
+
+.build-preview-screen p {
+    max-width: 210px;
+
+    font-size: 0.62rem;
+}
+
+.build-preview-button {
+    margin-top: 1.2rem;
+
+    font-size: 0.44rem;
+}
+
+
+/* ========================================
+   BUILD DETAILS — MOBILE
+======================================== */
+
+.build-details {
+    left: 0;
+    right: 0;
+    bottom: 15rem;
+
+    grid-template-columns: 1fr;
+}
+
+.build-detail {
+    padding: 0.95rem 0;
+
+    border-top:
+        1px solid rgba(248, 234, 219, 0.12);
+}
+
+.build-detail + .build-detail {
+    border-left: 0;
+}
+
+.build-detail span {
+    margin-bottom: 0.4rem;
+
+    font-size: 0.45rem;
+}
+
+.build-detail p {
+    max-width: 82%;
+
+    font-size: 0.63rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   BUILD SCOPE NOTE — MOBILE
+======================================== */
+
+.build-scope-note {
+    left: 0;
+    bottom: 7rem;
+
+    width: 68%;
+}
+
+.build-scope-note > span {
+    margin-bottom: 0.5rem;
+
+    font-size: 1.2rem;
+}
+
+.build-scope-note p {
+    padding-top: 0.65rem;
+
+    font-size: 0.61rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   BUILD STAGE RESULT — MOBILE
+======================================== */
+
+.build-stage-result {
+    left: auto;
+    right: 0;
+    bottom: -4rem;
+
+    width: 90%;
+}
+/* ========================================
+   PROCESS — REVIEW & REFINE — MOBILE
+======================================== */
+
+.process-review {
+    padding: 5rem 0;
+}
+
+.process-review::before {
+    left: -0.2em;
+    top: 0.02em;
+
+    font-size: 22rem;
+}
+
+.process-review-container {
+    min-height: 1680px;
+}
+
+
+/* ========================================
+   REVIEW HEADING — MOBILE
+======================================== */
+
+.process-review-heading {
+    max-width: none;
+
+    margin-top: 3.75rem;
+}
+
+.process-review-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.6rem;
+}
+
+.process-review-heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+    line-height: 0.86;
+}
+
+.process-review-heading h2 span {
+    margin-left: 12%;
+}
+
+
+/* ========================================
+   REVIEW INTRO COPY — MOBILE
+======================================== */
+
+.process-review-copy {
+    width: 78%;
+
+    margin: 2rem 0 0 auto;
+}
+
+.process-review-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   REVIEW WORKSPACE — MOBILE
+======================================== */
+
+.review-workspace {
+    top: 415px;
+
+    min-height: 660px;
+}
+
+
+/* ========================================
+   DESKTOP INSPECTION — MOBILE
+======================================== */
+
+.review-desktop {
+    left: 0;
+    top: 70px;
+
+    width: 88%;
+
+    box-shadow:
+        10px 11px 0 rgba(185, 79, 112, 0.055);
+}
+
+.review-browser-bar {
+    gap: 1rem;
+
+    padding: 0.6rem 0.7rem;
+}
+
+.review-browser-bar > div {
+    gap: 0.25rem;
+}
+
+.review-browser-bar > div span {
+    width: 5px;
+    height: 5px;
+}
+
+.review-browser-bar > span {
+    font-size: 0.37rem;
+}
+
+
+/* ========================================
+   MINI SITE — MOBILE
+======================================== */
+
+.review-desktop-screen {
+    min-height: 225px;
+
+    padding: 0.9rem;
+}
+
+.review-mini-nav {
+    padding-bottom: 0.65rem;
+}
+
+.review-mini-nav > span {
+    width: 42px;
+    height: 6px;
+}
+
+.review-mini-nav > div {
+    gap: 0.3rem;
+}
+
+.review-mini-nav > div span {
+    width: 18px;
+    height: 3px;
+}
+
+.review-mini-hero {
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 0.75rem;
+
+    padding-top: 1rem;
+}
+
+.review-mini-hero > div:first-child {
+    gap: 0.4rem;
+
+    padding-top: 0.5rem;
+}
+
+.review-mini-label {
+    width: 38px;
+    height: 4px;
+
+    margin-bottom: 0.15rem;
+}
+
+.review-mini-title {
+    height: 13px;
+}
+
+.review-mini-copy {
+    height: 5px;
+
+    margin-top: 0.2rem;
+}
+
+.review-mini-button {
+    width: 48px;
+    height: 17px;
+
+    margin-top: 0.25rem;
+}
+
+.review-mini-visual {
+    min-height: 145px;
+}
+
+.review-mini-visual span {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ========================================
+   INSPECTION CIRCLE — MOBILE
+======================================== */
+
+.review-circle {
+    right: -20px;
+    top: 72px;
+
+    width: 110px;
+    height: 82px;
+
+    border-width: 1px;
+}
+
+.review-circle::after {
+    right: -34px;
+    bottom: -17px;
+
+    width: 50px;
+}
+
+
+/* ========================================
+   PHONE INSPECTION — MOBILE
+======================================== */
+
+.review-phone {
+    right: 0;
+    top: 260px;
+
+    width: 125px;
+    height: 245px;
+
+    padding: 7px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        -8px 9px 0 rgba(185, 79, 112, 0.07);
+
+    transform: rotate(3deg);
+}
+
+.review-phone-speaker {
+    width: 30px;
+    height: 2px;
+
+    margin: 1px auto 6px;
+}
+
+.review-phone-screen {
+    height: calc(100% - 10px);
+
+    padding: 0.7rem 0.55rem;
+
+    border-radius: 12px;
+}
+
+.review-phone-logo {
+    width: 26px;
+    height: 4px;
+
+    margin-bottom: 0.9rem;
+}
+
+.review-phone-heading {
+    height: 8px;
+
+    margin-bottom: 0.25rem;
+}
+
+.review-phone-image {
+    height: 78px;
+
+    margin: 0.7rem 0;
+}
+
+.review-phone-copy {
+    height: 4px;
+}
+
+.review-phone-button {
+    width: 38px;
+    height: 13px;
+
+    margin-top: 0.65rem;
+}
+
+
+/* ========================================
+   QA MARKS — MOBILE
+======================================== */
+
+.review-mark {
+    gap: 0.35rem;
+}
+
+.review-mark > span {
+    width: 20px;
+    height: 20px;
+
+    font-size: 0.42rem;
+}
+
+.review-mark p {
+    font-size: 0.4rem;
+}
+
+.review-mark-one {
+    left: 1%;
+    top: 15px;
+}
+
+.review-mark-two {
+    left: 1%;
+    top: 390px;
+}
+
+.review-mark-three {
+    right: 0;
+    top: 530px;
+}
+
+
+/* ========================================
+   REVIEW ANNOTATION — MOBILE
+======================================== */
+
+.review-annotation {
+    left: 3%;
+    right: auto;
+    top: 500px;
+
+    gap: 0.35rem;
+}
+
+.review-annotation > span {
+    font-size: 1.5rem;
+}
+
+.review-annotation p {
+    font-size: 1.35rem;
+}
+
+
+/* ========================================
+   REVIEW FLOW — MOBILE
+======================================== */
+
+.review-flow {
+    left: 0;
+    right: 0;
+    bottom: 22rem;
+
+    grid-template-columns: 1fr;
+}
+
+.review-flow-step {
+    grid-template-columns: 30px 1fr;
+
+    gap: 0.65rem;
+
+    padding: 1rem 0;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.16);
+}
+
+.review-flow-step + .review-flow-step {
+    border-left: 0;
+}
+
+.review-flow-step > span {
+    font-size: 0.44rem;
+}
+
+.review-flow-step div > p {
+    margin-bottom: 0.35rem;
+
+    font-size: 1.15rem;
+}
+
+.review-flow-step div > span {
+    max-width: 90%;
+
+    font-size: 0.62rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   REVISION NOTE — MOBILE
+======================================== */
+
+.review-revision-note {
+    left: 0;
+    bottom: 10rem;
+
+    width: 62%;
+}
+
+.review-revision-note > span {
+    margin-bottom: 0.45rem;
+
+    font-size: 1.2rem;
+}
+
+.review-revision-note p {
+    padding-top: 0.6rem;
+
+    font-size: 0.6rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   FINAL CHECK — MOBILE
+======================================== */
+
+.review-final-check {
+    left: auto;
+    right: 0;
+    bottom: 8.5rem;
+
+    width: 34%;
+
+    gap: 0.5rem;
+}
+
+.review-final-check > span {
+    width: 26px;
+    height: 26px;
+
+    font-size: 0.48rem;
+}
+
+.review-final-check div > span {
+    font-size: 0.42rem;
+}
+
+.review-final-check p {
+    font-size: 0.58rem;
+    line-height: 1.55;
+}
+
+
+/* ========================================
+   REVIEW STAGE RESULT — MOBILE
+======================================== */
+
+.review-stage-result {
+    left: auto;
+    right: 0;
+    bottom: -4rem;
+
+    width: 90%;
+}
+/* ========================================
+   PROCESS — LAUNCH & HANDOFF — MOBILE
+======================================== */
+
+.process-launch {
+    padding: 5rem 0;
+}
+
+.process-launch::before {
+    right: -0.2em;
+    top: 0.02em;
+
+    font-size: 22rem;
+}
+
+.process-launch-container {
+    min-height: 1840px;
+}
+
+
+/* ========================================
+   LAUNCH HEADING — MOBILE
+======================================== */
+
+.process-launch-heading {
+    max-width: none;
+
+    margin-top: 3.75rem;
+}
+
+.process-launch-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.6rem;
+}
+
+.process-launch-heading h2 {
+    font-size: clamp(3.8rem, 18vw, 5.4rem);
+    line-height: 0.84;
+}
+
+.process-launch-heading h2 span {
+    margin-left: 15%;
+}
+
+
+/* ========================================
+   LAUNCH INTRO COPY — MOBILE
+======================================== */
+
+.process-launch-copy {
+    width: 78%;
+
+    margin: 2rem 0 0 auto;
+}
+
+.process-launch-copy p {
+    padding-left: 1rem;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   LAUNCH MOMENT — MOBILE
+======================================== */
+
+.launch-moment {
+    top: 410px;
+
+    min-height: 700px;
+}
+
+
+/* ========================================
+   BEFORE WINDOW — MOBILE
+======================================== */
+
+.launch-local {
+    left: 0;
+    top: 45px;
+
+    width: 70%;
+
+    transform: rotate(-2deg);
+}
+
+.launch-state-label {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.42rem;
+}
+
+.launch-window-top {
+    padding: 0.55rem 0.65rem;
+}
+
+.launch-window-top > div {
+    gap: 0.25rem;
+}
+
+.launch-window-top > div span {
+    width: 5px;
+    height: 5px;
+}
+
+.launch-window-top > span {
+    font-size: 0.36rem;
+}
+
+.launch-local-screen {
+    min-height: 150px;
+
+    padding: 1.4rem;
+}
+
+.launch-local-screen > span {
+    font-size: 0.5rem;
+}
+
+.launch-local-screen p {
+    margin-top: 0.45rem;
+
+    font-size: 1.55rem;
+}
+
+
+/* ========================================
+   PUBLISH PATH — MOBILE
+======================================== */
+
+.launch-path {
+    left: 12%;
+    top: 275px;
+
+    width: auto;
+
+    gap: 0.4rem;
+
+    transform: rotate(7deg);
+}
+
+.launch-path > span {
+    font-size: 0;
+}
+
+.launch-path > span:last-child {
+    font-size: 1rem;
+}
+
+.launch-path > span:last-child::before {
+    content: "↓";
+
+    font-size: 1rem;
+}
+
+.launch-path p {
+    font-size: 1.6rem;
+
+    transform: rotate(-5deg);
+}
+
+
+/* ========================================
+   LIVE WEBSITE — MOBILE
+======================================== */
+
+.launch-live {
+    right: 0;
+    top: 345px;
+
+    width: 86%;
+
+    transform: rotate(1deg);
+}
+
+.launch-live-window {
+    box-shadow:
+        -10px 12px 0 rgba(185, 79, 112, 0.09);
+}
+
+.launch-live-screen {
+    min-height: 275px;
+
+    padding: 2rem 1.5rem;
+}
+
+.launch-live-screen::before {
+    right: -45px;
+    top: -35px;
+
+    width: 135px;
+    height: 135px;
+}
+
+.launch-live-status {
+    font-size: 0.43rem;
+}
+
+.launch-live-screen > p {
+    max-width: 250px;
+
+    margin-top: 1.5rem;
+
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+    line-height: 0.88;
+}
+
+.launch-live-screen > p em {
+    margin-left: 5%;
+}
+
+.launch-live-link {
+    margin-top: 1.4rem;
+
+    font-size: 0.43rem;
+}
+
+
+/* ========================================
+   WE MADE IT — MOBILE
+======================================== */
+
+.launch-scribble {
+    left: 1%;
+    top: 665px;
+
+    font-size: 2rem;
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   HANDOFF — MOBILE
+======================================== */
+
+.launch-handoff {
+    left: 0;
+    right: 0;
+
+    top: 1120px;
+    bottom: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+
+    padding-top: 1.4rem;
+}
+
+.launch-handoff-heading > span {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.46rem;
+}
+
+.launch-handoff-heading h3 {
+    max-width: 260px;
+
+    font-size: 2.7rem;
+}
+
+.launch-handoff-heading h3 em {
+    margin-left: 8%;
+}
+
+
+/* ========================================
+   HANDOFF DETAILS — MOBILE
+======================================== */
+
+.launch-handoff-details {
+    grid-template-columns: 1fr;
+}
+
+.launch-handoff-details > div {
+    padding: 0.85rem 0;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.14);
+}
+
+.launch-handoff-details > div + div {
+    border-left: 0;
+}
+
+.launch-handoff-details span {
+    margin-bottom: 0.4rem;
+
+    font-size: 0.43rem;
+}
+
+.launch-handoff-details p {
+    max-width: 84%;
+
+    font-size: 0.61rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   AFTERCARE — MOBILE
+======================================== */
+
+.launch-aftercare {
+    left: 0;
+    bottom: 10rem;
+
+    width: 59%;
+}
+
+.launch-aftercare-label {
+    margin-bottom: 0.45rem;
+
+    font-size: 1.2rem;
+}
+
+.launch-aftercare p {
+    padding-top: 0.6rem;
+
+    font-size: 0.59rem;
+    line-height: 1.6;
+}
+
+.launch-aftercare-note {
+    margin-top: 0.55rem;
+
+    font-size: 0.39rem;
+}
+
+
+/* ========================================
+   COMPLETION STAMP — MOBILE
+======================================== */
+
+.launch-complete {
+    left: auto;
+    right: 0;
+    bottom: 11rem;
+
+    gap: 0.5rem;
+
+    padding: 0.55rem 0.7rem;
+}
+
+.launch-complete > span {
+    font-size: 1.5rem;
+}
+
+.launch-complete > div {
+    padding-left: 0.55rem;
+}
+
+.launch-complete p {
+    font-size: 0.34rem;
+}
+
+.launch-complete strong {
+    font-size: 0.48rem;
+}
+
+
+/* ========================================
+   LAUNCH STAGE RESULT — MOBILE
+======================================== */
+
+.launch-stage-result {
+    left: auto;
+    right: 0;
+    bottom: -4rem;
+
+    width: 90%;
 }
 /* ========================================
    SITE FOOTER — MOBILE
