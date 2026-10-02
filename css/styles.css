@@ -12198,6 +12198,1322 @@ p {
     width: min(520px, 45%);
 }
 /* ========================================
+   CONTACT — HERO
+======================================== */
+
+.contact-hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 950px;
+
+    padding: clamp(7rem, 10vw, 10rem) 0 6rem;
+
+    background: var(--color-cream);
+
+    color: var(--color-espresso);
+}
+
+.contact-hero::before {
+    content: "?";
+
+    position: absolute;
+
+    right: -0.05em;
+    top: -0.2em;
+
+    font-family: var(--font-display);
+    font-size: clamp(25rem, 48vw, 48rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(185, 79, 112, 0.035);
+
+    pointer-events: none;
+}
+
+.contact-hero-container {
+    position: relative;
+
+    min-height: 760px;
+}
+
+
+/* ========================================
+   CONTACT — HERO INTRO
+======================================== */
+
+.contact-hero-intro {
+    position: relative;
+    z-index: 3;
+
+    max-width: 1000px;
+}
+
+.contact-hero-intro .section-eyebrow {
+    margin: 0 0 1.2rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-hero-intro h1 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(5.5rem, 9.5vw, 9.5rem);
+    font-weight: 500;
+    line-height: 0.82;
+
+    letter-spacing: -0.055em;
+
+    color: var(--color-espresso);
+}
+
+.contact-hero-intro h1 span {
+    display: block;
+
+    margin-left: 19%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   HANDWRITTEN ACCENT
+======================================== */
+
+.contact-hero-script {
+    position: absolute;
+    z-index: 4;
+
+    left: 4%;
+    top: 300px;
+
+    font-family: var(--font-script);
+    font-size: clamp(2rem, 3.5vw, 3.6rem);
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   CONTACT — INTRO COPY
+======================================== */
+
+.contact-hero-copy {
+    position: absolute;
+    z-index: 3;
+
+    right: 3%;
+    top: 330px;
+
+    width: min(390px, 35%);
+}
+
+.contact-copy-number {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    font-family: var(--font-code);
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-hero-copy p {
+    margin: 0;
+
+    padding-left: 1.25rem;
+
+    border-left:
+        1px solid rgba(185, 79, 112, 0.25);
+
+    /* Important customer-facing copy */
+    font-size: 1rem;
+    line-height: 1.75;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   DIRECT EMAIL
+======================================== */
+
+.contact-direct {
+    position: absolute;
+    z-index: 3;
+
+    left: 2%;
+    top: 500px;
+
+    width: min(650px, 57%);
+}
+
+.contact-direct-label {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    font-family: var(--font-code);
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.58);
+}
+
+.contact-email {
+    position: relative;
+
+    display: inline-block;
+
+    padding-bottom: 0.35rem;
+
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.3vw, 5.3rem);
+    font-weight: 500;
+    line-height: 0.95;
+
+    letter-spacing: -0.035em;
+
+    text-decoration: none;
+
+    color: var(--color-espresso);
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.22);
+
+    transition:
+        color 180ms ease,
+        border-color 180ms ease;
+}
+
+.contact-email span {
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+    color: var(--color-deep-pink);
+
+    border-color: var(--color-deep-pink);
+}
+
+.contact-direct-arrow {
+    position: absolute;
+
+    right: -1.5rem;
+    top: 2.3rem;
+
+    font-family: var(--font-code);
+    font-size: 1.3rem;
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(8deg);
+}
+
+
+/* ========================================
+   CONVERSATION PROMPT
+======================================== */
+
+.contact-conversation {
+    position: absolute;
+    z-index: 3;
+
+    right: 4%;
+    top: 575px;
+
+    width: min(350px, 31%);
+}
+
+.contact-conversation > span {
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-conversation p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+    font-style: italic;
+    line-height: 1.05;
+
+    color: var(--color-espresso);
+}
+
+
+/* ========================================
+   MC + YOU
+======================================== */
+
+.contact-hero-mark {
+    position: absolute;
+    z-index: 3;
+
+    left: 3%;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.9rem;
+}
+
+.contact-hero-mark span:first-child,
+.contact-hero-mark span:last-child {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-style: italic;
+
+    color: var(--color-espresso);
+}
+
+.contact-hero-mark span:nth-child(2) {
+    font-family: var(--font-script);
+    font-size: 2rem;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   SCROLL CUE
+======================================== */
+
+.contact-scroll-cue {
+    position: absolute;
+    z-index: 3;
+
+    right: 3%;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.65rem;
+}
+
+.contact-scroll-cue span:first-child {
+    font-family: var(--font-code);
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(107, 68, 56, 0.58);
+}
+
+.contact-scroll-cue span:last-child {
+    font-size: 1.2rem;
+
+    color: var(--color-deep-pink);
+}
+/* ========================================
+   CONTACT — SEND A NOTE
+======================================== */
+
+.contact-note {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-espresso);
+
+    color: var(--color-cream);
+}
+
+.contact-note::before {
+    content: "HELLO";
+
+    position: absolute;
+
+    left: -0.04em;
+    top: 0.08em;
+
+    font-family: var(--font-display);
+    font-size: clamp(11rem, 24vw, 24rem);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 0.8;
+
+    color: rgba(248, 234, 219, 0.025);
+
+    pointer-events: none;
+}
+
+.contact-note-container {
+    position: relative;
+
+    min-height: 1250px;
+}
+
+
+/* ========================================
+   SEND A NOTE — HEADING
+======================================== */
+
+.contact-note-heading {
+    position: relative;
+    z-index: 3;
+
+    max-width: 900px;
+}
+
+.contact-note-heading .section-eyebrow {
+    margin: 0 0 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-blush);
+}
+
+.contact-note-heading h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-cream);
+}
+
+.contact-note-heading h2 span {
+    display: block;
+
+    margin-left: 22%;
+
+    font-style: italic;
+
+    color: var(--color-blush);
+}
+
+
+/* ========================================
+   SEND A NOTE — INTRO
+======================================== */
+
+.contact-note-intro {
+    position: absolute;
+    z-index: 3;
+
+    right: 3%;
+    top: 180px;
+
+    width: min(390px, 34%);
+}
+
+.contact-note-intro > span {
+    display: block;
+
+    margin-bottom: 0.75rem;
+
+    font-family: var(--font-code);
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    color: var(--color-blush);
+}
+
+.contact-note-intro p {
+    margin: 0;
+
+    padding-left: 1.25rem;
+
+    border-left:
+        1px solid rgba(232, 154, 170, 0.3);
+
+    font-size: 1rem;
+    line-height: 1.75;
+
+    color: rgba(248, 234, 219, 0.82);
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+.contact-form {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    top: 400px;
+
+    width: 72%;
+}
+
+
+/* ========================================
+   FORM FIELDS
+======================================== */
+
+.contact-field {
+    position: relative;
+
+    padding: 1.6rem 0 1.3rem;
+
+    border-bottom:
+        1px solid rgba(248, 234, 219, 0.2);
+}
+
+.contact-field:first-child {
+    border-top:
+        1px solid rgba(248, 234, 219, 0.2);
+}
+
+.contact-field label {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 0.9rem;
+
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    line-height: 1;
+
+    color: var(--color-cream);
+}
+
+.contact-field label span {
+    font-family: var(--font-code);
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: var(--color-blush);
+}
+
+.contact-field input,
+.contact-field textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: var(--color-cream);
+
+    caret-color: var(--color-blush);
+}
+
+.contact-field input {
+    min-height: 42px;
+}
+
+.contact-field textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: rgba(248, 234, 219, 0.42);
+
+    opacity: 1;
+}
+
+.contact-field:focus-within {
+    border-color: rgba(232, 154, 170, 0.8);
+}
+
+.contact-field:focus-within label {
+    color: var(--color-blush);
+}
+
+
+/* ========================================
+   MESSAGE FIELD
+======================================== */
+
+.contact-field-message {
+    padding-bottom: 1.6rem;
+}
+
+.contact-field-message label {
+    margin-bottom: 1.2rem;
+}
+
+
+/* ========================================
+   FORM FOOTER
+======================================== */
+
+.contact-form-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-top: 1.5rem;
+}
+
+.contact-form-footer > p {
+    max-width: 380px;
+
+    margin: 0;
+
+    font-size: 0.875rem;
+    line-height: 1.65;
+
+    color: rgba(248, 234, 219, 0.64);
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    min-width: 190px;
+
+    padding: 1rem 1.25rem;
+
+    border:
+        1px solid rgba(232, 154, 170, 0.55);
+
+    background: transparent;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-cream);
+
+    cursor: pointer;
+
+    transition:
+        background 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+}
+
+.contact-submit span:last-child {
+    font-size: 1rem;
+
+    color: var(--color-blush);
+}
+
+.contact-submit:hover,
+.contact-submit:focus-visible {
+    border-color: var(--color-blush);
+
+    background: var(--color-blush);
+
+    color: var(--color-espresso);
+
+    transform: translateY(-2px);
+}
+
+.contact-submit:hover span:last-child,
+.contact-submit:focus-visible span:last-child {
+    color: var(--color-espresso);
+}
+
+
+/* ========================================
+   FORM STATUS
+======================================== */
+
+.contact-form-status {
+    min-height: 1.5rem;
+
+    margin: 1rem 0 0;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    color: var(--color-blush);
+}
+
+
+/* ========================================
+   PROJECT CTA
+======================================== */
+
+.contact-project-note {
+    position: absolute;
+    z-index: 3;
+
+    right: 0;
+    bottom: 8rem;
+
+    width: min(310px, 25%);
+
+    padding-top: 1.1rem;
+
+    border-top:
+        1px solid rgba(232, 154, 170, 0.35);
+}
+
+.contact-project-note > span {
+    display: block;
+
+    margin-bottom: 0.75rem;
+
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.05;
+
+    color: var(--color-blush);
+}
+
+.contact-project-note p {
+    margin: 0 0 1rem;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+
+    color: rgba(248, 234, 219, 0.78);
+}
+
+.contact-project-note a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.65rem;
+
+    padding-bottom: 0.3rem;
+
+    border-bottom:
+        1px solid rgba(232, 154, 170, 0.45);
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--color-blush);
+}
+
+
+/* ========================================
+   HANDWRITTEN NOTE
+======================================== */
+
+.contact-note-script {
+    position: absolute;
+    z-index: 2;
+
+    right: 2%;
+    top: 600px;
+
+    font-family: var(--font-script);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+
+    color: rgba(232, 154, 170, 0.65);
+
+    transform: rotate(-7deg);
+}
+/* ========================================
+   CONTACT — GOOD TO KNOW
+======================================== */
+
+.contact-know {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 11vw, 11rem) 0;
+
+    background: var(--color-soft-cream);
+
+    color: var(--color-espresso);
+}
+
+.contact-know::before {
+    content: "03";
+
+    position: absolute;
+
+    right: -0.05em;
+    top: -0.18em;
+
+    font-family: var(--font-display);
+    font-size: clamp(22rem, 42vw, 42rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: rgba(185, 79, 112, 0.035);
+
+    pointer-events: none;
+}
+
+.contact-know-container {
+    position: relative;
+
+    min-height: 1080px;
+}
+
+
+/* ========================================
+   GOOD TO KNOW — HEADING
+======================================== */
+
+.contact-know-heading {
+    position: relative;
+    z-index: 3;
+
+    max-width: 850px;
+}
+
+.contact-know-heading .section-eyebrow {
+    margin: 0 0 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-know-heading h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 8vw, 8rem);
+    font-weight: 500;
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-espresso);
+}
+
+.contact-know-heading h2 span {
+    display: block;
+
+    margin-left: 22%;
+
+    font-style: italic;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   HANDWRITTEN ACCENT
+======================================== */
+
+.contact-know-script {
+    position: absolute;
+    z-index: 4;
+
+    right: 6%;
+    top: 205px;
+
+    font-family: var(--font-script);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-6deg);
+}
+
+
+/* ========================================
+   GOOD TO KNOW — LIST
+======================================== */
+
+.contact-know-list {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    top: 390px;
+
+    width: 74%;
+}
+
+.contact-know-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+
+    border-top:
+        1px solid rgba(107, 68, 56, 0.18);
+}
+
+.contact-know-item:last-child {
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.18);
+}
+
+.contact-know-number {
+    padding-top: 0.35rem;
+
+    font-family: var(--font-code);
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-know-item > div {
+    max-width: 650px;
+}
+
+.contact-know-item h3 {
+    margin: 0 0 0.75rem;
+
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.7vw, 2.7rem);
+    font-weight: 500;
+    line-height: 1;
+
+    color: var(--color-espresso);
+}
+
+.contact-know-item p {
+    max-width: 580px;
+
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: var(--color-cocoa);
+}
+
+
+/* ========================================
+   START PROJECT LINK
+======================================== */
+
+.contact-know-item a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.65rem;
+
+    margin-top: 1rem;
+    padding-bottom: 0.3rem;
+
+    border-bottom:
+        1px solid rgba(185, 79, 112, 0.4);
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--color-deep-pink);
+
+    transition:
+        gap 180ms ease,
+        border-color 180ms ease;
+}
+
+.contact-know-item a:hover,
+.contact-know-item a:focus-visible {
+    gap: 0.95rem;
+
+    border-color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   CLOSING MESSAGE
+======================================== */
+
+.contact-know-closing {
+    position: absolute;
+    z-index: 3;
+
+    right: 1%;
+    bottom: 8rem;
+
+    width: min(350px, 28%);
+}
+
+.contact-know-closing > span {
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--font-script);
+    font-size: 1.8rem;
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-4deg);
+}
+
+.contact-know-closing p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.7vw, 2.7rem);
+    line-height: 1.08;
+
+    color: var(--color-espresso);
+}
+
+.contact-know-closing p em {
+    color: var(--color-deep-pink);
+}
+/* ========================================
+   CONTACT — SPAM TRAP
+======================================== */
+
+.contact-honeypot {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+}
+
+/* ========================================
+   MC × HELLO
+======================================== */
+
+.contact-know-mark {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.contact-know-mark span:first-child,
+.contact-know-mark span:last-child {
+    font-family: var(--font-code);
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: var(--color-espresso);
+}
+
+.contact-know-mark span:nth-child(2) {
+    font-family: var(--font-script);
+    font-size: 1.8rem;
+
+    color: var(--color-deep-pink);
+}
+/* ========================================
+   CONTACT — CLOSING
+======================================== */
+
+.contact-closing {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(7rem, 10vw, 9rem) 0;
+
+    background: var(--color-blush);
+
+    color: var(--color-espresso);
+}
+
+.contact-closing::before {
+    content: "HELLO";
+
+    position: absolute;
+
+    right: -0.08em;
+    bottom: -0.18em;
+
+    font-family: var(--font-display);
+    font-size: clamp(13rem, 27vw, 27rem);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 0.8;
+
+    color: rgba(248, 234, 219, 0.08);
+
+    pointer-events: none;
+}
+
+.contact-closing-container {
+    position: relative;
+
+    min-height: 650px;
+}
+
+
+/* ========================================
+   CLOSING — EYEBROW
+======================================== */
+
+.contact-closing .section-eyebrow {
+    position: relative;
+    z-index: 3;
+
+    margin: 0;
+
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   CLOSING — MAIN MESSAGE
+======================================== */
+
+.contact-closing-heading {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 4rem;
+
+    width: min(950px, 82%);
+}
+
+.contact-closing-kicker {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-espresso);
+}
+
+.contact-closing-heading h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(4.5rem, 7.5vw, 7.5rem);
+    font-weight: 500;
+    line-height: 0.86;
+
+    letter-spacing: -0.045em;
+
+    color: var(--color-espresso);
+}
+
+.contact-closing-heading h2 > span {
+    display: block;
+
+    margin-top: 0.25em;
+    margin-left: 13%;
+
+    font-size: 0.58em;
+    line-height: 1;
+}
+
+.contact-closing-heading h2 em {
+    font-weight: 500;
+
+    color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   CLOSING — HANDWRITTEN NOTE
+======================================== */
+
+.contact-closing-script {
+    position: absolute;
+    z-index: 4;
+
+    right: 7%;
+    top: 335px;
+
+    font-family: var(--font-script);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+
+    color: var(--color-deep-pink);
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   CLOSING — SAY HELLO
+======================================== */
+
+.contact-closing-link {
+    position: absolute;
+    z-index: 4;
+
+    right: 2%;
+    bottom: 5rem;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding-bottom: 0.4rem;
+
+    border-bottom:
+        1px solid rgba(107, 68, 56, 0.35);
+
+    font-family: var(--font-code);
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--color-espresso);
+
+    transition:
+        gap 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease;
+}
+
+.contact-closing-link span:last-child {
+    font-size: 1.1rem;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-closing-link:hover,
+.contact-closing-link:focus-visible {
+    gap: 1.35rem;
+
+    color: var(--color-deep-pink);
+    border-color: var(--color-deep-pink);
+}
+
+
+/* ========================================
+   CLOSING — SIGNATURE
+======================================== */
+
+.contact-closing-signature {
+    position: absolute;
+    z-index: 3;
+
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.65rem;
+}
+
+.contact-closing-signature span:first-child {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-style: italic;
+
+    color: var(--color-espresso);
+}
+
+.contact-closing-signature span:nth-child(2) {
+    font-family: var(--font-code);
+    font-size: 0.7rem;
+
+    color: var(--color-deep-pink);
+}
+
+.contact-closing-signature span:last-child {
+    font-family: var(--font-script);
+    font-size: 1.5rem;
+
+    color: var(--color-deep-pink);
+}
+/* ========================================
    SITE FOOTER
 ======================================== */
 
@@ -17701,6 +19017,670 @@ p {
     bottom: -4rem;
 
     width: 90%;
+}
+/* ========================================
+   CONTACT — HERO — MOBILE
+======================================== */
+
+.contact-hero {
+    min-height: 1080px;
+
+    padding: 5rem 0 4rem;
+}
+
+.contact-hero::before {
+    right: -0.28em;
+    top: 0.08em;
+
+    font-size: 25rem;
+}
+
+.contact-hero-container {
+    min-height: 940px;
+}
+
+
+/* ========================================
+   CONTACT INTRO — MOBILE
+======================================== */
+
+.contact-hero-intro {
+    max-width: none;
+}
+
+.contact-hero-intro .section-eyebrow {
+    margin-bottom: 0.9rem;
+
+    font-size: 0.62rem;
+}
+
+.contact-hero-intro h1 {
+    font-size: clamp(4rem, 18vw, 5.5rem);
+    line-height: 0.84;
+}
+
+.contact-hero-intro h1 span {
+    margin-left: 10%;
+}
+
+
+/* ========================================
+   HANDWRITTEN ACCENT — MOBILE
+======================================== */
+
+.contact-hero-script {
+    left: auto;
+    right: 3%;
+    top: 175px;
+
+    font-size: 2rem;
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   INTRO COPY — MOBILE
+======================================== */
+
+.contact-hero-copy {
+    left: auto;
+    right: 0;
+    top: 285px;
+
+    width: 82%;
+}
+
+.contact-copy-number {
+    margin-bottom: 0.65rem;
+
+    font-size: 0.55rem;
+}
+
+.contact-hero-copy p {
+    padding-left: 1rem;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   DIRECT EMAIL — MOBILE
+======================================== */
+
+.contact-direct {
+    left: 0;
+    top: 500px;
+
+    width: 100%;
+}
+
+.contact-direct-label {
+    margin-bottom: 0.65rem;
+
+    font-size: 0.58rem;
+}
+
+.contact-email {
+    max-width: 100%;
+
+    font-size: clamp(2.25rem, 10.5vw, 3.2rem);
+    line-height: 1;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-direct-arrow {
+    right: 0;
+    top: 2.2rem;
+
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   CONVERSATION PROMPT — MOBILE
+======================================== */
+
+.contact-conversation {
+    left: auto;
+    right: 0;
+    top: 650px;
+
+    width: 76%;
+}
+
+.contact-conversation > span {
+    margin-bottom: 0.65rem;
+
+    font-size: 0.58rem;
+    line-height: 1.5;
+}
+
+.contact-conversation p {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    line-height: 1.02;
+}
+
+
+/* ========================================
+   MC + YOU — MOBILE
+======================================== */
+
+.contact-hero-mark {
+    left: 0;
+    bottom: 20px;
+
+    gap: 0.65rem;
+}
+
+.contact-hero-mark span:first-child,
+.contact-hero-mark span:last-child {
+    font-size: 1.4rem;
+}
+
+.contact-hero-mark span:nth-child(2) {
+    font-size: 1.7rem;
+}
+
+
+/* ========================================
+   SCROLL CUE — MOBILE
+======================================== */
+
+.contact-scroll-cue {
+    right: 0;
+    bottom: 20px;
+
+    gap: 0.45rem;
+}
+
+.contact-scroll-cue span:first-child {
+    font-size: 0.52rem;
+}
+
+.contact-scroll-cue span:last-child {
+    font-size: 1rem;
+}
+/* ========================================
+   CONTACT — SEND A NOTE — MOBILE
+======================================== */
+
+.contact-note {
+    padding: 5rem 0;
+}
+
+.contact-note::before {
+    left: -0.12em;
+    top: 0.08em;
+
+    font-size: 10rem;
+}
+
+.contact-note-container {
+    min-height: 1480px;
+}
+
+
+/* ========================================
+   SEND A NOTE HEADING — MOBILE
+======================================== */
+
+.contact-note-heading {
+    max-width: none;
+}
+
+.contact-note-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.62rem;
+}
+
+.contact-note-heading h2 {
+    font-size: clamp(3.8rem, 17vw, 5.2rem);
+    line-height: 0.85;
+}
+
+.contact-note-heading h2 span {
+    margin-left: 12%;
+}
+
+
+/* ========================================
+   SEND A NOTE INTRO — MOBILE
+======================================== */
+
+.contact-note-intro {
+    left: auto;
+    right: 0;
+    top: 210px;
+
+    width: 82%;
+}
+
+.contact-note-intro > span {
+    margin-bottom: 0.65rem;
+
+    font-size: 0.55rem;
+}
+
+.contact-note-intro p {
+    padding-left: 1rem;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CONTACT FORM — MOBILE
+======================================== */
+
+.contact-form {
+    left: 0;
+    top: 450px;
+
+    width: 100%;
+}
+
+
+/* ========================================
+   FORM FIELDS — MOBILE
+======================================== */
+
+.contact-field {
+    padding: 1.4rem 0 1.2rem;
+}
+
+.contact-field label {
+    gap: 0.7rem;
+
+    margin-bottom: 0.8rem;
+
+    font-size: 1.25rem;
+}
+
+.contact-field label span {
+    font-size: 0.48rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-field input {
+    min-height: 44px;
+}
+
+.contact-field textarea {
+    min-height: 170px;
+}
+
+.contact-field-message {
+    padding-bottom: 1.4rem;
+}
+
+
+/* ========================================
+   FORM FOOTER — MOBILE
+======================================== */
+
+.contact-form-footer {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 1.25rem;
+
+    padding-top: 1.3rem;
+}
+
+.contact-form-footer > p {
+    max-width: 100%;
+
+    font-size: 0.875rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   SUBMIT BUTTON — MOBILE
+======================================== */
+
+.contact-submit {
+    align-self: flex-end;
+
+    min-width: 175px;
+
+    padding: 1rem 1.1rem;
+
+    font-size: 0.62rem;
+}
+
+
+/* ========================================
+   FORM STATUS — MOBILE
+======================================== */
+
+.contact-form-status {
+    margin-top: 0.8rem;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   HANDWRITTEN NOTE — MOBILE
+======================================== */
+
+.contact-note-script {
+    right: 0;
+    top: 1235px;
+
+    font-size: 1.65rem;
+}
+
+
+/* ========================================
+   PROJECT CTA — MOBILE
+======================================== */
+
+.contact-project-note {
+    left: 0;
+    right: auto;
+    bottom: 1rem;
+
+    width: 78%;
+
+    padding-top: 1rem;
+}
+
+.contact-project-note > span {
+    margin-bottom: 0.65rem;
+
+    font-size: 1.4rem;
+}
+
+.contact-project-note p {
+    margin-bottom: 0.9rem;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.contact-project-note a {
+    font-size: 0.62rem;
+}
+/* ========================================
+   CONTACT — GOOD TO KNOW — MOBILE
+======================================== */
+
+.contact-know {
+    padding: 5rem 0;
+}
+
+.contact-know::before {
+    right: -0.22em;
+    top: 0.02em;
+
+    font-size: 22rem;
+}
+
+.contact-know-container {
+    min-height: 1280px;
+}
+
+
+/* ========================================
+   GOOD TO KNOW HEADING — MOBILE
+======================================== */
+
+.contact-know-heading {
+    max-width: none;
+}
+
+.contact-know-heading .section-eyebrow {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.62rem;
+}
+
+.contact-know-heading h2 {
+    font-size: clamp(3.8rem, 17vw, 5.2rem);
+    line-height: 0.85;
+}
+
+.contact-know-heading h2 span {
+    margin-left: 12%;
+}
+
+
+/* ========================================
+   HANDWRITTEN ACCENT — MOBILE
+======================================== */
+
+.contact-know-script {
+    right: 2%;
+    top: 185px;
+
+    font-size: 1.7rem;
+
+    transform: rotate(-6deg);
+}
+
+
+/* ========================================
+   GOOD TO KNOW LIST — MOBILE
+======================================== */
+
+.contact-know-list {
+    left: 0;
+    top: 315px;
+
+    width: 100%;
+}
+
+.contact-know-item {
+    grid-template-columns: 35px 1fr;
+
+    gap: 0.8rem;
+
+    padding: 1.7rem 0;
+}
+
+.contact-know-number {
+    padding-top: 0.25rem;
+
+    font-size: 0.52rem;
+}
+
+.contact-know-item > div {
+    max-width: none;
+}
+
+.contact-know-item h3 {
+    margin-bottom: 0.65rem;
+
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.contact-know-item p {
+    max-width: 100%;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   START PROJECT LINK — MOBILE
+======================================== */
+
+.contact-know-item a {
+    margin-top: 0.85rem;
+
+    font-size: 0.62rem;
+}
+
+
+/* ========================================
+   CLOSING MESSAGE — MOBILE
+======================================== */
+
+.contact-know-closing {
+    left: auto;
+    right: 0;
+    bottom: 7rem;
+
+    width: 78%;
+}
+
+.contact-know-closing > span {
+    margin-bottom: 0.55rem;
+
+    font-size: 1.6rem;
+}
+
+.contact-know-closing p {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    line-height: 1.08;
+}
+
+
+/* ========================================
+   MC × HELLO — MOBILE
+======================================== */
+
+.contact-know-mark {
+    left: 0;
+    bottom: 0;
+
+    gap: 0.6rem;
+}
+
+.contact-know-mark span:first-child,
+.contact-know-mark span:last-child {
+    font-size: 0.52rem;
+}
+
+.contact-know-mark span:nth-child(2) {
+    font-size: 1.5rem;
+}
+/* ========================================
+   CONTACT — CLOSING — MOBILE
+======================================== */
+
+.contact-closing {
+    padding: 5rem 0 4rem;
+}
+
+.contact-closing::before {
+    right: -0.25em;
+    bottom: -0.08em;
+
+    font-size: 12rem;
+}
+
+.contact-closing-container {
+    min-height: 700px;
+}
+
+
+/* ========================================
+   CLOSING EYEBROW — MOBILE
+======================================== */
+
+.contact-closing .section-eyebrow {
+    font-size: 0.62rem;
+}
+
+
+/* ========================================
+   CLOSING MAIN MESSAGE — MOBILE
+======================================== */
+
+.contact-closing-heading {
+    margin-top: 3.5rem;
+
+    width: 100%;
+}
+
+.contact-closing-kicker {
+    margin-bottom: 0.8rem;
+
+    font-size: 0.62rem;
+}
+
+.contact-closing-heading h2 {
+    font-size: clamp(3.8rem, 17vw, 5.2rem);
+    line-height: 0.85;
+}
+
+.contact-closing-heading h2 > span {
+    margin-top: 0.35em;
+    margin-left: 8%;
+
+    font-size: 0.58em;
+    line-height: 1.05;
+}
+
+
+/* ========================================
+   CLOSING HANDWRITTEN NOTE — MOBILE
+======================================== */
+
+.contact-closing-script {
+    right: 2%;
+    top: 395px;
+
+    font-size: 1.7rem;
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   SAY HELLO — MOBILE
+======================================== */
+
+.contact-closing-link {
+    right: 0;
+    bottom: 6rem;
+
+    gap: 0.75rem;
+
+    font-size: 0.78rem;
+}
+
+.contact-closing-link span:last-child {
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   CLOSING SIGNATURE — MOBILE
+======================================== */
+
+.contact-closing-signature {
+    left: 0;
+    bottom: 0;
+
+    gap: 0.5rem;
+}
+
+.contact-closing-signature span:first-child {
+    font-size: 1.4rem;
+}
+
+.contact-closing-signature span:nth-child(2) {
+    font-size: 0.62rem;
+}
+
+.contact-closing-signature span:last-child {
+    font-size: 1.35rem;
 }
 /* ========================================
    SITE FOOTER — MOBILE
