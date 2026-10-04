@@ -1186,3 +1186,30 @@ window.scrollTo({
     top: 0,
     behavior: "smooth"
 });
+            } catch (error) {
+
+                console.error(
+                    "Project inquiry submission error:",
+                    error
+                );
+
+                if (submitButton) {
+
+                    submitButton.disabled = false;
+
+                    submitButton.innerHTML =
+                        originalButtonContent;
+
+                }
+
+                window.alert(
+                    "Your inquiry could not be sent. " +
+                    "Please try again."
+                );
+
+            }
+
+        }
+    );
+
+}
