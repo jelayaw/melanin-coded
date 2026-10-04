@@ -13514,6 +13514,1755 @@ p {
     color: var(--color-deep-pink);
 }
 /* ========================================
+   START A PROJECT — HERO
+======================================== */
+
+.start-project-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 7.5rem 5% 8rem;
+
+    background:
+        radial-gradient(
+            circle at 78% 25%,
+            rgba(214, 129, 153, 0.16),
+            transparent 28%
+        ),
+        #f7eee9;
+}
+
+.start-project-hero-inner {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+    align-items: center;
+    gap: 6rem;
+}
+
+
+/* ========================================
+   HERO COPY
+======================================== */
+
+.start-project-hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.start-project-eyebrow {
+    margin: 0 0 1.35rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #b44f70;
+}
+
+.start-project-title {
+    max-width: 720px;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(4.2rem, 6vw, 6.6rem);
+    font-weight: 500;
+    line-height: 0.88;
+
+    letter-spacing: -0.045em;
+
+    color: #3a211b;
+}
+
+.start-project-title span {
+    display: block;
+
+    font-family: "Allura", cursive;
+    font-size: 0.78em;
+    font-weight: 400;
+    line-height: 1.05;
+
+    letter-spacing: 0;
+
+    color: #c45d7c;
+
+    transform: rotate(-2deg);
+    transform-origin: left center;
+}
+
+.start-project-intro {
+    max-width: 610px;
+    margin: 2.25rem 0 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.08rem;
+    line-height: 1.85;
+
+    color: #60463f;
+}
+
+.start-project-button {
+    width: fit-content;
+    margin-top: 2.25rem;
+    padding: 1rem 1.45rem;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    border: 1px solid #3a211b;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    color: #fff8f3;
+    background: #3a211b;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.start-project-button:hover {
+    transform: translateY(-3px);
+
+    color: #3a211b;
+    background: transparent;
+}
+
+
+/* ========================================
+   HERO VISUAL
+======================================== */
+
+.start-project-hero-visual {
+    position: relative;
+
+    min-height: 470px;
+
+    display: grid;
+    place-items: center;
+}
+
+.start-project-visual-card {
+    position: relative;
+
+    width: min(100%, 410px);
+    min-height: 360px;
+
+    padding: 4rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(58, 33, 27, 0.18);
+    box-shadow: 0 28px 70px rgba(58, 33, 27, 0.12);
+
+    background: rgba(255, 250, 246, 0.82);
+
+    transform: rotate(3deg);
+}
+
+.start-project-visual-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 14px;
+
+    border: 1px solid rgba(196, 93, 124, 0.28);
+
+    pointer-events: none;
+}
+
+.start-project-visual-code {
+    margin: 0;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.82rem;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    color: #8d6d64;
+}
+
+.start-project-visual-script {
+    position: relative;
+    z-index: 1;
+
+    margin: 1rem 0;
+
+    font-family: "Allura", cursive;
+    font-size: 3.3rem;
+    line-height: 1;
+
+    text-align: center;
+
+    color: #c45d7c;
+}
+
+.start-project-visual-line {
+    width: 135px;
+    height: 2px;
+    margin: 0.65rem 0;
+
+    background: #3a211b;
+
+    transform: rotate(-3deg);
+}
+
+.start-project-sparkle {
+    position: absolute;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #c45d7c;
+}
+
+.sparkle-one {
+    top: 11%;
+    right: 4%;
+
+    font-size: 3.3rem;
+
+    transform: rotate(12deg);
+}
+
+.sparkle-two {
+    bottom: 12%;
+    left: 3%;
+
+    font-size: 2.2rem;
+
+    transform: rotate(-14deg);
+}
+/* ========================================
+   START A PROJECT — HOW IT WORKS
+======================================== */
+
+.project-intro-process {
+    padding: 6.5rem 5%;
+
+    background: #f3d9d7;
+}
+
+.project-intro-process-inner {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.project-intro-heading {
+    margin-bottom: 4rem;
+}
+
+.project-intro-eyebrow {
+    margin: 0 0 1rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #9d3f60;
+}
+
+.project-intro-title {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 4vw, 4.6rem);
+    font-weight: 500;
+    line-height: 0.95;
+
+    letter-spacing: -0.035em;
+
+    color: #3a211b;
+}
+
+.project-intro-title span {
+    font-family: "Allura", cursive;
+    font-size: 1.05em;
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    color: #b94f70;
+}
+
+
+/* ========================================
+   PROCESS STEPS
+======================================== */
+
+.project-intro-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid rgba(58, 33, 27, 0.22);
+    border-bottom: 1px solid rgba(58, 33, 27, 0.22);
+}
+
+.project-intro-step {
+    min-height: 230px;
+    padding: 2.5rem 2.5rem 2.75rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.project-intro-step + .project-intro-step {
+    border-left: 1px solid rgba(58, 33, 27, 0.22);
+}
+
+.project-intro-number {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 0.85;
+
+    color: #c96883;
+}
+
+.project-intro-step-copy h3 {
+    margin: 0 0 0.8rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.05;
+
+    color: #3a211b;
+}
+
+.project-intro-step-copy p {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: #60463f;
+}
+
+
+/* ========================================
+   GOOD TO KNOW
+======================================== */
+
+.project-intro-note {
+    width: min(950px, 100%);
+    margin: 2.5rem auto 0;
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+
+    border: 1px solid rgba(185, 79, 112, 0.22);
+    border-radius: 999px;
+
+    background: rgba(255, 248, 245, 0.58);
+}
+
+.project-intro-note-icon {
+    width: 27px;
+    height: 27px;
+
+    flex: 0 0 27px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #3a211b;
+    border-radius: 50%;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+
+    color: #3a211b;
+}
+
+.project-intro-note p {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.6;
+
+    color: #513a34;
+}
+
+.project-intro-note strong {
+    color: #3a211b;
+}
+/* ========================================
+   START A PROJECT — INTAKE SHELL
+======================================== */
+
+.project-intake {
+    padding: 7rem 5% 8rem;
+
+    background: #fffaf6;
+}
+
+.project-intake-inner {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   INTAKE HEADER
+======================================== */
+
+.project-intake-header {
+    width: min(760px, 100%);
+    margin: 0 auto 4rem;
+
+    text-align: center;
+}
+
+.project-intake-eyebrow {
+    margin: 0 0 1rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #b44f70;
+}
+
+.project-intake-title {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.4rem, 5vw, 5.2rem);
+    font-weight: 500;
+    line-height: 0.92;
+
+    letter-spacing: -0.04em;
+
+    color: #3a211b;
+}
+
+.project-intake-title span {
+    font-family: "Allura", cursive;
+    font-size: 1.02em;
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    color: #c45d7c;
+}
+
+.project-intake-intro {
+    width: min(650px, 100%);
+    margin: 1.75rem auto 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    color: #60463f;
+}
+
+
+/* ========================================
+   FORM CONTAINER
+======================================== */
+
+.project-intake-form {
+    width: 100%;
+
+    border: 1px solid rgba(58, 33, 27, 0.16);
+
+    box-shadow:
+        0 24px 65px rgba(58, 33, 27, 0.08);
+
+    background: #ffffff;
+}
+
+
+/* ========================================
+   DESKTOP PROGRESS
+======================================== */
+
+.project-progress-desktop {
+    padding: 2rem 2.5rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    border-bottom: 1px solid rgba(58, 33, 27, 0.13);
+
+    background: #f8efeb;
+}
+
+.project-progress-item {
+    min-width: 115px;
+
+    text-align: center;
+}
+
+.project-progress-item span {
+    width: 38px;
+    height: 38px;
+    margin: 0 auto 0.7rem;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(58, 33, 27, 0.32);
+    border-radius: 50%;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    color: #6e5149;
+    background: #fffaf6;
+}
+
+.project-progress-item p {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.4;
+
+    color: #72574f;
+}
+
+.project-progress-item.active span {
+    border-color: #3a211b;
+
+    color: #fffaf6;
+    background: #3a211b;
+}
+
+.project-progress-item.active p {
+    color: #3a211b;
+}
+
+.project-progress-line {
+    height: 1px;
+    margin: 19px 0.8rem 0;
+
+    flex: 1;
+
+    background: rgba(58, 33, 27, 0.2);
+}
+
+
+/* ========================================
+   MOBILE PROGRESS
+   Hidden on desktop
+======================================== */
+
+.project-progress-mobile {
+    display: none;
+}
+
+
+/* ========================================
+   FORM STAGE
+======================================== */
+
+.project-form-stage {
+    min-height: 0px;
+}
+
+.project-form-step {
+    padding: 4.5rem 5rem 5rem;
+}
+
+.project-form-step-heading {
+    width: min(700px, 100%);
+    margin-bottom: 3rem;
+}
+
+.project-form-step-number {
+    margin: 0 0 0.8rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #b44f70;
+}
+
+.project-form-step-heading h3 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.5rem, 3.5vw, 3.7rem);
+    font-weight: 500;
+    line-height: 1;
+
+    letter-spacing: -0.025em;
+
+    color: #3a211b;
+}
+
+.project-form-step-heading > p:last-child {
+    max-width: 580px;
+    margin: 1rem 0 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.75;
+
+    color: #60463f;
+}
+
+
+/* ========================================
+   FIELD AREA
+======================================== */
+
+.project-form-fields {
+    width: 100%;
+}
+/* ========================================
+   START A PROJECT — STEP 01 FIELDS
+======================================== */
+
+.project-field-group {
+    margin: 0 0 3.5rem;
+    padding: 0;
+
+    border: 0;
+}
+
+.project-field-group legend,
+.project-field-label {
+    display: block;
+    margin: 0 0 0.8rem;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    color: #3a211b;
+}
+
+.required-mark {
+    color: #b94f70;
+}
+
+.project-field-help {
+    max-width: 680px;
+    margin: -0.25rem 0 1.25rem;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    color: #72574f;
+}
+
+
+/* ========================================
+   PROJECT TYPE CARDS
+======================================== */
+
+.project-option-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.project-option-card {
+    position: relative;
+
+    min-height: 150px;
+
+    cursor: pointer;
+}
+
+.project-option-card input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.project-option-content {
+    height: 100%;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    border: 1px solid rgba(58, 33, 27, 0.2);
+
+    background: #fffaf6;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-option-content strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.1;
+
+    color: #3a211b;
+}
+
+.project-option-content small {
+    font-family: "Manrope", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    color: #72574f;
+}
+
+.project-option-card:hover .project-option-content {
+    transform: translateY(-3px);
+
+    border-color: rgba(185, 79, 112, 0.55);
+
+    box-shadow:
+        0 12px 28px rgba(58, 33, 27, 0.07);
+}
+
+.project-option-card input:checked + .project-option-content {
+    border-color: #b94f70;
+
+    background: #f8e6e7;
+
+    box-shadow:
+        inset 0 0 0 1px #b94f70;
+}
+
+.project-option-card input:focus-visible + .project-option-content {
+    outline: 3px solid rgba(185, 79, 112, 0.3);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   TEXTAREA + URL INPUT
+======================================== */
+
+.project-field-group textarea,
+.project-field-group input[type="url"] {
+    width: 100%;
+
+    border: 1px solid rgba(58, 33, 27, 0.25);
+    border-radius: 0;
+
+    outline: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+
+    color: #3a211b;
+    background: #fffaf6;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-field-group textarea {
+    min-height: 190px;
+    padding: 1.15rem 1.2rem;
+
+    resize: vertical;
+
+    line-height: 1.7;
+}
+
+.project-field-group input[type="url"] {
+    height: 56px;
+    padding: 0 1.2rem;
+}
+
+.project-field-group textarea:focus,
+.project-field-group input[type="url"]:focus {
+    border-color: #b94f70;
+
+    box-shadow:
+        0 0 0 3px rgba(185, 79, 112, 0.12);
+}
+
+.project-field-group input[type="url"]::placeholder {
+    color: #9a817a;
+}
+
+
+/* ========================================
+   WEBSITE CHOICES
+======================================== */
+
+.project-choice-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.project-choice {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.project-choice input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.project-choice span {
+    min-height: 50px;
+    padding: 0.8rem 1.25rem;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid rgba(58, 33, 27, 0.22);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.45;
+
+    color: #60463f;
+    background: #fffaf6;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.project-choice:hover span {
+    border-color: #b94f70;
+}
+
+.project-choice input:checked + span {
+    border-color: #3a211b;
+
+    color: #fffaf6;
+    background: #3a211b;
+}
+
+.project-choice input:focus-visible + span {
+    outline: 3px solid rgba(185, 79, 112, 0.3);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   STEP NAVIGATION
+======================================== */
+
+.project-form-navigation {
+    margin-top: 1rem;
+    padding-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(58, 33, 27, 0.13);
+}
+
+.project-form-navigation-note {
+    font-family: "Space Mono", monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: #8d7068;
+}
+
+.project-next-button {
+    min-height: 52px;
+    padding: 0.9rem 1.5rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    border: 1px solid #3a211b;
+
+    cursor: pointer;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: #fffaf6;
+    background: #3a211b;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.project-next-button:hover {
+    transform: translateY(-2px);
+
+    color: #3a211b;
+    background: transparent;
+}
+/* ========================================
+   START A PROJECT — STEP 02
+======================================== */
+
+
+/* ========================================
+   PAGE COUNT CHOICES
+======================================== */
+
+.project-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.8rem;
+}
+
+.project-choice-grid .project-choice {
+    width: 100%;
+}
+
+.project-choice-grid .project-choice span {
+    width: 100%;
+    min-height: 58px;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   MULTI-SELECT CHECKBOX CARDS
+======================================== */
+
+.project-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+
+.project-checkbox-card {
+    position: relative;
+
+    min-width: 0;
+
+    cursor: pointer;
+}
+
+.project-checkbox-card input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.project-checkbox-card span {
+    position: relative;
+
+    width: 100%;
+    min-height: 64px;
+    padding: 1rem 3rem 1rem 1.1rem;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid rgba(58, 33, 27, 0.2);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.45;
+
+    color: #60463f;
+    background: #fffaf6;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-checkbox-card span::after {
+    content: "+";
+
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #b94f70;
+
+    transform: translateY(-50%);
+}
+
+.project-checkbox-card:hover span {
+    border-color: #b94f70;
+
+    transform: translateY(-2px);
+}
+
+.project-checkbox-card input:checked + span {
+    border-color: #b94f70;
+
+    color: #3a211b;
+    background: #f8e6e7;
+
+    box-shadow:
+        inset 0 0 0 1px #b94f70;
+}
+
+.project-checkbox-card input:checked + span::after {
+    content: "✓";
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    color: #9d3f60;
+}
+
+.project-checkbox-card input:focus-visible + span {
+    outline: 3px solid rgba(185, 79, 112, 0.3);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   BACK BUTTON
+======================================== */
+
+.project-back-button {
+    min-height: 52px;
+    padding: 0.9rem 1.4rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    border: 1px solid rgba(58, 33, 27, 0.28);
+
+    cursor: pointer;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: #3a211b;
+    background: transparent;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-back-button:hover {
+    transform: translateY(-2px);
+
+    border-color: #3a211b;
+
+    color: #fffaf6;
+    background: #3a211b;
+}
+/* ========================================
+   START A PROJECT — STEP 03
+======================================== */
+
+/* Budget */
+.project-budget-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.8rem;
+}
+
+.project-budget-grid .project-choice,
+.project-timeline-grid .project-choice,
+.project-payment-grid .project-choice {
+    width: 100%;
+}
+
+.project-budget-grid .project-choice span,
+.project-timeline-grid .project-choice span,
+.project-payment-grid .project-choice span {
+    width: 100%;
+    min-height: 58px;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.project-timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+
+
+/* ========================================
+   PAYMENT PREFERENCE
+======================================== */
+
+.project-payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+
+/* ========================================
+   LAUNCH DATE
+======================================== */
+
+.project-field-group input[type="date"] {
+    width: min(360px, 100%);
+    height: 56px;
+    padding: 0 1.2rem;
+
+    border: 1px solid rgba(58, 33, 27, 0.25);
+    border-radius: 0;
+
+    outline: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+
+    color: #3a211b;
+    background: #fffaf6;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-field-group input[type="date"]:focus {
+    border-color: #b94f70;
+
+    box-shadow:
+        0 0 0 3px rgba(185, 79, 112, 0.12);
+}
+
+
+/* ========================================
+   DEPOSIT NOTE
+======================================== */
+
+.project-deposit-note {
+    margin: 0 0 3.5rem;
+    padding: 1.75rem 2rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.5rem;
+
+    border: 1px solid rgba(185, 79, 112, 0.25);
+
+    background: #f8e6e7;
+}
+
+.project-deposit-note-number {
+    width: 74px;
+    height: 74px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #b94f70;
+    border-radius: 50%;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    font-style: italic;
+
+    color: #9d3f60;
+    background: #fffaf6;
+}
+
+.project-deposit-note strong {
+    display: block;
+    margin-bottom: 0.35rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+
+    color: #3a211b;
+}
+
+.project-deposit-note p {
+    max-width: 700px;
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    color: #60463f;
+}
+/* ========================================
+   START A PROJECT — STEP 04
+======================================== */
+
+.project-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.project-contact-grid .project-field-group {
+    min-width: 0;
+}
+
+
+/* ========================================
+   CONTACT INPUTS
+======================================== */
+
+.project-field-group input[type="text"],
+.project-field-group input[type="email"],
+.project-field-group input[type="tel"],
+.project-field-group select {
+    width: 100%;
+    height: 56px;
+    padding: 0 1.2rem;
+
+    border: 1px solid rgba(58, 33, 27, 0.25);
+    border-radius: 0;
+
+    outline: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+
+    color: #3a211b;
+    background: #fffaf6;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-field-group input[type="text"]:focus,
+.project-field-group input[type="email"]:focus,
+.project-field-group input[type="tel"]:focus,
+.project-field-group select:focus {
+    border-color: #b94f70;
+
+    box-shadow:
+        0 0 0 3px rgba(185, 79, 112, 0.12);
+}
+
+
+/* ========================================
+   OPTIONAL LABEL
+======================================== */
+
+.optional-label {
+    margin-left: 0.4rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.68rem;
+    font-weight: 400;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #9a817a;
+}
+
+
+/* ========================================
+   CONTACT METHOD
+======================================== */
+
+.project-contact-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+
+.project-contact-choice-grid .project-choice {
+    width: 100%;
+}
+
+.project-contact-choice-grid .project-choice span {
+    width: 100%;
+    min-height: 58px;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   SELECT
+======================================== */
+
+.project-field-group select {
+    cursor: pointer;
+}
+/* ========================================
+   START A PROJECT — REVIEW
+======================================== */
+
+.project-review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+
+/* ========================================
+   REVIEW CARDS
+======================================== */
+
+.project-review-card {
+    min-width: 0;
+    padding: 2rem;
+
+    border: 1px solid rgba(58, 33, 27, 0.16);
+
+    background: #fffaf6;
+}
+
+.project-review-card-header {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+
+    border-bottom: 1px solid rgba(58, 33, 27, 0.13);
+}
+
+.project-review-number {
+    display: block;
+    margin-bottom: 0.35rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: #b44f70;
+}
+
+.project-review-card h4 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1;
+
+    color: #3a211b;
+}
+
+
+/* ========================================
+   EDIT BUTTON
+======================================== */
+
+.project-review-edit {
+    padding: 0;
+
+    border: 0;
+
+    cursor: pointer;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    color: #9d3f60;
+    background: transparent;
+}
+
+.project-review-edit:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   REVIEW CONTENT
+======================================== */
+
+.project-review-content {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.project-review-item {
+    min-width: 0;
+}
+
+.project-review-label {
+    display: block;
+    margin-bottom: 0.3rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #9a817a;
+}
+
+.project-review-value {
+    margin: 0;
+
+    overflow-wrap: anywhere;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+
+    color: #3a211b;
+}
+
+
+/* ========================================
+   REVIEW NOTICE
+======================================== */
+
+.project-review-notice {
+    margin-top: 2rem;
+    padding: 1.5rem 1.75rem;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    border: 1px solid rgba(185, 79, 112, 0.24);
+
+    background: #f8e6e7;
+}
+
+.project-review-notice-icon {
+    width: 30px;
+    height: 30px;
+
+    flex: 0 0 30px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #3a211b;
+    border-radius: 50%;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+
+    color: #3a211b;
+}
+
+.project-review-notice p {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    color: #60463f;
+}
+
+.project-review-notice strong {
+    color: #3a211b;
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.project-submit-button {
+    min-height: 54px;
+    padding: 0.95rem 1.6rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    border: 1px solid #b44f70;
+
+    cursor: pointer;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: #ffffff;
+    background: #b44f70;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.project-submit-button:hover {
+    transform: translateY(-2px);
+
+    color: #b44f70;
+    background: transparent;
+}
+/* ========================================
+   PROJECT INQUIRY — SUCCESS
+======================================== */
+
+.project-success-content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    text-align: center;
+}
+
+.project-success-eyebrow {
+    display: block;
+    margin-bottom: 1.25rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #b44f70;
+}
+
+.project-success-mark {
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 1.75rem;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #b44f70;
+    border-radius: 50%;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    color: #b44f70;
+    background: #f8e6e7;
+}
+
+.project-success-content h3 {
+    margin: 0 0 1rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 1;
+
+    color: #3a211b;
+}
+
+.project-success-lead {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: #60463f;
+}
+
+
+/* ========================================
+   SUCCESS — NEXT STEP
+======================================== */
+
+.project-success-next {
+    padding: 1.75rem 2rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.5rem;
+
+    border: 1px solid rgba(185, 79, 112, 0.25);
+
+    text-align: left;
+
+    background: #f8e6e7;
+}
+
+.project-success-next-number {
+    width: 68px;
+    height: 68px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #b44f70;
+    border-radius: 50%;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-style: italic;
+
+    color: #9d3f60;
+    background: #fffaf6;
+}
+
+.project-success-next strong {
+    display: block;
+    margin-bottom: 0.35rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    color: #3a211b;
+}
+
+.project-success-next p {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    color: #60463f;
+}
+
+
+/* ========================================
+   SUCCESS — NOTE + HOME
+======================================== */
+
+.project-success-note {
+    margin: 1.5rem auto 2rem;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.6;
+
+    color: #806a63;
+}
+
+.project-success-home {
+    min-height: 54px;
+    padding: 0.95rem 1.6rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    border: 1px solid #b44f70;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    color: #ffffff;
+    background: #b44f70;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.project-success-home:hover {
+    transform: translateY(-2px);
+
+    color: #b44f70;
+    background: transparent;
+}
+/* ========================================
    SITE FOOTER
 ======================================== */
 
@@ -19681,6 +21430,718 @@ p {
 
 .contact-closing-signature span:last-child {
     font-size: 1.35rem;
+}
+/* ========================================
+   START A PROJECT — HERO — MOBILE
+======================================== */
+
+.start-project-hero {
+    padding: 4.5rem 1.35rem 5rem;
+}
+
+.start-project-hero-inner {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+
+/* ========================================
+   HERO COPY — MOBILE
+======================================== */
+
+.start-project-eyebrow {
+    margin-bottom: 1.15rem;
+
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+}
+
+.start-project-title {
+    max-width: 100%;
+
+    font-size: clamp(3.6rem, 16vw, 5rem);
+    line-height: 0.86;
+}
+
+.start-project-title span {
+    margin-top: 0.2rem;
+
+    font-size: 0.72em;
+    line-height: 1.05;
+
+    transform: rotate(-1deg);
+}
+
+.start-project-intro {
+    max-width: 100%;
+    margin-top: 2rem;
+
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.start-project-button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+
+    justify-content: center;
+
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   HERO VISUAL — MOBILE
+======================================== */
+
+.start-project-hero-visual {
+    min-height: 360px;
+}
+
+.start-project-visual-card {
+    width: min(88%, 340px);
+    min-height: 310px;
+
+    padding: 3rem 2rem;
+
+    transform: rotate(2deg);
+}
+
+.start-project-visual-card::before {
+    inset: 11px;
+}
+
+.start-project-visual-script {
+    margin: 0.85rem 0;
+
+    font-size: 2.75rem;
+}
+
+.start-project-visual-line {
+    width: 110px;
+}
+
+.sparkle-one {
+    top: 5%;
+    right: 1%;
+
+    font-size: 2.5rem;
+}
+
+.sparkle-two {
+    bottom: 6%;
+    left: 1%;
+
+    font-size: 1.8rem;
+}
+/* ========================================
+   START A PROJECT — HOW IT WORKS — MOBILE
+======================================== */
+
+.project-intro-process {
+    padding: 4.5rem 1.35rem;
+}
+
+.project-intro-process-inner {
+    width: 100%;
+}
+
+
+/* ========================================
+   SECTION HEADING — MOBILE
+======================================== */
+
+.project-intro-heading {
+    margin-bottom: 3rem;
+}
+
+.project-intro-eyebrow {
+    margin-bottom: 0.85rem;
+
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+}
+
+.project-intro-title {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+    line-height: 0.92;
+}
+
+.project-intro-title span {
+    display: block;
+    margin-top: 0.1rem;
+}
+
+
+/* ========================================
+   PROCESS STEPS — MOBILE
+======================================== */
+
+.project-intro-steps {
+    grid-template-columns: 1fr;
+}
+
+.project-intro-step {
+    min-height: 0;
+    padding: 2rem 0.25rem;
+
+    grid-template-columns: 55px minmax(0, 1fr);
+    gap: 1.15rem;
+}
+
+.project-intro-step + .project-intro-step {
+    border-left: 0;
+    border-top: 1px solid rgba(58, 33, 27, 0.22);
+}
+
+.project-intro-number {
+    font-size: 3.25rem;
+}
+
+.project-intro-step-copy h3 {
+    font-size: 1.65rem;
+}
+
+.project-intro-step-copy p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   GOOD TO KNOW — MOBILE
+======================================== */
+
+.project-intro-note {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1.25rem;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    border-radius: 0;
+}
+
+.project-intro-note p {
+    min-width: 0;
+
+    font-size: 1rem;
+    line-height: 1.65;
+}
+/* ========================================
+   START A PROJECT — INTAKE SHELL — MOBILE
+======================================== */
+
+.project-intake {
+    padding: 4.5rem 1.35rem 5rem;
+}
+
+.project-intake-inner {
+    width: 100%;
+}
+
+
+/* ========================================
+   INTAKE HEADER — MOBILE
+======================================== */
+
+.project-intake-header {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    text-align: left;
+}
+
+.project-intake-eyebrow {
+    margin-bottom: 0.85rem;
+
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+}
+
+.project-intake-title {
+    font-size: clamp(2.9rem, 12vw, 4rem);
+    line-height: 0.92;
+}
+
+.project-intake-title span {
+    display: block;
+
+    margin-top: 0.1rem;
+}
+
+.project-intake-intro {
+    width: 100%;
+    margin-top: 1.5rem;
+
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   FORM CONTAINER — MOBILE
+======================================== */
+
+.project-intake-form {
+    width: 100%;
+
+    box-shadow:
+        0 18px 45px rgba(58, 33, 27, 0.07);
+}
+
+
+/* ========================================
+   PROGRESS — MOBILE
+======================================== */
+
+.project-progress-desktop {
+    display: none;
+}
+
+.project-progress-mobile {
+    padding: 1.5rem;
+
+    display: block;
+
+    border-bottom: 1px solid rgba(58, 33, 27, 0.13);
+
+    background: #f8efeb;
+}
+
+.project-progress-mobile-label {
+    margin: 0 0 0.75rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #3a211b;
+}
+
+.project-progress-mobile-bar {
+    width: 100%;
+    height: 4px;
+
+    overflow: hidden;
+
+    background: rgba(58, 33, 27, 0.14);
+}
+
+.project-progress-mobile-bar span {
+    width: 25%;
+    height: 100%;
+
+    display: block;
+
+    background: #b94f70;
+}
+
+
+/* ========================================
+   FORM STAGE — MOBILE
+======================================== */
+
+.project-form-stage {
+    min-height: 0;
+}
+
+.project-form-step {
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+.project-form-step-heading {
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.project-form-step-number {
+    margin-bottom: 0.7rem;
+
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+}
+
+.project-form-step-heading h3 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+    line-height: 1;
+}
+
+.project-form-step-heading > p:last-child {
+    width: 100%;
+    margin-top: 0.9rem;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.project-form-fields {
+    width: 100%;
+}
+/* ========================================
+   START A PROJECT — STEP 01 — MOBILE
+======================================== */
+
+.project-field-group {
+    margin-bottom: 3rem;
+}
+
+.project-field-group legend,
+.project-field-label {
+    margin-bottom: 0.75rem;
+
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.project-field-help {
+    margin: -0.15rem 0 1.1rem;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PROJECT TYPE CARDS — MOBILE
+======================================== */
+
+.project-option-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+.project-option-card {
+    min-height: 0;
+}
+
+.project-option-content {
+    min-height: 120px;
+    padding: 1.25rem;
+
+    gap: 0.8rem;
+}
+
+.project-option-content strong {
+    font-size: 1.4rem;
+}
+
+.project-option-content small {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   TEXTAREA + URL — MOBILE
+======================================== */
+
+.project-field-group textarea {
+    min-height: 180px;
+    padding: 1rem;
+
+    font-size: 1rem;
+}
+
+.project-field-group input[type="url"] {
+    height: 54px;
+    padding: 0 1rem;
+
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   WEBSITE CHOICES — MOBILE
+======================================== */
+
+.project-choice-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+}
+
+.project-choice {
+    width: 100%;
+}
+
+.project-choice span {
+    width: 100%;
+    min-height: 52px;
+    padding: 0.85rem 1rem;
+
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   STEP NAVIGATION — MOBILE
+======================================== */
+
+.project-form-navigation {
+    margin-top: 0;
+    padding-top: 1.5rem;
+
+    gap: 1rem;
+}
+
+.project-form-navigation-note {
+    font-size: 0.75rem;
+}
+
+.project-next-button {
+    min-height: 54px;
+    padding: 0.9rem 1.3rem;
+
+    font-size: 1rem;
+}
+/* ========================================
+   START A PROJECT — STEP 02 — MOBILE
+======================================== */
+
+.project-choice-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+}
+
+.project-choice-grid .project-choice span {
+    min-height: 52px;
+
+    justify-content: flex-start;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   CHECKBOX CARDS — MOBILE
+======================================== */
+
+.project-checkbox-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+}
+
+.project-checkbox-card {
+    width: 100%;
+}
+
+.project-checkbox-card span {
+    min-height: 56px;
+    padding: 0.9rem 3rem 0.9rem 1rem;
+
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   BACK BUTTON — MOBILE
+======================================== */
+
+.project-back-button {
+    min-height: 54px;
+    padding: 0.9rem 1.1rem;
+
+    font-size: 1rem;
+}
+/* ========================================
+   START A PROJECT — STEP 03 — MOBILE
+======================================== */
+
+.project-budget-grid,
+.project-timeline-grid,
+.project-payment-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+}
+
+.project-budget-grid .project-choice span,
+.project-timeline-grid .project-choice span,
+.project-payment-grid .project-choice span {
+    min-height: 52px;
+
+    justify-content: flex-start;
+
+    text-align: left;
+}
+
+.project-field-group input[type="date"] {
+    width: 100%;
+    height: 54px;
+    padding: 0 1rem;
+
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   DEPOSIT NOTE — MOBILE
+======================================== */
+
+.project-deposit-note {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1rem;
+}
+
+.project-deposit-note-number {
+    width: 64px;
+    height: 64px;
+
+    font-size: 1.5rem;
+}
+
+.project-deposit-note strong {
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.project-deposit-note p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+/* ========================================
+   START A PROJECT — STEP 04 — MOBILE
+======================================== */
+
+.project-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.project-field-group input[type="text"],
+.project-field-group input[type="email"],
+.project-field-group input[type="tel"],
+.project-field-group select {
+    height: 54px;
+    padding: 0 1rem;
+
+    font-size: 1rem;
+}
+
+.project-contact-choice-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+}
+
+.project-contact-choice-grid .project-choice span {
+    min-height: 52px;
+
+    justify-content: flex-start;
+
+    text-align: left;
+}
+/* ========================================
+   START A PROJECT — REVIEW — MOBILE
+======================================== */
+
+.project-review-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.project-review-card {
+    padding: 1.4rem;
+}
+
+.project-review-card-header {
+    margin-bottom: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.project-review-card h4 {
+    font-size: 1.55rem;
+}
+
+.project-review-content {
+    gap: 1.1rem;
+}
+
+.project-review-value {
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.project-review-notice {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+
+    gap: 0.8rem;
+}
+
+.project-review-notice p {
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.project-submit-button {
+    min-height: 54px;
+    padding: 0.9rem 1.1rem;
+
+    font-size: 1rem;
+}
+/* ========================================
+   PROJECT INQUIRY — SUCCESS — MOBILE
+======================================== */
+
+.project-success-content {
+    padding: 0;
+}
+
+.project-success-mark {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.5rem;
+
+    font-size: 1.5rem;
+}
+
+.project-success-content h3 {
+    font-size: 2.4rem;
+}
+
+.project-success-lead {
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.project-success-next {
+    padding: 1.5rem;
+
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.project-success-next-number {
+    width: 60px;
+    height: 60px;
+}
+
+.project-success-next strong {
+    font-size: 1.3rem;
+}
+
+.project-success-next p {
+    font-size: 1rem;
+}
+
+.project-success-home {
+    width: 100%;
+
+    font-size: 1rem;
 }
 /* ========================================
    SITE FOOTER — MOBILE
