@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Secure client portal login for Melanin Coded."
+    >
+
+    <title>Client Portal | Melanin Coded</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main Site Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="portal-login-page">
+
+    <main class="portal-login-main">
+
+        <section class="portal-login-section">
+
+            <div class="portal-login-brand">
+                <a href="index.html" class="portal-login-home-link">
+                    Melanin Coded
+                </a>
+
+                <p class="portal-login-eyebrow">
+                    Client Portal
+                </p>
+            </div>
+
+            <div class="portal-login-card">
+
+                <div class="portal-login-heading">
+                    <p class="section-label">Secure Access</p>
+
+                    <h1>Welcome</h1>
+
+                    <p>
+                        Sign in to access your Melanin Coded project portal.
+                    </p>
+                </div>
+
+                <form id="portal-login-form">
+
+                    <div class="portal-form-group">
+                        <label for="portal-email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="portal-email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="portal-form-group">
+                        <label for="portal-password">Password</label>
+
+                        <input
+                            type="password"
+                            id="portal-password"
+                            name="password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <div
+                        id="portal-login-message"
+                        class="portal-login-message"
+                        aria-live="polite"
+                    ></div>
+
+                    <button
+                        type="submit"
+                        class="portal-login-button"
+                    >
+                        Sign In
+                    </button>
+
+                    <a
+                        href="#"
+                        class="portal-forgot-password"
+                        id="portal-forgot-password"
+                    >
+                        Forgot Password?
+                    </a>
+
+                </form>
+
+            </div>
+
+            <div class="portal-login-footer">
+                <a href="index.html">← Return to Melanin Coded</a>
+
+                <p>
+                    Need project support?
+                    <a href="contact.html">Contact Melanin Coded</a>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

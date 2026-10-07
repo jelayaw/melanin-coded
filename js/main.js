@@ -17,3 +17,38 @@ if (menuToggle && primaryNav) {
         );
     });
 }
+// ========================================
+// FAQ — ACCORDION
+// ========================================
+
+const faqTriggers =
+    document.querySelectorAll(".faq-trigger");
+
+faqTriggers.forEach((trigger) => {
+
+    trigger.addEventListener("click", () => {
+
+        const answerId =
+            trigger.getAttribute("aria-controls");
+
+        const answer =
+            document.getElementById(answerId);
+
+        if (!answer) {
+            return;
+        }
+
+        const isOpen =
+            trigger.getAttribute("aria-expanded") ===
+            "true";
+
+        trigger.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
+
+        answer.hidden = isOpen;
+
+    });
+
+});
