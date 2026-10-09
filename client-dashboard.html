@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Client Dashboard | Melanin Coded</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- LOCAL DESIGN PREVIEW ONLY: restore "checking" before deployment -->
+<body class="client-dashboard-page" data-auth-state="checking">
+
+    <div class="client-app">
+
+        <!-- ===============================
+             CLIENT SIDEBAR
+        ================================ -->
+        <aside class="client-sidebar" id="client-sidebar"
+               aria-label="Client navigation">
+
+            <button type="button"
+                    class="client-menu-close"
+                    id="client-menu-close"
+                    aria-label="Close client navigation"
+                    hidden>
+                &times;
+            </button>
+
+            <div class="client-sidebar-brand">
+                <a href="client-dashboard.html" class="client-brand-name">
+                    Melanin Coded
+                </a>
+                <span class="client-brand-label">CLIENT PORTAL</span>
+            </div>
+
+            <nav class="client-nav" aria-label="Client portal menu">
+
+                <a href="client-dashboard.html"
+                   class="client-nav-link is-active"
+                   aria-current="page">
+                    Overview
+                </a>
+
+                <a href="#projects" class="client-nav-link">
+                    My Projects
+                </a>
+
+                <a href="#actions" class="client-nav-link">
+                    My Actions
+                </a>
+
+                <a href="#updates" class="client-nav-link">
+                    Updates
+                </a>
+
+                <a href="#files" class="client-nav-link">
+                    Files
+                </a>
+
+                <a href="#payments" class="client-nav-link">
+                    Payments
+                </a>
+
+            </nav>
+
+            <div class="client-sidebar-bottom">
+
+                <a href="index.html" class="client-website-link">
+                    View Website
+                </a>
+
+                <button type="button"
+                        class="client-signout-button"
+                        id="client-signout-button">
+                    Sign Out
+                </button>
+
+            </div>
+
+        </aside>
+
+        <div class="client-sidebar-overlay"
+             id="client-sidebar-overlay"
+             hidden></div>
+
+        <!-- ===============================
+             MAIN DASHBOARD
+        ================================ -->
+        <main class="client-main" id="main-content">
+
+            <!-- TOP BAR -->
+            <header class="client-topbar">
+
+                <button type="button"
+                        class="client-menu-toggle"
+                        id="client-menu-toggle"
+                        aria-label="Open client navigation"
+                        aria-controls="client-sidebar"
+                        aria-expanded="false"
+                        hidden>
+                    <span aria-hidden="true">☰</span>
+                </button>
+
+                <div class="client-topbar-heading">
+                    <span class="client-eyebrow">YOUR CREATIVE STUDIO</span>
+                    <h1>Client Dashboard</h1>
+                </div>
+
+                <div class="client-account">
+                    <span class="client-account-label">My Account</span>
+                    <span class="client-avatar" aria-hidden="true">
+                        MC
+                    </span>
+                </div>
+
+            </header>
+
+            <!-- WELCOME -->
+            <section class="client-welcome"
+                     aria-labelledby="client-welcome-heading">
+
+                <span class="client-eyebrow">
+                    YOUR PROJECT JOURNEY
+                </span>
+
+                <h2 id="client-welcome-heading">
+                    Welcome to your creative space.
+                </h2>
+
+                <p>
+                    Your vision is coming to life. Follow your website
+                    progress, review important updates, and stay
+                    connected throughout your project.
+                </p>
+
+            </section>
+
+            <!-- ===============================
+                 DASHBOARD SUMMARY CARDS
+            ================================ -->
+            <section class="client-overview"
+                     aria-labelledby="client-overview-heading">
+
+                <h2 id="client-overview-heading" class="client-section-heading">
+                    At a Glance
+                </h2>
+
+                <div class="client-stats">
+
+                    <article class="client-stat-card">
+                        <span class="client-stat-label">
+                            Active Projects
+                        </span>
+
+                        <strong class="client-stat-value"
+                                id="client-active-projects">
+                            —
+                        </strong>
+
+                        <p>Your current website builds</p>
+                    </article>
+
+                    <article class="client-stat-card">
+                        <span class="client-stat-label">
+                            Pending Actions
+                        </span>
+
+                        <strong class="client-stat-value"
+                                id="client-pending-actions">
+                            —
+                        </strong>
+
+                        <p>Items needing your attention</p>
+                    </article>
+
+                    <article class="client-stat-card">
+                        <span class="client-stat-label">
+                            Upcoming Payments
+                        </span>
+
+                        <strong class="client-stat-value"
+                                id="client-upcoming-payments">
+                            —
+                        </strong>
+
+                        <p>Scheduled project payments</p>
+                    </article>
+
+                    <article class="client-stat-card">
+                        <span class="client-stat-label">
+                            Latest Update
+                        </span>
+
+                        <strong class="client-stat-value"
+                                id="client-latest-update">
+                            —
+                        </strong>
+
+                        <p>Your most recent project activity</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ===============================
+                 MY PROJECTS
+            ================================ -->
+            <section class="client-panel"
+                     id="projects"
+                     aria-labelledby="client-projects-heading">
+
+                <div class="client-panel-header">
+                    <div>
+                        <span class="client-eyebrow">THE BIG PICTURE</span>
+                        <h2 id="client-projects-heading">My Projects</h2>
+                    </div>
+                </div>
+
+                <div class="client-empty-state">
+                    <h3>Your projects will appear here.</h3>
+                    <p>
+                        Once your project is assigned, you'll be able
+                        to follow its progress and upcoming milestones.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- ===============================
+                 ACTION ITEMS
+            ================================ -->
+            <section class="client-panel"
+                     id="actions"
+                     aria-labelledby="client-actions-heading">
+
+                <div class="client-panel-header">
+                    <div>
+                        <span class="client-eyebrow">YOUR NEXT STEPS</span>
+                        <h2 id="client-actions-heading">Action Items</h2>
+                    </div>
+                </div>
+
+                <div class="client-empty-state">
+                    <h3>Nothing needs your attention yet.</h3>
+                    <p>
+                        Requests for content, feedback, or approvals
+                        will appear here when they're ready.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- ===============================
+                 RECENT UPDATES
+            ================================ -->
+            <section class="client-panel"
+                     id="updates"
+                     aria-labelledby="client-updates-heading">
+
+                <div class="client-panel-header">
+                    <div>
+                        <span class="client-eyebrow">STAY IN THE LOOP</span>
+                        <h2 id="client-updates-heading">Recent Updates</h2>
+                    </div>
+                </div>
+
+                <div class="client-empty-state">
+                    <h3>Project updates are on the way.</h3>
+                    <p>
+                        You'll find progress announcements and
+                        important project news here.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- ===============================
+                 PROJECT FILES
+            ================================ -->
+            <section class="client-panel"
+                     id="files"
+                     aria-labelledby="client-files-heading">
+
+                <div class="client-panel-header">
+                    <div>
+                        <span class="client-eyebrow">ALL IN ONE PLACE</span>
+                        <h2 id="client-files-heading">Project Files</h2>
+                    </div>
+                </div>
+
+                <div class="client-empty-state">
+                    <h3>No files available yet.</h3>
+                    <p>
+                        Shared documents, design previews, and
+                        project resources will appear here.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- ===============================
+                 PAYMENTS
+            ================================ -->
+            <section class="client-panel"
+                     id="payments"
+                     aria-labelledby="client-payments-heading">
+
+                <div class="client-panel-header">
+                    <div>
+                        <span class="client-eyebrow">KEEPING THINGS CLEAR</span>
+                        <h2 id="client-payments-heading">Payments</h2>
+                    </div>
+                </div>
+
+                <div class="client-empty-state">
+                    <h3>No payment information to display.</h3>
+                    <p>
+                        Your project payment schedule and payment
+                        status will appear here when available.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- DASHBOARD FOOTER -->
+            <footer class="client-dashboard-footer">
+                <p>
+                    Made with intention by Melanin Coded.
+                </p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- Supabase Library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Melanin Coded Supabase Connection -->
+<script src="js/supabase.js"></script>
+
+<!-- Client Dashboard -->
+<script src="js/client-dashboard.js"></script>
+
+</body>
+</html>

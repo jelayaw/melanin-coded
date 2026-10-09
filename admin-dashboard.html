@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melanin Coded administration dashboard.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Admin Dashboard | Melanin Coded</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="admin-dashboard-page" data-auth-state="checking">
+
+    <div class="admin-app">
+
+        <!-- ==========================================
+             ADMIN SIDEBAR
+        =========================================== -->
+        <aside
+            class="admin-sidebar"
+            id="admin-sidebar"
+            aria-label="Admin navigation"
+        >
+            <button
+                type="button"
+                class="admin-menu-close"
+                id="admin-menu-close"
+                aria-label="Close admin navigation"
+                hidden
+            >
+                &times;
+            </button>
+
+            <div class="admin-sidebar-brand">
+                <a href="admin-dashboard.html" class="admin-brand-link">
+                    Melanin Coded
+                </a>
+
+                <span class="admin-brand-caption">
+                    ADMIN STUDIO
+                </span>
+            </div>
+
+            <nav class="admin-navigation" aria-label="Main dashboard navigation">
+
+                <p class="admin-nav-label">Workspace</p>
+
+                <a href="admin-dashboard.html"
+                   class="admin-nav-link is-active"
+                   aria-current="page">
+                    <span>Overview</span>
+                </a>
+
+                <a href="#inquiries" class="admin-nav-link">
+                    <span>Inquiries</span>
+                </a>
+
+                <a href="#projects" class="admin-nav-link">
+                    <span>Projects</span>
+                </a>
+
+                <a href="#clients" class="admin-nav-link">
+                    <span>Clients</span>
+                </a>
+
+                <a href="#payments" class="admin-nav-link">
+                    <span>Payments</span>
+                </a>
+
+            </nav>
+
+            <div class="admin-sidebar-bottom">
+                <a href="index.html" class="admin-back-link">
+                    View Website
+                </a>
+
+                <button
+                    type="button"
+                    class="admin-signout-button"
+                    id="admin-signout-button"
+                >
+                    Sign Out
+                </button>
+            </div>
+
+        </aside>
+
+        <div
+            class="admin-sidebar-overlay"
+            id="admin-sidebar-overlay"
+            hidden
+        ></div>
+
+        <!-- ==========================================
+             MAIN ADMIN WORKSPACE
+        =========================================== -->
+        <main class="admin-main">
+
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+
+                <!-- Mobile Menu Toggle -->
+                <button
+                    type="button"
+                    class="admin-menu-toggle"
+                    id="admin-menu-toggle"
+                    aria-label="Open admin navigation"
+                    aria-controls="admin-sidebar"
+                    aria-expanded="false"
+                    hidden
+                >
+                    <span aria-hidden="true">☰</span>
+                </button>
+
+                <div class="admin-topbar-title">
+                    <p class="admin-eyebrow">Business Overview</p>
+                    <span>Admin Dashboard</span>
+                </div>
+
+                <div class="admin-topbar-account">
+                    <span class="admin-account-avatar" aria-hidden="true">
+                        JW
+                    </span>
+
+                    <span class="admin-account-name">
+                        JeLaya Williamson
+                    </span>
+                </div>
+
+            </header>
+
+
+            <div class="admin-content">
+
+                <!-- Welcome -->
+                <section class="admin-welcome" aria-labelledby="admin-welcome-title">
+
+                    <p class="admin-section-kicker">
+                        Your Studio / Overview
+                    </p>
+
+                    <h1 id="admin-welcome-title">
+                        Welcome, JeLaya.
+                    </h1>
+
+                    <p class="admin-welcome-description">
+                        Here's what's happening at Melanin Coded.
+                    </p>
+
+                </section>
+
+
+                <!-- Summary Cards -->
+                <section class="admin-summary" aria-label="Business summary">
+
+                    <article class="admin-stat-card">
+                        <p>Active Projects</p>
+                        <strong id="admin-active-projects">—</strong>
+                        <span>Projects currently in progress</span>
+                    </article>
+
+                    <article class="admin-stat-card">
+                        <p>Waiting on Client</p>
+                        <strong id="admin-waiting-projects">—</strong>
+                        <span>Projects requiring client input</span>
+                    </article>
+
+                    <article class="admin-stat-card">
+                        <p>Payments Due</p>
+                        <strong id="admin-payments-due">—</strong>
+                        <span>Outstanding scheduled payments</span>
+                    </article>
+
+                    <article class="admin-stat-card">
+                        <p>New Inquiries</p>
+                        <strong id="admin-new-inquiries">—</strong>
+                        <span>Requests awaiting review</span>
+                    </article>
+
+                </section>
+
+
+                <!-- Dashboard Main Grid -->
+                <div class="admin-dashboard-grid">
+
+                    <!-- Needs Attention -->
+                    <section class="admin-panel admin-attention"
+                             aria-labelledby="admin-attention-title">
+
+                        <div class="admin-panel-heading">
+                            <div>
+                                <p class="admin-panel-kicker">Priority</p>
+                                <h2 id="admin-attention-title">
+                                    Needs Attention
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div id="admin-attention-list" class="admin-attention-list">
+                            <p class="admin-empty-state">
+                                Attention items will appear here when connected.
+                            </p>
+                        </div>
+
+                    </section>
+
+
+                    <!-- Capacity Overview -->
+                    <section class="admin-panel admin-capacity"
+                             aria-labelledby="admin-capacity-title">
+
+                        <div class="admin-panel-heading">
+                            <div>
+                                <p class="admin-panel-kicker">Availability</p>
+                                <h2 id="admin-capacity-title">
+                                    Capacity Overview
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="admin-capacity-content">
+
+                            <p class="admin-capacity-status"
+                               id="admin-capacity-status">
+                                Not calculated
+                            </p>
+
+                            <div class="admin-capacity-track"
+                                 role="progressbar"
+                                 aria-label="Current workload"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100"
+                                 aria-valuenow="0">
+                                <div class="admin-capacity-fill"
+                                     id="admin-capacity-fill"></div>
+                            </div>
+
+                            <p class="admin-capacity-note">
+                                Workload considers project scope and complexity,
+                                not just the number of clients.
+                            </p>
+
+                            <div class="admin-capacity-details">
+                                <div>
+                                    <span>Active Workload</span>
+                                    <strong id="admin-capacity-workload">—</strong>
+                                </div>
+
+                                <div>
+                                    <span>Waitlisted Inquiries</span>
+                                    <strong id="admin-waitlist-count">—</strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Recent Activity -->
+                    <section class="admin-panel admin-activity"
+                             aria-labelledby="admin-activity-title">
+
+                        <div class="admin-panel-heading">
+                            <div>
+                                <p class="admin-panel-kicker">Studio Timeline</p>
+                                <h2 id="admin-activity-title">
+                                    Recent Activity
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div id="admin-activity-list" class="admin-activity-list">
+                            <p class="admin-empty-state">
+                                Project and client activity will appear here.
+                            </p>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+   <!-- Supabase Library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Melanin Coded Supabase Connection -->
+<script src="js/supabase.js"></script>
+
+<!-- Admin Dashboard -->
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>
