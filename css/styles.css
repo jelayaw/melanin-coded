@@ -25241,3 +25241,540 @@ p {
 .client-dashboard-page [hidden] {
     display: none !important;
 }
+
+
+/* =========================================================
+   CLIENT DASHBOARD — LIVE PROJECT CARDS
+   ========================================================= */
+
+.client-dashboard-page .client-project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 18px;
+}
+
+.client-dashboard-page .client-project-card {
+    padding: 28px;
+    background: linear-gradient(
+        145deg,
+        #fffdf9 0%,
+        #fdf3f3 100%
+    );
+    border: 1px solid #e9d2d6;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(65, 37, 30, 0.04);
+}
+
+.client-dashboard-page .client-project-card h3 {
+    margin: 0 0 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #35231f;
+}
+
+.client-dashboard-page .client-project-card p {
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #70574f;
+}
+
+.client-dashboard-page .client-project-card progress {
+    display: block;
+    width: 100%;
+    height: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    accent-color: #b85d85;
+}
+
+.client-dashboard-page .client-project-card progress::-webkit-progress-bar {
+    background: #eadcda;
+    border-radius: 20px;
+}
+
+.client-dashboard-page .client-project-card progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #9d496f, #d98ba9);
+    border-radius: 20px;
+}
+
+.client-dashboard-page .client-project-card progress::-moz-progress-bar {
+    background: #b85d85;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .client-dashboard-page .client-project-card {
+        padding: 22px 18px;
+    }
+
+    .client-dashboard-page .client-project-card h3 {
+        font-size: 27px;
+    }
+}
+
+/* =========================================================
+   CLIENT DASHBOARD — LIVE PROJECT CARDS
+   ========================================================= */
+
+.client-dashboard-page .client-project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 18px;
+}
+
+.client-dashboard-page .client-project-card {
+    padding: 28px;
+    background: linear-gradient(
+        145deg,
+        #fffdf9 0%,
+        #fdf3f3 100%
+    );
+    border: 1px solid #e9d2d6;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(65, 37, 30, 0.04);
+}
+
+.client-dashboard-page .client-project-card h3 {
+    margin: 0 0 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #35231f;
+}
+
+.client-dashboard-page .client-project-card p {
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #70574f;
+}
+
+.client-dashboard-page .client-project-card progress {
+    display: block;
+    width: 100%;
+    height: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    accent-color: #b85d85;
+}
+
+.client-dashboard-page .client-project-card progress::-webkit-progress-bar {
+    background: #eadcda;
+    border-radius: 20px;
+}
+
+.client-dashboard-page .client-project-card progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #9d496f, #d98ba9);
+    border-radius: 20px;
+}
+
+.client-dashboard-page .client-project-card progress::-moz-progress-bar {
+    background: #b85d85;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .client-dashboard-page .client-project-card {
+        padding: 22px 18px;
+    }
+
+    .client-dashboard-page .client-project-card h3 {
+        font-size: 27px;
+    }
+}
+
+/* =========================================================
+   CLIENT DASHBOARD — ACTION ITEM CARDS
+   ========================================================= */
+
+.client-dashboard-page .client-action-list {
+    display: grid;
+    gap: 14px;
+}
+
+.client-dashboard-page .client-action-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 22px 26px;
+    background: linear-gradient(
+        135deg,
+        #fffdf9 0%,
+        #fdf3f3 100%
+    );
+    border: 1px solid #e9d2d6;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(65, 37, 30, 0.04);
+}
+
+.client-dashboard-page .client-action-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.client-dashboard-page .client-action-content h3 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #35231f;
+    overflow-wrap: anywhere;
+}
+
+.client-dashboard-page .client-action-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border: 1px solid #e8c3d2;
+    border-radius: 999px;
+    background: #f9e9ef;
+    color: #89415f;
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .client-dashboard-page .client-action-card {
+        padding: 20px 18px;
+    }
+
+    .client-dashboard-page .client-action-content h3 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   CLIENT DASHBOARD — RECENT PROJECT UPDATES
+   ========================================================= */
+
+.client-dashboard-page .client-update-list {
+    display: grid;
+    gap: 16px;
+}
+
+.client-dashboard-page .client-update-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 26px 28px;
+    background: linear-gradient(
+        135deg,
+        #fffdf9 0%,
+        #fdf3f3 100%
+    );
+    border: 1px solid #e9d2d6;
+    border-left: 4px solid #b85d85;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(65, 37, 30, 0.04);
+}
+
+.client-dashboard-page .client-update-card h3 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #35231f;
+    overflow-wrap: anywhere;
+}
+
+.client-dashboard-page .client-update-card p {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #70574f;
+    overflow-wrap: anywhere;
+}
+
+.client-dashboard-page .client-update-date {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid #eadcda;
+    width: 100%;
+    font-family: "Space Mono", monospace;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #906f76;
+}
+
+@media (max-width: 768px) {
+    .client-dashboard-page .client-update-card {
+        padding: 22px 18px;
+        gap: 10px;
+    }
+
+    .client-dashboard-page .client-update-card h3 {
+        font-size: 24px;
+    }
+
+    .client-dashboard-page .client-update-card p {
+        font-size: 12px;
+    }
+}
+
+/* CLIENT DASHBOARD — LATEST UPDATE SUMMARY */
+
+.client-dashboard-page #client-latest-update,
+.client-dashboard-page #client-upcoming-payments {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 600;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    .client-dashboard-page #client-latest-update {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   CLIENT PORTAL — PAYMENTS SECTION
+   Desktop styling
+   ========================================= */
+
+.client-dashboard-page .client-payments-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 20px;
+}
+
+/* Payment overview */
+
+.client-dashboard-page .client-payment-overview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.client-dashboard-page .client-payment-overview-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    background: #fff9f5;
+    border: 1px solid #eadbd5;
+    border-radius: 16px;
+}
+
+.client-dashboard-page .client-payment-label {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #795e55;
+}
+
+.client-dashboard-page .client-payment-overview-item strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #a63567;
+    overflow-wrap: anywhere;
+}
+
+/* Payment schedule and history */
+
+.client-dashboard-page .client-payment-group {
+    padding: 24px;
+    background: #fff9f5;
+    border: 1px solid #eadbd5;
+    border-radius: 16px;
+}
+
+.client-dashboard-page .client-payment-group h3 {
+    margin: 0 0 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #39241f;
+}
+
+.client-dashboard-page .client-payment-description {
+    margin: 0 0 20px;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #795e55;
+}
+
+.client-dashboard-page .client-payment-empty {
+    margin: 0;
+    padding: 20px;
+    border: 1px dashed #dcc6be;
+    border-radius: 12px;
+    background: #fffdfb;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #795e55;
+}
+
+
+/* =========================================
+   CLIENT PORTAL — PAYMENTS MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .client-dashboard-page .client-payments-content {
+        gap: 20px;
+        margin-top: 16px;
+    }
+
+    .client-dashboard-page .client-payment-overview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .client-dashboard-page .client-payment-overview-item {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .client-dashboard-page .client-payment-overview-item strong {
+        font-size: 26px;
+    }
+
+    .client-dashboard-page .client-payment-group {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .client-dashboard-page .client-payment-group h3 {
+        font-size: 24px;
+    }
+
+    .client-dashboard-page .client-payment-description {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .client-dashboard-page .client-payment-empty {
+        padding: 16px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   CLIENT PORTAL — PAYMENT SCHEDULE CARDS
+   ========================================= */
+
+.client-dashboard-page .client-payment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    background: #fffdfb;
+    border: 1px solid #eadbd5;
+    border-radius: 12px;
+}
+
+.client-dashboard-page .client-payment-card + .client-payment-card {
+    margin-top: 12px;
+}
+
+.client-dashboard-page .client-payment-card-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.client-dashboard-page .client-payment-card-details h4 {
+    margin: 0 0 8px;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #39241f;
+}
+
+.client-dashboard-page .client-payment-card-details p {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    color: #795e55;
+}
+
+.client-dashboard-page .client-payment-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.client-dashboard-page .client-payment-card-info strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #a63567;
+}
+
+.client-dashboard-page .client-payment-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: #f9e3eb;
+    color: #913456;
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* =========================================
+   CLIENT PORTAL — PAID PAYMENT STATUS
+   ========================================= */
+
+.client-dashboard-page .client-payment-status-paid {
+    background: #e4f1e7;
+    color: #28613d;
+    border: 1px solid #c4dfcc;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+    .client-dashboard-page .client-payment-card {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .client-dashboard-page .client-payment-card-info strong {
+        font-size: 21px;
+    }
+
+    .client-dashboard-page .client-payment-card-details h4 {
+        font-size: 12px;
+    }
+}

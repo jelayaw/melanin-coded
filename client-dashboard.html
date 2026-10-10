@@ -187,7 +187,9 @@
                             —
                         </strong>
 
-                        <p>Scheduled project payments</p>
+                        <p id="client-upcoming-payment-date">
+                            No payment scheduled
+                        </p>
                     </article>
 
                     <article class="client-stat-card">
@@ -221,7 +223,7 @@
                     </div>
                 </div>
 
-                <div class="client-empty-state">
+                <div class="client-empty-state" id="client-projects-container">
                     <h3>Your projects will appear here.</h3>
                     <p>
                         Once your project is assigned, you'll be able
@@ -245,7 +247,7 @@
                     </div>
                 </div>
 
-                <div class="client-empty-state">
+                <div class="client-empty-state" id="client-actions-container">
                     <h3>Nothing needs your attention yet.</h3>
                     <p>
                         Requests for content, feedback, or approvals
@@ -269,7 +271,7 @@
                     </div>
                 </div>
 
-                <div class="client-empty-state">
+                <div class="client-empty-state" id="client-updates-container">
                     <h3>Project updates are on the way.</h3>
                     <p>
                         You'll find progress announcements and
@@ -317,12 +319,49 @@
                     </div>
                 </div>
 
-                <div class="client-empty-state">
-                    <h3>No payment information to display.</h3>
-                    <p>
-                        Your project payment schedule and payment
-                        status will appear here when available.
-                    </p>
+                <div class="client-payments-content">
+
+                    <!-- Payment overview -->
+                    <div class="client-payment-overview">
+                        <div class="client-payment-overview-item">
+                            <span class="client-payment-label">Outstanding Balance</span>
+                            <strong id="client-outstanding-balance">—</strong>
+                        </div>
+
+                        <div class="client-payment-overview-item">
+                            <span class="client-payment-label">Next Payment Due</span>
+                            <strong id="client-next-payment-date">—</strong>
+                        </div>
+                    </div>
+
+                    <!-- Payment schedule -->
+                    <div class="client-payment-group">
+                        <h3>Payment Schedule</h3>
+                        <p class="client-payment-description">
+                            View your upcoming project installments and their due dates.
+                        </p>
+
+                        <div id="client-payment-schedule">
+                            <p class="client-payment-empty">
+                                No scheduled payments to display.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Payment history -->
+                    <div class="client-payment-group">
+                        <h3>Payment History</h3>
+                        <p class="client-payment-description">
+                            Review payments that have been completed.
+                        </p>
+
+                        <div id="client-payment-history">
+                            <p class="client-payment-empty">
+                                No completed payments yet.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
             </section>
