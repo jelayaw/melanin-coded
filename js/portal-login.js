@@ -6,6 +6,8 @@ const portalLoginForm = document.getElementById("portal-login-form");
 const portalLoginMessage = document.getElementById("portal-login-message");
 const portalLoginButton = portalLoginForm.querySelector('button[type="submit"]');
 
+portalLoginForm.style.visibility = "hidden";
+
 portalLoginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -61,3 +63,41 @@ portalLoginForm.addEventListener("submit", async (event) => {
         portalLoginButton.textContent = "Sign In";
     }
 });
+
+async function redirectExistingPortalUser() {
+    let redirected = false;
+
+    try {
+        const { data, error } = await window.mcSupabase.auth.getUser();
+
+        if (error || !data.user) {
+            return;
+        }
+
+        const { data: profile, error: profileError } = await window.mcSupabase
+            .from("profiles")
+            .select("role")
+            .eq("id", data.user.id)
+            .single();
+
+        if (profileError || !profile) {
+            return;
+        }
+
+        if (profile.role === "admin") {
+            window.location.replace("admin-dashboard.html");
+            redirected = true;
+        } else if (profile.role === "client") {
+            window.location.replace("client-dashboard.html");
+            redirected = true;
+        }
+    } catch (error) {
+        console.warn("Existing portal session check failed:", error.message);
+    } finally {
+        if (!redirected) {
+            portalLoginForm.style.visibility = "";
+        }
+    }
+}
+
+redirectExistingPortalUser();
