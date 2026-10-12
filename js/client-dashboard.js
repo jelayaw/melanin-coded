@@ -177,6 +177,8 @@ async function verifyClientAccess() {
 
         console.log("Client assigned projects:", assignedProjects);
         renderClientProjects(assignedProjects);
+        populateClientUploadProjects(assignedProjects);
+        initializeClientUploadForm();
 
         // Update the Active Projects summary card.
 const activeProjectsCount = assignedProjects.filter(
@@ -371,6 +373,29 @@ if (activeProjectsElement) {
         } else {
             console.log("Client payment history:", paymentHistory);
             renderClientPaymentHistory(paymentHistory);
+        }
+
+        /* =========================================
+           CLIENT PORTAL — PROJECT FILES
+           Load permitted file metadata
+        ========================================= */
+
+        const { data: projectFiles, error: projectFilesError } =
+            await window.mcSupabase
+                .from("project_files")
+                .select(
+                    "id, project_id, file_name, storage_path, file_type, file_size, category, created_at"
+                )
+                .order("created_at", { ascending: false });
+
+        if (projectFilesError) {
+            console.error(
+                "Unable to load project files:",
+                projectFilesError
+            );
+        } else {
+            console.log("Client project files:", projectFiles);
+            renderClientFiles(projectFiles);
         }
 
         // Only verified client accounts may view this dashboard.
@@ -700,4 +725,401 @@ function renderClientPaymentHistory(payments) {
         card.append(details, paymentInfo);
         container.appendChild(card);
     });
+}
+
+/* =========================================
+   CLIENT PORTAL — PROJECT FILES
+   Render permitted file metadata
+========================================= */
+
+function renderClientFiles(files) {
+    const container = document.getElementById(
+        "client-files-container"
+    );
+
+    if (!container) return;
+
+    container.replaceChildren();
+
+    if (!files || files.length === 0) {
+        const emptyMessage = document.createElement("p");
+        emptyMessage.className = "client-files-empty";
+        emptyMessage.textContent =
+            "No project files have been shared yet.";
+
+        container.appendChild(emptyMessage);
+        return;
+    }
+
+    files.forEach((file) => {
+        const card = document.createElement("div");
+        card.className = "client-file-card";
+
+        const info = document.createElement("div");
+        info.className = "client-file-info";
+
+        const name = document.createElement("span");
+        name.className = "client-file-name";
+        name.textContent = file.file_name || "Untitled file";
+
+        const details = document.createElement("span");
+        details.className = "client-file-details";
+
+        const fileSize = Number(file.file_size);
+        const formattedSize =
+            Number.isFinite(fileSize) && fileSize >= 0
+                ? `${(fileSize / 1024).toFixed(1)} KB`
+                : "Size unavailable";
+
+        const category = file.category || "Project File";
+
+        details.textContent = `${category} • ${formattedSize}`;
+
+        info.appendChild(name);
+        info.appendChild(details);
+
+        card.appendChild(info);
+
+        // Download button for private project files
+        const downloadButton = document.createElement("button");
+        downloadButton.type = "button";
+        downloadButton.className = "client-file-action";
+        downloadButton.textContent = "Download";
+
+        downloadButton.addEventListener("click", async () => {
+            downloadButton.disabled = true;
+            downloadButton.textContent = "Downloading...";
+
+            try {
+                if (!file.storage_path) {
+                    throw new Error("File storage path is missing.");
+                }
+
+                const { data, error } = await window.mcSupabase.storage
+                    .from("project-files")
+                    .download(file.storage_path);
+
+                if (error) throw error;
+                if (!(data instanceof Blob)) {
+                    throw new Error("No downloadable file was returned.");
+                }
+
+                const objectUrl = URL.createObjectURL(data);
+                const link = document.createElement("a");
+
+                link.href = objectUrl;
+                link.download = file.file_name || "project-file";
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+
+                setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
+            } catch (error) {
+                console.error("Project file download failed:", error);
+                alert("Unable to download this file. Please try again.");
+            } finally {
+                downloadButton.disabled = false;
+                downloadButton.textContent = "Download";
+            }
+        });
+
+        card.appendChild(downloadButton);
+        container.appendChild(card);
+    });
+}
+
+/* =========================================
+   CLIENT PORTAL — UPLOAD PROJECT SELECTOR
+========================================= */
+
+function populateClientUploadProjects(projects) {
+    const projectSelect = document.getElementById(
+        "client-upload-project"
+    );
+
+    if (!projectSelect) return;
+
+    projectSelect.replaceChildren();
+
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Choose your project";
+
+    projectSelect.appendChild(placeholder);
+
+    if (!Array.isArray(projects) || projects.length === 0) {
+        projectSelect.disabled = true;
+        return;
+    }
+
+    projectSelect.disabled = false;
+
+    projects.forEach((project) => {
+        const option = document.createElement("option");
+
+        option.value = project.id;
+        option.textContent =
+            project.project_name || "Untitled Project";
+
+        projectSelect.appendChild(option);
+    });
+}
+
+/* =========================================
+   CLIENT PORTAL — UPLOAD FORM VALIDATION
+========================================= */
+
+function initializeClientUploadForm() {
+    const form = document.getElementById("client-upload-form");
+    const projectSelect = document.getElementById("client-upload-project");
+    const categorySelect = document.getElementById("client-upload-category");
+    const fileInput = document.getElementById("client-upload-file");
+    const uploadButton = form?.querySelector(".client-upload-button");
+    const message = document.getElementById("client-upload-message");
+
+    if (
+        !form ||
+        !projectSelect ||
+        !categorySelect ||
+        !fileInput ||
+        !uploadButton ||
+        !message
+    ) {
+        return;
+    }
+
+    const maxFileSize = 25 * 1024 * 1024;
+
+    const allowedTypes = new Set([
+        "image/jpeg",
+        "image/png",
+        "image/webp",
+        "image/gif",
+        "image/svg+xml",
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "text/plain"
+    ]);
+
+    function validateUpload() {
+        const file = fileInput.files?.[0];
+
+        uploadButton.disabled = true;
+
+        if (!projectSelect.value || !categorySelect.value || !file) {
+            return;
+        }
+
+        if (!allowedTypes.has(file.type)) {
+            message.textContent = "This file type is not supported.";
+            return;
+        }
+
+        if (file.size > maxFileSize) {
+            message.textContent = "Files must be 25 MB or smaller.";
+            return;
+        }
+
+        if (file.size === 0) {
+            message.textContent = "Please select a non-empty file.";
+            return;
+        }
+
+        uploadButton.disabled = false;
+    }
+
+    projectSelect.addEventListener("change", validateUpload);
+    categorySelect.addEventListener("change", validateUpload);
+    fileInput.addEventListener("change", validateUpload);
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const projectId = projectSelect.value;
+        const category = categorySelect.value;
+        const file = fileInput.files?.[0];
+
+        if (!projectId || !category || !file) {
+            message.textContent =
+                "Please select a project, category, and file.";
+            return;
+        }
+
+        // Revalidate before uploading.
+        if (
+            !allowedTypes.has(file.type) ||
+            file.size === 0 ||
+            file.size > maxFileSize
+        ) {
+            message.textContent =
+                "Please select a valid file under 25 MiB.";
+            return;
+        }
+
+        uploadButton.disabled = true;
+        uploadButton.textContent = "Uploading...";
+        message.textContent = "Uploading your file. Please wait...";
+
+        try {
+            await uploadClientProjectFile(projectId, category, file);
+
+            message.textContent =
+                "Your file was uploaded successfully!";
+
+            fileInput.value = "";
+            categorySelect.value = "";
+
+            // Refresh the file list without reloading the page.
+            const { data: updatedFiles, error: refreshError } =
+                await window.mcSupabase
+                    .from("project_files")
+                    .select(
+                        "id, project_id, file_name, storage_path, " +
+                        "file_type, file_size, category, created_at"
+                    )
+                    .order("created_at", { ascending: false });
+
+            if (refreshError) {
+                console.error(
+                    "Unable to refresh project files:",
+                    refreshError
+                );
+            } else {
+                renderClientFiles(updatedFiles);
+            }
+
+        } catch (error) {
+            console.error("Client file upload failed:", error);
+
+            message.textContent =
+                error.message ||
+                "Upload failed. Please try again.";
+
+        } finally {
+            uploadButton.textContent = "Upload File";
+            validateUpload();
+        }
+    });
+}
+
+/* =========================================
+   CLIENT PORTAL — SECURE UPLOAD PATH
+========================================= */
+
+function createClientUploadPath(projectId, file) {
+    const extensionsByType = {
+        "image/jpeg": "jpg",
+        "image/png": "png",
+        "image/webp": "webp",
+        "image/gif": "gif",
+        "image/svg+xml": "svg",
+        "application/pdf": "pdf",
+        "application/msword": "doc",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "docx",
+        "text/plain": "txt"
+    };
+
+    const extension = extensionsByType[file.type];
+
+    if (!extension) {
+        throw new Error("Unsupported file type.");
+    }
+
+    const uniqueId = crypto.randomUUID();
+
+    return `${projectId}/${uniqueId}.${extension}`;
+}
+
+/* =========================================
+   CLIENT PORTAL — UPLOAD PROJECT FILE
+========================================= */
+
+async function uploadClientProjectFile(projectId, category, file) {
+    const supabase = window.mcSupabase;
+
+    const {
+        data: { user },
+        error: userError
+    } = await supabase.auth.getUser();
+
+    if (userError || !user) {
+        throw new Error("You must be signed in to upload files.");
+    }
+
+    const allowedTypes = new Set([
+        "image/jpeg",
+        "image/png",
+        "image/webp",
+        "image/gif",
+        "image/svg+xml",
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "text/plain"
+    ]);
+
+    const allowedCategories = new Set([
+        "Brand Assets",
+        "Client Content",
+        "Documents"
+    ]);
+
+    if (!allowedCategories.has(category)) {
+        throw new Error("Invalid file category.");
+    }
+
+    if (
+        !file ||
+        !allowedTypes.has(file.type) ||
+        file.size === 0 ||
+        file.size > 25 * 1024 * 1024
+    ) {
+        throw new Error("Invalid file type or size.");
+    }
+
+    const storagePath = createClientUploadPath(projectId, file);
+
+    const { error: uploadError } = await supabase.storage
+        .from("project-files")
+        .upload(storagePath, file, {
+            contentType: file.type,
+            upsert: false
+        });
+
+    if (uploadError) {
+        throw uploadError;
+    }
+
+    const { error: metadataError } = await supabase
+        .from("project_files")
+        .insert({
+            project_id: projectId,
+            uploaded_by: user.id,
+            file_name: file.name,
+            storage_path: storagePath,
+            file_type: file.type,
+            file_size: file.size,
+            category: category
+        });
+
+    if (metadataError) {
+        console.error("Project file metadata save failed:", {
+            projectId,
+            storagePath,
+            originalFileName: file.name,
+            uploadedBy: user.id,
+            error: metadataError
+        });
+
+        throw new Error(
+            "Your file reached storage, but we couldn't finish recording it. " +
+            "Please contact Melanin Coded support before trying again."
+        );
+    }
+
+    return {
+        file_name: file.name,
+        storage_path: storagePath
+    };
 }

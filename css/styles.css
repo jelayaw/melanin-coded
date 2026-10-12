@@ -16932,6 +16932,387 @@ p {
     outline-offset: 3px;
 }
 
+/* ==========================================
+   ADMIN PROJECT FILES — DESKTOP
+========================================== */
+
+.admin-dashboard-page .admin-project-files {
+    margin-top: 28px;
+}
+
+.admin-dashboard-page .admin-project-files-description {
+    margin: 12px 0 24px;
+    color: #715e58;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.admin-dashboard-page .admin-files-toolbar {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.admin-dashboard-page .admin-files-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.admin-dashboard-page .admin-files-field label {
+    color: #38221e;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.admin-dashboard-page .admin-files-field select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 42px 12px 15px;
+    border: 1px solid #ddc9c1;
+    border-radius: 12px;
+    background: #fffaf7;
+    color: #38221e;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.admin-dashboard-page .admin-files-field select:focus-visible {
+    outline: 3px solid #e7a1b6;
+    outline-offset: 3px;
+}
+
+.admin-dashboard-page .admin-files-list {
+    display: grid;
+    gap: 14px;
+    min-height: 110px;
+    padding: 22px;
+    border: 1px dashed #ddc9c1;
+    border-radius: 14px;
+    background: #fffaf7;
+}
+
+.admin-dashboard-page .admin-files-list .admin-empty-state {
+    margin: 0;
+    align-self: center;
+    color: #806b65;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   ADMIN PROJECT FILE CARDS — DESKTOP
+========================================== */
+
+.admin-dashboard-page .admin-file-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 20px;
+    background: #ffffff;
+    border: 1px solid #eadbd5;
+    border-radius: 12px;
+}
+
+.admin-dashboard-page .admin-file-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-dashboard-page .admin-file-name {
+    margin: 0 0 8px;
+    color: #38221e;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.admin-dashboard-page .admin-file-details {
+    margin: 0;
+    color: #806b65;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.admin-dashboard-page .admin-file-card:hover {
+    border-color: #d9b2bd;
+    background: #fffafc;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+/* ==========================================
+   ADMIN FILE DOWNLOAD BUTTON — DESKTOP
+========================================== */
+
+.admin-dashboard-page .admin-file-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 120px;
+    min-height: 44px;
+    padding: 11px 20px;
+
+    border: 1px solid #38221e;
+    border-radius: 10px;
+
+    background: #38221e;
+    color: #fffaf7;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.admin-dashboard-page .admin-file-download:hover:not(:disabled) {
+    background: #6a3d43;
+    border-color: #6a3d43;
+    transform: translateY(-1px);
+}
+
+.admin-dashboard-page .admin-file-download:focus-visible {
+    outline: 3px solid #e7a1b6;
+    outline-offset: 3px;
+}
+
+.admin-dashboard-page .admin-file-download:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* ==========================================
+   ADMIN FILE ACTIONS MENU — DESKTOP
+========================================== */
+
+.admin-dashboard-page .admin-file-actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.admin-dashboard-page .admin-file-menu-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.admin-dashboard-page .admin-file-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    background: #fffaf7;
+    color: #38221e;
+    border: 1px solid #dccbc4;
+    border-radius: 10px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.admin-dashboard-page .admin-file-menu-button:hover,
+.admin-dashboard-page .admin-file-menu-button[aria-expanded="true"] {
+    background: #f9e9ed;
+    border-color: #d9b2bd;
+}
+
+.admin-dashboard-page .admin-file-menu-button:focus-visible,
+.admin-dashboard-page .admin-file-delete:focus-visible {
+    outline: 3px solid #e7a1b6;
+    outline-offset: 3px;
+}
+
+.admin-dashboard-page .admin-file-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 20;
+
+    min-width: 160px;
+    padding: 6px;
+
+    background: #ffffff;
+    border: 1px solid #eadbd5;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(56, 34, 30, 0.12);
+}
+
+.admin-dashboard-page .admin-file-menu[hidden] {
+    display: none;
+}
+
+.admin-dashboard-page .admin-file-delete {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 12px;
+
+    background: transparent;
+    color: #a13d4a;
+    border: none;
+    border-radius: 7px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.admin-dashboard-page .admin-file-delete:hover:not(:disabled) {
+    background: #fff0f2;
+}
+
+.admin-dashboard-page .admin-file-delete:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   ADMIN FILE UPLOAD FORM — DESKTOP
+========================================== */
+
+.admin-dashboard-page .admin-file-upload-panel {
+    margin: 24px 0;
+    padding: 24px;
+    background: #fffaf7;
+    border: 1px solid #eadbd5;
+    border-radius: 14px;
+}
+
+.admin-dashboard-page .admin-file-upload-heading {
+    margin-bottom: 22px;
+}
+
+.admin-dashboard-page .admin-file-upload-heading h3 {
+    margin: 0 0 8px;
+    color: #38221e;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+}
+
+.admin-dashboard-page .admin-file-upload-heading p {
+    margin: 0;
+    color: #806b65;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.admin-dashboard-page #admin-file-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.admin-dashboard-page .admin-file-upload-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.admin-dashboard-page .admin-file-upload-field label {
+    color: #38221e;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.admin-dashboard-page .admin-file-upload-field select,
+.admin-dashboard-page .admin-file-upload-field input[type="file"] {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    background: #ffffff;
+    color: #38221e;
+    border: 1px solid #dccbc4;
+    border-radius: 9px;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.85rem;
+}
+
+.admin-dashboard-page .admin-file-upload-field select:focus-visible,
+.admin-dashboard-page .admin-file-upload-field input[type="file"]:focus-visible {
+    outline: 3px solid #e7a1b6;
+    outline-offset: 2px;
+}
+
+.admin-dashboard-page .admin-file-upload-hint {
+    margin: 0;
+    color: #806b65;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+.admin-dashboard-page .admin-file-upload-button {
+    align-self: flex-start;
+    min-width: 150px;
+    min-height: 46px;
+    padding: 12px 22px;
+    background: #38221e;
+    color: #fffaf7;
+    border: 1px solid #38221e;
+    border-radius: 9px;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.admin-dashboard-page .admin-file-upload-button:hover:not(:disabled) {
+    background: #6a3d43;
+}
+
+.admin-dashboard-page .admin-file-upload-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.admin-dashboard-page .admin-file-upload-message {
+    margin: 0;
+    color: #6a3d43;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.admin-dashboard-page .admin-file-upload-message:empty {
+    display: none;
+}
+
 /* ---------- Desktop / Smaller Laptop ---------- */
 
 @media (min-width: 769px) and (max-width: 1250px) {
@@ -24661,6 +25042,187 @@ p {
     .admin-capacity-details {
         gap: 0.75rem;
     }
+
+    /* ==========================================
+       ADMIN PROJECT FILES — MOBILE
+    ========================================== */
+
+    .admin-dashboard-page .admin-project-files {
+        margin-top: 22px;
+    }
+
+    .admin-dashboard-page .admin-project-files-description {
+        margin: 10px 0 20px;
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .admin-dashboard-page .admin-files-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .admin-dashboard-page .admin-files-field {
+        max-width: 100%;
+    }
+
+    .admin-dashboard-page .admin-files-field select {
+        width: 100%;
+        min-height: 48px;
+        font-size: 0.875rem;
+    }
+
+    .admin-dashboard-page .admin-files-list {
+        min-height: 100px;
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .admin-dashboard-page .admin-files-list .admin-empty-state {
+        font-size: 0.85rem;
+    }
+
+    /* ==========================================
+       ADMIN PROJECT FILE CARDS — MOBILE
+    ========================================== */
+
+    .admin-dashboard-page .admin-file-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .admin-dashboard-page .admin-file-info {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .admin-dashboard-page .admin-file-name {
+        margin-bottom: 6px;
+        font-size: 1.2rem;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .admin-dashboard-page .admin-file-details {
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
+
+    /* ==========================================
+       ADMIN FILE DOWNLOAD BUTTON — MOBILE
+    ========================================== */
+
+    .admin-dashboard-page .admin-file-download {
+        width: 100%;
+        min-width: 0;
+        min-height: 46px;
+        padding: 12px 16px;
+        margin-top: 4px;
+
+        font-size: 0.82rem;
+        border-radius: 9px;
+    }
+
+    .admin-dashboard-page .admin-file-download:hover:not(:disabled) {
+        transform: none;
+    }
+
+    /* ==========================================
+       ADMIN FILE ACTIONS MENU — MOBILE
+    ========================================== */
+
+    .admin-dashboard-page .admin-file-actions {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .admin-dashboard-page .admin-file-download {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        margin-top: 0;
+    }
+
+    .admin-dashboard-page .admin-file-menu-wrapper {
+        flex-shrink: 0;
+    }
+
+    .admin-dashboard-page .admin-file-menu-button {
+        width: 48px;
+        height: 48px;
+        border-radius: 9px;
+    }
+
+    .admin-dashboard-page .admin-file-menu {
+        top: calc(100% + 6px);
+        right: 0;
+        min-width: 150px;
+        max-width: calc(100vw - 48px);
+    }
+
+    .admin-dashboard-page .admin-file-delete {
+        min-height: 44px;
+        font-size: 0.82rem;
+    }
+
+    /* ==========================================
+       ADMIN FILE UPLOAD FORM — MOBILE
+    ========================================== */
+
+    .admin-dashboard-page .admin-file-upload-panel {
+        margin: 20px 0;
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .admin-dashboard-page .admin-file-upload-heading {
+        margin-bottom: 18px;
+    }
+
+    .admin-dashboard-page .admin-file-upload-heading h3 {
+        font-size: 1.35rem;
+        line-height: 1.3;
+    }
+
+    .admin-dashboard-page .admin-file-upload-heading p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .admin-dashboard-page #admin-file-upload-form {
+        gap: 16px;
+    }
+
+    .admin-dashboard-page .admin-file-upload-field {
+        min-width: 0;
+    }
+
+    .admin-dashboard-page .admin-file-upload-field select,
+    .admin-dashboard-page .admin-file-upload-field input[type="file"] {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        font-size: 0.8rem;
+    }
+
+    .admin-dashboard-page .admin-file-upload-button {
+        align-self: stretch;
+        width: 100%;
+        min-width: 0;
+        min-height: 48px;
+    }
+
+    .admin-dashboard-page .admin-file-upload-message {
+        font-size: 0.78rem;
+        overflow-wrap: anywhere;
+    }
 }
 
 /* ---------- Small Phones ---------- */
@@ -25775,6 +26337,388 @@ p {
     }
 
     .client-dashboard-page .client-payment-card-details h4 {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   CLIENT PORTAL — PROJECT FILES
+   Desktop styling
+========================================= */
+
+.client-dashboard-page .client-files-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.client-dashboard-page .client-files-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.client-dashboard-page .client-files-header h3 {
+    margin: 0 0 8px;
+    color: #3b241f;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.client-dashboard-page .client-files-header p {
+    margin: 0;
+    color: #75635d;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.client-dashboard-page #client-files-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.client-dashboard-page .client-files-empty {
+    margin: 0;
+    padding: 28px 22px;
+    border: 1px dashed #decac2;
+    border-radius: 14px;
+    background: #fffaf7;
+    color: #75635d;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Individual file cards — populated later by JS */
+
+.client-dashboard-page .client-file-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 20px;
+    border: 1px solid #eadbd5;
+    border-left: 4px solid #d77b9a;
+    border-radius: 14px;
+    background: #fffaf7;
+}
+
+.client-dashboard-page .client-file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.client-dashboard-page .client-file-name {
+    color: #3b241f;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.client-dashboard-page .client-file-details {
+    color: #75635d;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.client-dashboard-page .client-file-action {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    border: 1px solid #d77b9a;
+    border-radius: 9px;
+    background: transparent;
+    color: #8b3655;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.client-dashboard-page .client-file-action:hover {
+    background: #8b3655;
+    color: #ffffff;
+}
+
+.client-dashboard-page .client-file-action:focus-visible {
+    outline: 3px solid #d77b9a;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   CLIENT PORTAL — PROJECT FILES
+   Mobile styling
+========================================= */
+
+@media (max-width: 768px) {
+
+    .client-dashboard-page .client-files-content {
+        gap: 18px;
+        margin-top: 16px;
+    }
+
+    .client-dashboard-page .client-files-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .client-dashboard-page .client-files-header h3 {
+        font-size: 24px;
+    }
+
+    .client-dashboard-page .client-files-header p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .client-dashboard-page .client-files-empty {
+        padding: 24px 16px;
+        font-size: 13px;
+    }
+
+    .client-dashboard-page .client-file-card {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 14px;
+        padding: 17px;
+    }
+
+    .client-dashboard-page .client-file-info {
+        width: 100%;
+    }
+
+    .client-dashboard-page .client-file-name {
+        font-size: 14px;
+    }
+
+    .client-dashboard-page .client-file-action {
+        align-self: flex-start;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .client-dashboard-page .client-file-card {
+        padding: 14px;
+    }
+
+    .client-dashboard-page .client-file-action {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   CLIENT PORTAL — FILE UPLOAD FORM
+   Desktop styling
+========================================= */
+
+.client-dashboard-page .client-upload-panel {
+    padding: 28px;
+    border: 1px solid #eadbd5;
+    border-radius: 18px;
+    background: #fffaf7;
+}
+
+.client-dashboard-page .client-upload-heading {
+    margin-bottom: 24px;
+}
+
+.client-dashboard-page .client-upload-heading h3 {
+    margin: 0 0 8px;
+    color: #3b241f;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.client-dashboard-page .client-upload-heading p {
+    margin: 0;
+    color: #75635d;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.client-dashboard-page #client-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.client-dashboard-page .client-upload-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.client-dashboard-page .client-upload-field label {
+    color: #3b241f;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.client-dashboard-page .client-upload-field select,
+.client-dashboard-page .client-upload-field input[type="file"] {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #decac2;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #3b241f;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+}
+
+.client-dashboard-page .client-upload-field input[type="file"] {
+    cursor: pointer;
+}
+
+.client-dashboard-page .client-upload-field input[type="file"]::file-selector-button {
+    margin-right: 14px;
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 7px;
+    background: #f5e1e8;
+    color: #71354c;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.client-dashboard-page .client-upload-field select:focus-visible,
+.client-dashboard-page .client-upload-field input[type="file"]:focus-visible {
+    outline: 3px solid #d77b9a;
+    outline-offset: 2px;
+}
+
+.client-dashboard-page .client-upload-hint {
+    margin: 0;
+    color: #75635d;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.client-dashboard-page .client-upload-button {
+    align-self: flex-start;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #8b3655;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.client-dashboard-page .client-upload-button:hover:not(:disabled) {
+    background: #6e2943;
+}
+
+.client-dashboard-page .client-upload-button:disabled {
+    background: #d6c5c9;
+    color: #655a5d;
+    cursor: not-allowed;
+}
+
+.client-dashboard-page .client-upload-button:focus-visible {
+    outline: 3px solid #d77b9a;
+    outline-offset: 3px;
+}
+
+.client-dashboard-page .client-upload-message {
+    margin: 0;
+    color: #75635d;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.client-dashboard-page .client-upload-message:empty {
+    display: none;
+}
+
+
+/* =========================================
+   CLIENT PORTAL — FILE UPLOAD FORM
+   Mobile styling
+========================================= */
+
+@media (max-width: 768px) {
+
+    .client-dashboard-page .client-upload-panel {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+
+    .client-dashboard-page .client-upload-heading {
+        margin-bottom: 20px;
+    }
+
+    .client-dashboard-page .client-upload-heading h3 {
+        font-size: 25px;
+    }
+
+    .client-dashboard-page .client-upload-heading p {
+        font-size: 13px;
+    }
+
+    .client-dashboard-page #client-upload-form {
+        gap: 18px;
+    }
+
+    .client-dashboard-page .client-upload-field select,
+    .client-dashboard-page .client-upload-field input[type="file"] {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .client-dashboard-page .client-upload-field input[type="file"]::file-selector-button {
+        margin-right: 10px;
+        padding: 9px 10px;
+    }
+
+    .client-dashboard-page .client-upload-button {
+        width: 100%;
+        align-self: stretch;
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .client-dashboard-page .client-upload-panel {
+        padding: 16px 12px;
+    }
+
+    .client-dashboard-page .client-upload-heading h3 {
+        font-size: 23px;
+    }
+
+    .client-dashboard-page .client-upload-field input[type="file"] {
         font-size: 12px;
     }
 }

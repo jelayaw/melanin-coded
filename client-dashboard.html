@@ -295,12 +295,92 @@
                     </div>
                 </div>
 
-                <div class="client-empty-state">
-                    <h3>No files available yet.</h3>
-                    <p>
-                        Shared documents, design previews, and
-                        project resources will appear here.
-                    </p>
+                <div class="client-files-content">
+
+                    <!-- Client Project File Uploads -->
+                    <div class="client-upload-panel">
+                        <div class="client-upload-heading">
+                            <h3>Upload Project Materials</h3>
+                            <p>
+                                Share logos, brand images, documents, and
+                                other materials needed for your website.
+                            </p>
+                        </div>
+
+                        <form id="client-upload-form">
+                            <div class="client-upload-field">
+                                <label for="client-upload-project">
+                                    Select Project
+                                </label>
+                                <select id="client-upload-project" required>
+                                    <option value="">
+                                        Choose your project
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="client-upload-field">
+                                <label for="client-upload-category">
+                                    File Category
+                                </label>
+                                <select id="client-upload-category" required>
+                                    <option value="">Choose a category</option>
+                                    <option value="Brand Assets">Brand Assets</option>
+                                    <option value="Client Content">Client Content</option>
+                                    <option value="Documents">Documents</option>
+                                </select>
+                            </div>
+
+                            <div class="client-upload-field">
+                                <label for="client-upload-file">
+                                    Choose File
+                                </label>
+                                <input
+                                    type="file"
+                                    id="client-upload-file"
+                                    accept=".jpg,.jpeg,.png,.webp,.gif,.svg,.pdf,.doc,.docx,.txt"
+                                    required
+                                >
+                                <p class="client-upload-hint">
+                                    Images, PDF, Word, or TXT files.
+                                    Maximum 25 MB per file.
+                                </p>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="client-upload-button"
+                                disabled
+                            >
+                                Upload File
+                            </button>
+
+                            <p
+                                id="client-upload-message"
+                                class="client-upload-message"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+                        </form>
+                    </div>
+
+                    <!-- Project file list -->
+                    <div class="client-files-header">
+                        <div>
+                            <h3>Shared Project Files</h3>
+                            <p>
+                                Access documents, design previews, and
+                                deliverables shared for your projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="client-files-container" aria-live="polite">
+                        <p class="client-files-empty">
+                            No project files have been shared yet.
+                        </p>
+                    </div>
+
                 </div>
 
             </section>

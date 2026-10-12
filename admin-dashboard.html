@@ -77,6 +77,9 @@
                 <a href="#payments" class="admin-nav-link">
                     <span>Payments</span>
                 </a>
+                <a href="#project-files" class="admin-nav-link">
+                    <span>Project Files</span>
+                </a>
 
             </nav>
 
@@ -290,6 +293,117 @@
                     </section>
 
                 </div>
+
+                <!-- ==========================================
+                     ADMIN PROJECT FILES
+                =========================================== -->
+                <section
+                    class="admin-panel admin-project-files"
+                    id="project-files"
+                    aria-labelledby="admin-project-files-title"
+                >
+                    <div class="admin-panel-heading">
+                        <div>
+                            <p class="admin-panel-kicker">
+                                Project Resources
+                            </p>
+
+                            <h2 id="admin-project-files-title">
+                                Project Files
+                            </h2>
+                        </div>
+                    </div>
+
+                    <p class="admin-project-files-description">
+                        View and manage files shared between
+                        Melanin Coded and your clients.
+                    </p>
+
+                    <div class="admin-files-toolbar">
+                        <div class="admin-files-field">
+                            <label for="admin-files-project">
+                                Select Project
+                            </label>
+
+                            <select id="admin-files-project">
+                                <option value="">
+                                    Choose a project
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- ADMIN PROJECT FILE UPLOAD -->
+                    <div class="admin-file-upload-panel">
+                        <div class="admin-file-upload-heading">
+                            <h3>Upload Project File</h3>
+                            <p>
+                                Share brand materials, design previews, documents,
+                                and final deliverables with your clients.
+                            </p>
+                        </div>
+
+                        <form id="admin-file-upload-form">
+                            <div class="admin-file-upload-field">
+                                <label for="admin-file-upload-category">
+                                    File Category
+                                </label>
+
+                                <select id="admin-file-upload-category" required>
+                                    <option value="">Choose a category</option>
+                                    <option value="Brand Assets">Brand Assets</option>
+                                    <option value="Client Content">Client Content</option>
+                                    <option value="Design Previews">Design Previews</option>
+                                    <option value="Documents">Documents</option>
+                                    <option value="Final Deliverables">Final Deliverables</option>
+                                </select>
+                            </div>
+
+                            <div class="admin-file-upload-field">
+                                <label for="admin-file-upload-input">
+                                    Choose File
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="admin-file-upload-input"
+                                    accept=".jpg,.jpeg,.png,.webp,.gif,.svg,.pdf,.doc,.docx,.txt"
+                                    required
+                                />
+
+                                <p class="admin-file-upload-hint">
+                                    Images, PDF, Word, or TXT files.
+                                    Maximum 25 MB per file.
+                                </p>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="admin-file-upload-button"
+                                disabled
+                            >
+                                Upload File
+                            </button>
+
+                            <p
+                                id="admin-file-upload-message"
+                                class="admin-file-upload-message"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+                        </form>
+                    </div>
+
+                    <div
+                        class="admin-files-list"
+                        id="admin-files-list"
+                        aria-live="polite"
+                    >
+                        <p class="admin-empty-state">
+                            Select a project to view its shared files.
+                        </p>
+                    </div>
+                </section>
 
             </div>
 
