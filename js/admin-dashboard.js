@@ -708,9 +708,38 @@ async function uploadAdminProjectFile(projectId, category, file) {
             error: metadataError
         });
 
+        const { data: removedFiles, error: cleanupError } =
+            await window.mcSupabase.storage
+                .from("project-files")
+                .remove([storagePath]);
+
+        const cleanupConfirmed =
+            !cleanupError &&
+            Array.isArray(removedFiles) &&
+            removedFiles.some(item =>
+                item.name === storagePath ||
+                item.name === storagePath.split("/").pop()
+            );
+
+        if (!cleanupConfirmed) {
+            console.error("Admin upload cleanup failed:", {
+                projectId,
+                storagePath,
+                cleanupError,
+                removedFiles
+            });
+
+            throw new Error(
+                "The upload could not be completed, and automatic " +
+                "cleanup was not confirmed. Contact support and " +
+                "check the console before retrying."
+            );
+        }
+
         throw new Error(
-            "The file reached storage, but its database record " +
-            "could not be saved. Check the console before retrying."
+            "The upload could not be completed. " +
+            "The uploaded file was cleaned up successfully. " +
+            "Please try again."
         );
     }
 
